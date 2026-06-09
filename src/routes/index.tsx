@@ -212,71 +212,64 @@ function Index() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
-          {/* Dark card */}
+          {/* Reason 01 — Dark card */}
           <div
-            className="rounded-3xl p-8 flex flex-col justify-between min-h-[280px] md:row-span-1"
+            className="rounded-3xl p-8 flex flex-col justify-between min-h-[300px]"
             style={{ backgroundColor: "var(--emerald-pine)", color: "#f5f0e0" }}
           >
             <div className="flex items-start justify-between gap-4">
-              <h3 className="text-2xl font-semibold leading-snug max-w-[12ch]">Trained 3,500+ people across 10 countries</h3>
-              <i className="fa-solid fa-globe text-xl" style={{ color: "var(--lime-glow)" }} />
+              <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Strategy before tools</h3>
+              <span className="text-xs tracking-[0.2em] uppercase opacity-70">Reason 01</span>
             </div>
             <p className="text-sm leading-relaxed mt-10" style={{ color: "rgba(245,240,224,0.7)" }}>
-              We have run cohorts, workshops, and advisory sprints for founders, executives, and operators on three continents.
+              We do not start by recommending random AI apps. We identify your goals, bottlenecks, workflows, and opportunities first — then design the right AI approach around them.
             </p>
           </div>
 
-          {/* Lime card */}
+          {/* Reason 02 — Lime card */}
           <div
-            className="rounded-3xl p-8 flex flex-col justify-between min-h-[280px]"
+            className="rounded-3xl p-8 flex flex-col justify-between min-h-[300px]"
             style={{ backgroundColor: "var(--lime-glow)", color: "var(--emerald-pine)" }}
           >
             <div className="flex items-start justify-between gap-4">
-              <h3 className="text-2xl font-semibold leading-snug max-w-[12ch]">Real human guidance, not a chatbot</h3>
-              <i className="fa-solid fa-comment-dots text-xl" />
+              <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Built around your work</h3>
+              <span className="text-xs tracking-[0.2em] uppercase opacity-70">Reason 02</span>
             </div>
             <p className="text-sm leading-relaxed mt-10" style={{ color: "rgba(8,71,52,0.75)" }}>
-              You work directly with us. We sit with your team, look at the real work, and build around the people doing it.
+              Your AI system is not generic. It is shaped around your role, business model, content, clients, habits, and level of technical confidence.
             </p>
           </div>
 
-          {/* Light card with stack */}
+          {/* Reason 03 — Light card */}
           <div
-            className="rounded-3xl p-8 flex flex-col justify-between min-h-[280px] relative overflow-hidden"
+            className="rounded-3xl p-8 flex flex-col justify-between min-h-[300px]"
             style={{ backgroundColor: "var(--green-tea)", color: "var(--emerald-pine)" }}
           >
             <div className="flex items-start justify-between gap-4">
-              <h3 className="text-2xl font-semibold leading-snug">Model agnostic by design</h3>
-              <i className="fa-solid fa-shuffle text-xl" style={{ color: "var(--emerald-pine)" }} />
+              <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Education plus execution</h3>
+              <span className="text-xs tracking-[0.2em] uppercase opacity-60">Reason 03</span>
             </div>
-            <div className="my-6 flex flex-col items-center gap-2">
-              <div className="px-4 py-2 rounded-xl bg-white text-xs font-medium shadow-sm">OpenAI</div>
-              <div className="px-4 py-2 rounded-xl bg-white text-xs font-medium shadow-sm">Anthropic</div>
-              <div className="px-4 py-2 rounded-xl bg-white text-xs font-medium shadow-sm">Google &middot; Open-weights</div>
-            </div>
-            <p className="text-sm leading-relaxed" style={{ color: "rgba(8,71,52,0.75)" }}>
-              Your prompts, rules, and systems live with you, not locked inside one vendor.
+            <p className="text-sm leading-relaxed mt-10" style={{ color: "rgba(8,71,52,0.75)" }}>
+              You do not just get theory. You learn how to think with AI, then apply it through prompts, workflows, automations, playbooks, and practical systems.
             </p>
           </div>
 
-          {/* Wide card with image */}
+          {/* Reason 04 — Wide with image */}
           <div
-            className="rounded-3xl p-8 flex flex-col md:flex-row gap-6 md:col-span-3 min-h-[280px]"
+            className="rounded-3xl p-8 flex flex-col md:flex-row gap-6 md:col-span-3 min-h-[300px]"
             style={{ backgroundColor: "var(--green-tea)", color: "var(--emerald-pine)" }}
           >
             <div className="flex-1 flex flex-col justify-between">
-              <h3 className="text-2xl font-semibold leading-snug max-w-[18ch]">Working systems in 6 weeks, not 6 months</h3>
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="text-2xl font-semibold leading-snug max-w-[18ch]">Creator-led and field-tested</h3>
+                <span className="text-xs tracking-[0.2em] uppercase opacity-60">Reason 04</span>
+              </div>
               <p className="text-sm leading-relaxed mt-10 max-w-md" style={{ color: "rgba(8,71,52,0.75)" }}>
-                We keep engagements tight on purpose. You leave with a working system, a trained team, and a clear playbook inside one quarter.
+                Eddys AI Lab is built from daily AI research, experimentation, content creation, and real-world application — not recycled corporate AI theory.
               </p>
             </div>
-            <div className="md:w-[44%] rounded-2xl overflow-hidden relative min-h-[200px]">
-              <img src={gallery5} alt="Working session" className="absolute inset-0 w-full h-full object-cover" />
-              <div className="absolute top-4 left-4 bg-white rounded-xl px-3 py-2 text-xs font-medium shadow-sm flex items-center gap-2">
-                <i className="fa-solid fa-check text-[var(--emerald-pine)]" />
-                System shipped
-                <span className="opacity-50">6w</span>
-              </div>
+            <div className="md:w-[44%] rounded-2xl overflow-hidden relative min-h-[220px]">
+              <img src={gallery5} alt="Eddy in the lab" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -416,12 +409,45 @@ function Index() {
           className="big-footer rounded-3xl"
           style={{ ["--footer-bg" as never]: `url(${footerBg})` }}
         >
-          <div className="max-w-[1600px] mx-auto pt-24 pb-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-16 lg:gap-24 mb-20">
-            <div>
-              <p className="big-footer-eyebrow mb-8">Let&apos;s talk</p>
-              <h2 className="big-footer-title">Put AI<br />to work.</h2>
-              <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
+          <div className="max-w-[1600px] mx-auto pt-24 pb-10 px-2 sm:px-6 lg:px-10">
+            {/* Top: 3 column nav */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 pb-12 md:pb-16 border-b" style={{ borderColor: "rgba(245,240,224,0.18)" }}>
+              <div>
+                <p className="big-footer-col-title">For Leaders</p>
+                <ul className="space-y-2">
+                  <li><a href="/services/ai-strategy-integration" className="big-footer-link">AI Strategy Integration</a></li>
+                  <li><a href="/services/executive-ai-coaching" className="big-footer-link">Executive AI Coaching</a></li>
+                  <li><a href="/services/ai-workflow-systems" className="big-footer-link">AI Workflow Systems</a></li>
+                  <li><a href="/services/ai-content-authority-systems" className="big-footer-link">Content &amp; Authority</a></li>
+                </ul>
+              </div>
+              <div>
+                <p className="big-footer-col-title">Company</p>
+                <ul className="space-y-2">
+                  <li><a href="/about" className="big-footer-link">About</a></li>
+                  <li><a href="#why-us" className="big-footer-link">Why us</a></li>
+                  <li><a href="#services" className="big-footer-link">Services</a></li>
+                  <li><a href="#faq" className="big-footer-link">FAQ</a></li>
+                </ul>
+              </div>
+              <div>
+                <p className="big-footer-col-title">Connect</p>
+                <ul className="space-y-2">
+                  <li><a href="mailto:hello@eddysailab.com" className="big-footer-link">hello@eddysailab.com</a></li>
+                  <li><a href="#" className="big-footer-link">Instagram</a></li>
+                  <li><a href="#" className="big-footer-link">X / Twitter</a></li>
+                  <li><a href="#" className="big-footer-link">LinkedIn</a></li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Eyebrow CTA */}
+            <div id="contact-cta" className="py-12 md:py-16 grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-10 items-end">
+              <div>
+                <p className="big-footer-eyebrow mb-6">Let&apos;s talk</p>
+                <h2 className="big-footer-title">Put AI<br />to work.</h2>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 sm:items-center md:justify-end">
                 <a
                   href="mailto:hello@eddysailab.com"
                   className="inline-flex items-center gap-3 px-7 py-4 rounded-full text-base font-medium"
@@ -430,52 +456,39 @@ function Index() {
                   Book your call
                   <i className="fa-solid fa-arrow-right text-sm" />
                 </a>
-                <a href="mailto:hello@eddysailab.com" className="big-footer-link underline underline-offset-4">
-                  hello@eddysailab.com
-                </a>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-10">
-              <div>
-                <p className="big-footer-col-title">Explore</p>
-                <ul className="space-y-1">
-                  <li><a href="/" className="big-footer-link">Home</a></li>
-                  <li><a href="/about" className="big-footer-link">About</a></li>
-                  <li><a href="#services" className="big-footer-link">Services</a></li>
-                  <li><a href="#faq" className="big-footer-link">FAQ</a></li>
-                </ul>
-              </div>
-              <div>
-                <p className="big-footer-col-title">Follow</p>
-                <ul className="space-y-1">
-                  <li><a href="#" className="big-footer-link">Twitter</a></li>
-                  <li><a href="#" className="big-footer-link">Instagram</a></li>
-                  <li><a href="#" className="big-footer-link">LinkedIn</a></li>
-                  <li><a href="#" className="big-footer-link">YouTube</a></li>
-                </ul>
-              </div>
+            {/* Huge wordmark */}
+            <div className="pt-6 pb-2 select-none leading-none">
+              <span
+                aria-hidden
+                className="block font-semibold tracking-tight"
+                style={{
+                  color: "#f5f0e0",
+                  fontSize: "clamp(80px, 18vw, 280px)",
+                  letterSpacing: "-0.04em",
+                  lineHeight: 0.85,
+                }}
+              >
+                eddys ai lab<sup style={{ fontSize: "0.25em", verticalAlign: "super", opacity: 0.7 }}>®</sup>
+              </span>
             </div>
-          </div>
 
-          <div
-            className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
-            style={{ borderTop: "1px solid rgba(245,240,224,0.18)" }}
-          >
-            <a href="/" className="flex items-center gap-3 text-lg font-semibold" style={{ color: "#f5f0e0" }}>
-              <img src={logoAsset.url} alt="Eddys AI Lab" className="h-8 w-auto" />
-              eddys ai lab
-            </a>
-            <p className="big-footer-link" style={{ fontSize: 14, opacity: 0.65 }}>
-              © {new Date().getFullYear()} Eddys AI Lab. All rights reserved.
-            </p>
-            <div className="flex items-center gap-5 text-lg">
-              <a href="#" aria-label="Twitter"><i className="fa-brands fa-x-twitter" /></a>
-              <a href="#" aria-label="Instagram"><i className="fa-brands fa-instagram" /></a>
-              <a href="#" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in" /></a>
+            <div
+              className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+              style={{ borderTop: "1px solid rgba(245,240,224,0.18)" }}
+            >
+              <p className="big-footer-link" style={{ fontSize: 13, opacity: 0.65 }}>
+                © {new Date().getFullYear()} Eddys AI Lab. All rights reserved.
+              </p>
+              <div className="flex items-center gap-5" style={{ fontSize: 13, opacity: 0.65 }}>
+                <a href="#" className="big-footer-link">Terms of Use</a>
+                <span>|</span>
+                <a href="#" className="big-footer-link">Privacy Policy</a>
+              </div>
             </div>
           </div>
-        </div>
       </footer>
       </section>
     </div>
