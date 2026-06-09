@@ -126,7 +126,7 @@ function Index() {
             with less friction.
           </h2>
 
-          <p className="section-description mt-8 max-w-2xl">
+          <p className="section-description mt-8 max-w-md text-balance">
             Eddys AI Lab exists for leaders who do not want more AI noise. They want
             strategy, education, systems, and execution that make their work sharper.
           </p>
