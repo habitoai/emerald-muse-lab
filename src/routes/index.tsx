@@ -136,6 +136,58 @@ function Index() {
         </div>
       </section>
 
+      {/* COHORT BANNER */}
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden">
+          <div className="relative min-h-[460px]">
+            <img
+              src={gallery5}
+              alt="Cohort learning session"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+          <div
+            className="p-10 lg:p-14 flex flex-col justify-between min-h-[460px]"
+            style={{ backgroundColor: "var(--emerald-pine)" }}
+          >
+            <div>
+              <div
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
+                style={{ backgroundColor: "rgba(134, 232, 30, 0.15)" }}
+              >
+                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
+                <span className="text-sm" style={{ color: "var(--lime-glow)" }}>Next cohort</span>
+              </div>
+              <h3
+                className="font-semibold tracking-tight"
+                style={{ color: "white", fontSize: "56px", lineHeight: "60px", letterSpacing: "-0.02em" }}
+              >
+                AI Clarity
+                <br />
+                Cohort 2026
+              </h3>
+            </div>
+
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mt-10">
+              <p className="max-w-sm" style={{ color: "rgba(255,255,255,0.75)", fontSize: "16px", lineHeight: "24px" }}>
+                A six-week program for leaders who want to use AI with
+                strategy, taste, and real execution. Limited seats.
+              </p>
+              <button
+                className="rounded-2xl px-6 py-5 flex items-center justify-between gap-6 shrink-0"
+                style={{ backgroundColor: "rgba(255,255,255,0.08)", color: "white", minWidth: "220px" }}
+              >
+                <div className="flex flex-col items-start leading-tight">
+                  <span style={{ color: "var(--lime-glow)", fontSize: "12px" }}>Starts March 2026</span>
+                  <span className="font-semibold">Reserve a seat</span>
+                </div>
+                <i className="fa-solid fa-arrow-up-right-from-square" style={{ color: "var(--lime-glow)" }} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* GALLERY */}
       <section id="works" className="pb-24">
         <div className="gallery-container flex gap-6 px-6 lg:px-10 pb-4">
