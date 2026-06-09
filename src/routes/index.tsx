@@ -11,6 +11,14 @@ import serviceSystems from "@/assets/service-systems.jpg";
 import serviceCreator from "@/assets/service-creator.jpg";
 import speakerAsset from "@/assets/speaker.png.asset.json";
 import logoAsset from "@/assets/eddys-logo.png.asset.json";
+import brandOsho from "@/assets/brands/osho.png.asset.json";
+import brandBatanat from "@/assets/brands/batanat.png.asset.json";
+import brandDazu from "@/assets/brands/dazu.png.asset.json";
+import brandExcellence from "@/assets/brands/excellence-project.png.asset.json";
+import brandHive from "@/assets/brands/hive-pastries.png.asset.json";
+import brandGorgeous from "@/assets/brands/gorgeous-tech.png.asset.json";
+import brandMku from "@/assets/brands/mount-kenya.png.asset.json";
+import brandNdovesha from "@/assets/brands/ndovesha.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,12 +42,14 @@ const gallery = [
 ];
 
 const brands = [
-  { name: "logoipsum", icon: "fa-solid fa-asterisk" },
-  { name: "waterline", icon: "fa-solid fa-water" },
-  { name: "blooms®", icon: "fa-solid fa-seedling" },
-  { name: "arch+", icon: "fa-solid fa-archway" },
-  { name: "scientific", icon: "fa-solid fa-atom" },
-  { name: "log...", icon: "fa-solid fa-circle-nodes" },
+  { name: "Osho", src: brandOsho.url },
+  { name: "Batanat", src: brandBatanat.url },
+  { name: "Dazu AI Hub", src: brandDazu.url },
+  { name: "Excellence Project", src: brandExcellence.url },
+  { name: "The Hive Pastries", src: brandHive.url },
+  { name: "Gorgeous Technical Institute", src: brandGorgeous.url },
+  { name: "Mount Kenya University", src: brandMku.url },
+  { name: "Ndovesha", src: brandNdovesha.url },
 ];
 
 function Index() {
@@ -96,11 +106,10 @@ function Index() {
           We have shaped AI strategy for teams at brands like
         </p>
         {/* Desktop */}
-        <div className="hidden md:flex flex-wrap items-center justify-center gap-x-14 gap-y-8">
+        <div className="hidden md:flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
           {brands.map((b) => (
-            <div key={b.name} className="brand-logo">
-              <i className={b.icon} />
-              <span>{b.name}</span>
+            <div key={b.name} className="brand-logo-img-wrap" title={b.name}>
+              <img src={b.src} alt={b.name} className="brand-logo-img" loading="lazy" />
             </div>
           ))}
         </div>
@@ -108,9 +117,8 @@ function Index() {
         <div className="md:hidden brand-marquee">
           <div className="brand-marquee-track">
             {[...brands, ...brands].map((b, i) => (
-              <div key={i} className="brand-logo brand-marquee-item">
-                <i className={b.icon} />
-                <span>{b.name}</span>
+              <div key={i} className="brand-logo-img-wrap brand-marquee-item" title={b.name}>
+                <img src={b.src} alt={b.name} className="brand-logo-img" loading="lazy" />
               </div>
             ))}
           </div>

@@ -440,3 +440,31 @@
   .about-hero-title { font-size: 48px; }
   .about-lead { font-size: 18px; line-height: 28px; }
 }
+
+/* Brand logos — monotone, blended into theme */
+.brand-logo-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 4px;
+}
+.brand-logo-img {
+  max-height: 100%;
+  max-width: 140px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0.45) contrast(1.1);
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+  transition: opacity 200ms ease, filter 200ms ease;
+}
+.brand-logo-img-wrap:hover .brand-logo-img {
+  opacity: 1;
+  filter: grayscale(1) brightness(0.25) contrast(1.15);
+}
+@media (max-width: 767px) {
+  .brand-logo-img-wrap { height: 44px; }
+  .brand-logo-img { max-width: 110px; }
+}
