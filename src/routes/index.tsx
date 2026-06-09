@@ -100,7 +100,8 @@ function Index() {
         <nav className="hidden md:flex items-center gap-10">
           <a className="nav-link text-base hover:opacity-70 transition" href="#works">Works</a>
           <a className="nav-link text-base hover:opacity-70 transition" href="#journal">Journal</a>
-          <a className="nav-link text-base hover:opacity-70 transition" href="#about">About</a>
+          <a className="nav-link text-base hover:opacity-70 transition" href="/about">About</a>
+          <a className="nav-link text-base hover:opacity-70 transition" href="#faq">FAQ</a>
           <a className="nav-link text-base hover:opacity-70 transition" href="#contact">Contact</a>
         </nav>
       </header>
@@ -240,12 +241,12 @@ function Index() {
 
       {/* CAPABILITIES */}
       <section id="services" className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24 border-t border-accent">
-        <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-10 lg:gap-20 mb-16">
-          <p className="capability-eyebrow">A look at how we help leaders<br />put AI to work with clarity</p>
+        <div className="flex flex-col items-center text-center mb-16 gap-4">
+          <p className="capability-eyebrow">A look at how we help leaders put AI to work with clarity</p>
           <h2 className="capability-headline">Our services</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 lg:pl-[260px] xl:pl-[320px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {[
             { slug: "ai-strategy-advisory", image: serviceAdvisory, title: "AI Strategy Advisory", body: "For founders, executives, and creators who need a clear AI direction, roadmap, and execution plan." },
             { slug: "executive-ai-training", image: serviceTraining, title: "Executive AI Training", body: "Private training for business leaders and professionals who want to understand how to use AI in real work, not just theory." },
@@ -308,8 +309,66 @@ function Index() {
       </section>
 
 
+      {/* FAQ */}
+      <section id="faq" className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24 border-t border-accent">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
+          <div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-8">
+              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
+              <span className="tag-label">FAQ</span>
+            </div>
+            <h2 className="capability-headline mb-6">Questions leaders ask before we start</h2>
+            <p className="section-description max-w-md" style={{ opacity: 0.8 }}>
+              Straight answers on training, privacy, ROI, and how engagements run.
+            </p>
+          </div>
+
+          <div className="faq-list">
+            {[
+              {
+                q: "Do you offer custom training for corporate teams?",
+                a: "Yes. Every executive training engagement is shaped around the team's industry, current AI maturity, and the workflows they actually run. We build private cohorts for leadership teams, marketing teams, operations, and specialist groups, with live sessions, recorded modules, and follow-up office hours.",
+              },
+              {
+                q: "How do you handle data privacy and security in your AI workflows?",
+                a: "All systems are designed with a privacy-first posture. We default to enterprise-tier models with no-training agreements, isolate client data per workspace, use redaction patterns for sensitive inputs, and document a clear data map for every workflow. NDAs and DPAs are signed before any client material enters a system.",
+              },
+              {
+                q: "What is the expected ROI for my team after the AI Clarity cohort?",
+                a: "Past participants typically reclaim 6 to 12 hours per person per week within 60 days through workflow automation, faster research, and better decision drafts. We measure ROI through three lenses: time saved, decision speed, and quality of output, and you leave the cohort with a documented baseline and target for each.",
+              },
+              {
+                q: "How long does a typical engagement run?",
+                a: "Strategy advisory runs as a focused 4 to 6 week sprint. Executive training is 3 to 6 weeks depending on cohort size. Workflow systems are scoped per deliverable and usually ship in 2 to 8 weeks. We keep engagements tight on purpose, so you see live results inside a quarter.",
+              },
+              {
+                q: "Will the systems still work if model providers change?",
+                a: "Yes. Workflows are built on a model-agnostic layer so we can swap providers (OpenAI, Anthropic, Google, open-weights) without rewriting your processes. Prompts, evaluations, and governance live in your workspace, not locked inside a vendor.",
+              },
+              {
+                q: "What if my team has very little AI experience?",
+                a: "That is the most common starting point. The training is built so non-technical leaders get fluent fast, with frameworks, hands-on exercises, and templates they can use the same day. No coding background is required.",
+              },
+              {
+                q: "How do we get started?",
+                a: "Book a call. We spend 30 minutes mapping your goals, current stack, and constraints, then propose the right format — advisory, training, systems, or a combination — with a clear scope and price before any work begins.",
+              },
+            ].map((item, i) => (
+              <details key={i} className="faq-item">
+                <summary>
+                  <span>{item.q}</span>
+                  <i className="fa-solid fa-plus faq-icon" />
+                </summary>
+                <div className="faq-answer">{item.a}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer id="contact" className="border-t border-accent">
+
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <a href="/" className="logo-text text-2xl font-semibold flex items-center gap-3">
             <img src={logoAsset.url} alt="Eddys AI Lab" className="h-8 w-auto" />
