@@ -234,9 +234,9 @@ function Index() {
             </p>
           </div>
 
-          {/* Reason 03 — Light card */}
+          {/* Reason 03 — Light card (tall, spans 2 rows) */}
           <div
-            className="rounded-3xl p-8 flex flex-col justify-between min-h-[420px]"
+            className="rounded-3xl p-8 flex flex-col justify-between min-h-[420px] md:row-span-2 md:min-h-full"
             style={{ backgroundColor: "var(--green-tea)", color: "var(--emerald-pine)" }}
           >
             <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Education plus execution</h3>
@@ -245,9 +245,9 @@ function Index() {
             </p>
           </div>
 
-          {/* Reason 04 — Wide with image */}
+          {/* Reason 04 — Wide with image (spans 2 cols, row 2) */}
           <div
-            className="rounded-3xl p-8 flex flex-col md:flex-row gap-6 md:col-span-3 min-h-[420px]"
+            className="rounded-3xl p-8 flex flex-col md:flex-row gap-6 md:col-span-2 min-h-[420px]"
             style={{ backgroundColor: "var(--green-tea)", color: "var(--emerald-pine)" }}
           >
             <div className="flex-1 flex flex-col justify-between">
@@ -260,6 +260,7 @@ function Index() {
               <img src={gallery5} alt="Eddy in the lab" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
+
         </div>
       </section>
 
