@@ -180,10 +180,10 @@ function Index() {
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
           {[
-            { n: "90+", d: "Projects that were shipped with care, reviewed end to end" },
-            { n: "100%", d: "Happy clients that quickly come back for new projects and ideas" },
-            { n: "30+", d: "Brands and startups that trusted us to shape their identity" },
-            { n: "120", d: "Design concepts explored before landing on the perfect fit" },
+            { n: "3,500+", d: "People we have trained across 10 countries, hands on, not theory" },
+            { n: "500K", d: "Kenyans we are working to give free AI literacy training to" },
+            { n: "10+", d: "Countries where we have run cohorts, workshops, and advisory sprints" },
+            { n: "6 wk", d: "Average time we need to ship a working AI system inside your team" },
           ].map((s) => (
             <div key={s.n}>
               <div className="stat-number">{s.n}</div>
