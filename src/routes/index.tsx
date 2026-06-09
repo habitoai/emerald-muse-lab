@@ -201,12 +201,16 @@ function Index() {
 
       {/* STATS */}
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+        <div className="flex items-center gap-2 mb-10">
+          <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
+          <span className="tag-label">Track record, in numbers we can stand behind</span>
+        </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
           {[
-            { n: "3,500+", d: "People we have trained across 10 countries, hands on, not theory" },
-            { n: "500K", d: "Kenyans we are working to give free AI literacy training to" },
-            { n: "10+", d: "Countries where we have run cohorts, workshops, and advisory sprints" },
-            { n: "6 wk", d: "Average time we need to ship a working AI system inside your team" },
+            { n: "3,500+", d: "Leaders and teams trained in person across our cohorts and workshops since 2022" },
+            { n: "10", d: "Countries where we have delivered AI advisory, training, or build sprints on the ground" },
+            { n: "6 wks", d: "Typical time from kickoff to a working AI workflow live inside a client team" },
+            { n: "500K", d: "Kenyans we are on a mission to give free, structured AI literacy training to by 2030" },
           ].map((s) => (
             <div key={s.n}>
               <div className="stat-number">{s.n}</div>
