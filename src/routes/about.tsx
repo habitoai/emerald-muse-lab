@@ -47,12 +47,12 @@ function AboutPage() {
           <span className="tag-label">About</span>
         </div>
         <h1 className="about-hero-title max-w-5xl">
-          A strategic advisor for leaders
-          <br />navigating the AI shift.
+          We are your strategic advisors
+          <br />for the AI shift.
         </h1>
         <p className="about-lead mt-10 max-w-2xl">
-          Eddys is not a tech guy who picked up AI. He is a communicator, a journalist, and a
-          PR strategist who now helps leaders use AI with clarity, taste, and ethics.
+          We are not tech people who picked up AI. We come from journalism and PR, and we help you
+          use AI with clarity, taste, and ethics, not noise.
         </p>
       </section>
 
