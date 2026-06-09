@@ -64,9 +64,9 @@ function Index() {
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-56 pb-12">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           <h1 className="hero-title max-w-4xl">
-            Strategic AI integration
+            We help business leaders
             <br />
-            for business leaders
+            put AI to work.
           </h1>
           <button className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base self-start md:self-end shrink-0">
             Book Call
