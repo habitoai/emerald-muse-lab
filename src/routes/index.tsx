@@ -162,8 +162,8 @@ function Index() {
 
             <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mt-10">
               <p className="max-w-sm cohort-banner-body" style={{ color: "rgba(255,255,255,0.75)" }}>
-                A six-week program for leaders who want to use AI with
-                strategy, taste, and real execution. Limited seats.
+                Our six-week program for leaders who want to use AI with strategy,
+                taste, and real execution. We keep seats limited so you get our attention.
               </p>
               <button
                 className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base shrink-0"
