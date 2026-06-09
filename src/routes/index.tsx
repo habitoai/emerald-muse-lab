@@ -6,6 +6,7 @@ import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
 import speakerAsset from "@/assets/speaker.png.asset.json";
+import logoAsset from "@/assets/eddys-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
