@@ -212,17 +212,14 @@ function Index() {
               </div>
               <h3 className="capability-visual-title">{c.title}</h3>
               <p className="capability-visual-body">{c.body}</p>
+              <span className="mt-3 inline-flex items-center gap-2 text-sm font-medium" style={{ color: "var(--emerald-pine)" }}>
+                Learn more
+                <i className="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1" style={{ color: "var(--lime-glow)" }} />
+              </span>
             </a>
           ))}
         </div>
 
-        <div className="lg:pl-[260px] xl:pl-[320px] mt-20 pt-10 border-t border-accent">
-          <p className="capability-closing">
-            Eddys AI Lab plugs leaders into AI strategy, executive training,
-            <br className="hidden md:block" />
-            and workflow systems built for faster decisions and sharper execution.
-          </p>
-        </div>
       </section>
 
       {/* GALLERY */}
