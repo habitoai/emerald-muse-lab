@@ -23,6 +23,9 @@ import brandNdovesha from "@/assets/brands/ndovesha.png.asset.json";
 import reasonStrategy from "@/assets/reason-strategy.png";
 import reasonWorkflow from "@/assets/reason-workflow.png";
 import reasonEducation from "@/assets/reason-education.png";
+import articleRoi from "@/assets/article-ai-roi.jpg";
+import articleTraining from "@/assets/article-team-training.jpg";
+import articleStrategy from "@/assets/article-ai-strategy.jpg";
 
 
 export const Route = createFileRoute("/")({
