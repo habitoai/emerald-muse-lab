@@ -64,9 +64,9 @@ function Index() {
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-56 pb-12">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           <h1 className="hero-title max-w-4xl">
-            Strategic AI integration
+            We help business leaders
             <br />
-            for business leaders
+            put AI to work.
           </h1>
           <button className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base self-start md:self-end shrink-0">
             Book Call
@@ -93,7 +93,7 @@ function Index() {
       {/* BRANDS */}
       <section className="max-w-7xl mx-auto px-6 lg:px-10 pt-6 pb-12 border-t border-accent mt-6">
         <p className="section-description text-center mb-10">
-          Over 190 design projects created for top brands including
+          We have shaped AI strategy for teams at brands like
         </p>
         {/* Desktop */}
         <div className="hidden md:flex flex-wrap items-center justify-center gap-x-14 gap-y-8">
@@ -122,18 +122,18 @@ function Index() {
         <div className="flex flex-col items-center text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-8">
             <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
-            <span className="tag-label">What I do</span>
+            <span className="tag-label">What we do</span>
           </div>
 
           <h2 className="section-title max-w-3xl">
-            Get more from AI,
+            We help you get more from AI,
             <br />
             with less friction.
           </h2>
 
           <p className="section-description mt-8 max-w-md text-balance">
-            Eddys AI Lab exists for leaders who do not want more AI noise. They want
-            strategy, education, systems, and execution that make their work sharper.
+            We work with leaders who do not want more AI noise. You want strategy,
+            training, systems, and execution that make your work sharper. That is what we build.
           </p>
         </div>
       </section>
@@ -162,8 +162,8 @@ function Index() {
 
             <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mt-10">
               <p className="max-w-sm cohort-banner-body" style={{ color: "rgba(255,255,255,0.75)" }}>
-                A six-week program for leaders who want to use AI with
-                strategy, taste, and real execution. Limited seats.
+                Our six-week program for leaders who want to use AI with strategy,
+                taste, and real execution. We keep seats limited so you get our attention.
               </p>
               <button
                 className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base shrink-0"
@@ -180,10 +180,10 @@ function Index() {
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
           {[
-            { n: "90+", d: "Projects that were shipped with care, reviewed end to end" },
-            { n: "100%", d: "Happy clients that quickly come back for new projects and ideas" },
-            { n: "30+", d: "Brands and startups that trusted us to shape their identity" },
-            { n: "120", d: "Design concepts explored before landing on the perfect fit" },
+            { n: "3,500+", d: "People we have trained across 10 countries, hands on, not theory" },
+            { n: "500K", d: "Kenyans we are working to give free AI literacy training to" },
+            { n: "10+", d: "Countries where we have run cohorts, workshops, and advisory sprints" },
+            { n: "6 wk", d: "Average time we need to ship a working AI system inside your team" },
           ].map((s) => (
             <div key={s.n}>
               <div className="stat-number">{s.n}</div>
@@ -202,10 +202,10 @@ function Index() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {[
-            { slug: "ai-strategy-advisory", image: serviceAdvisory, title: "AI Strategy Advisory", body: "For founders, executives, and creators who need a clear AI direction, roadmap, and execution plan." },
-            { slug: "executive-ai-training", image: serviceTraining, title: "Executive AI Training", body: "Private training for business leaders and professionals who want to understand how to use AI in real work, not just theory." },
-            { slug: "ai-workflow-systems", image: serviceSystems, title: "AI Workflow Systems", body: "Design and implementation of AI systems for research, content, operations, client delivery, and decision-making." },
-            { slug: "creator-personal-brand-ai", image: serviceCreator, title: "Creator & Personal Brand AI", body: "For high-performing individuals who want to use AI to scale content, thinking, offers, and digital products." },
+            { slug: "ai-strategy-advisory", image: serviceAdvisory, title: "AI Strategy Advisory", body: "We help founders, executives, and creators land on a clear AI direction, roadmap, and execution plan." },
+            { slug: "executive-ai-training", image: serviceTraining, title: "Executive AI Training", body: "We train leaders and teams to use AI in real work, not slides. Practical, hands on, built around your day." },
+            { slug: "ai-workflow-systems", image: serviceSystems, title: "AI Workflow Systems", body: "We design and ship AI systems for your research, content, operations, client delivery, and decisions." },
+            { slug: "creator-personal-brand-ai", image: serviceCreator, title: "Creator & Personal Brand AI", body: "We help high performers use AI to scale content, thinking, offers, and digital products." },
           ].map((c) => (
             <a key={c.slug} href={`/services/${c.slug}`} className="capability-visual-card group">
               <div className="capability-visual-image">
@@ -259,31 +259,31 @@ function Index() {
             {[
               {
                 q: "Do you offer custom training for corporate teams?",
-                a: "Yes. Every executive training engagement is shaped around the team's industry, current AI maturity, and the workflows they actually run. We build private cohorts for leadership teams, marketing teams, operations, and specialist groups, with live sessions, recorded modules, and follow-up office hours.",
+                a: "Yes. We shape every training around your team, your industry, and the work you actually do. We run private cohorts for leadership, marketing, operations, and specialist teams, with live sessions, recorded modules, and follow-up office hours so it sticks.",
               },
               {
                 q: "How do you handle data privacy and security in your AI workflows?",
-                a: "All systems are designed with a privacy-first posture. We default to enterprise-tier models with no-training agreements, isolate client data per workspace, use redaction patterns for sensitive inputs, and document a clear data map for every workflow. NDAs and DPAs are signed before any client material enters a system.",
+                a: "We treat your data carefully. We use enterprise-tier models that do not train on your inputs, keep each client in their own workspace, redact sensitive information, and write down exactly where data flows. We sign NDAs and data agreements before any of your material touches a system.",
               },
               {
                 q: "What is the expected ROI for my team after the AI Clarity cohort?",
-                a: "Past participants typically reclaim 6 to 12 hours per person per week within 60 days through workflow automation, faster research, and better decision drafts. We measure ROI through three lenses: time saved, decision speed, and quality of output, and you leave the cohort with a documented baseline and target for each.",
+                a: "Most of our past participants save 6 to 12 hours per person per week within 60 days. We measure it three ways: time saved, decisions made faster, and quality of output. You leave the cohort with a clear baseline and target for each.",
               },
               {
                 q: "How long does a typical engagement run?",
-                a: "Strategy advisory runs as a focused 4 to 6 week sprint. Executive training is 3 to 6 weeks depending on cohort size. Workflow systems are scoped per deliverable and usually ship in 2 to 8 weeks. We keep engagements tight on purpose, so you see live results inside a quarter.",
+                a: "Strategy advisory is a focused 4 to 6 week sprint. Training runs 3 to 6 weeks depending on cohort size. Workflow systems usually ship in 2 to 8 weeks. We keep things tight on purpose so you see real results inside a quarter.",
               },
               {
                 q: "Will the systems still work if model providers change?",
-                a: "Yes. Workflows are built on a model-agnostic layer so we can swap providers (OpenAI, Anthropic, Google, open-weights) without rewriting your processes. Prompts, evaluations, and governance live in your workspace, not locked inside a vendor.",
+                a: "Yes. We build on a model-agnostic layer so we can swap providers, OpenAI, Anthropic, Google, open-weights, without rewriting your processes. Your prompts, evaluations, and rules live in your workspace, not locked inside one vendor.",
               },
               {
                 q: "What if my team has very little AI experience?",
-                a: "That is the most common starting point. The training is built so non-technical leaders get fluent fast, with frameworks, hands-on exercises, and templates they can use the same day. No coding background is required.",
+                a: "That is the most common place we start. We teach non-technical leaders to get fluent fast, with simple frameworks, hands-on exercises, and templates you can use the same day. No coding background needed.",
               },
               {
                 q: "How do we get started?",
-                a: "Book a call. We spend 30 minutes mapping your goals, current stack, and constraints, then propose the right format — advisory, training, systems, or a combination — with a clear scope and price before any work begins.",
+                a: "Book a call. We spend 30 minutes mapping your goals, your current stack, and your constraints. Then we propose the right format, advisory, training, systems, or a mix, with a clear scope and price before any work begins.",
               },
             ].map((item, i) => (
               <details key={i} className="faq-item">
@@ -311,7 +311,7 @@ function Index() {
             should move the needle.
           </h2>
           <p className="section-description mt-6 max-w-md" style={{ opacity: 0.8 }}>
-            Work with an advisor who pairs strategy, ethics, and execution to put AI to work in your business.
+            Work with us as your advisor. We pair strategy, ethics, and execution to put AI to real work in your business.
           </p>
           <button className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base mt-10 shrink-0">
             Book your call

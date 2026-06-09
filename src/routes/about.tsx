@@ -47,12 +47,12 @@ function AboutPage() {
           <span className="tag-label">About</span>
         </div>
         <h1 className="about-hero-title max-w-5xl">
-          A strategic advisor for leaders
-          <br />navigating the AI shift.
+          We are your strategic advisors
+          <br />for the AI shift.
         </h1>
         <p className="about-lead mt-10 max-w-2xl">
-          Eddys is not a tech guy who picked up AI. He is a communicator, a journalist, and a
-          PR strategist who now helps leaders use AI with clarity, taste, and ethics.
+          We are not tech people who picked up AI. We come from journalism and PR, and we help you
+          use AI with clarity, taste, and ethics, not noise.
         </p>
       </section>
 
@@ -74,19 +74,19 @@ function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10 lg:gap-20">
           <p className="about-section-label">The background</p>
           <div className="max-w-3xl space-y-6">
-            <h2 className="capability-headline">From newsrooms and press desks to AI strategy rooms.</h2>
+            <h2 className="capability-headline">From newsrooms and press desks to your AI strategy room.</h2>
             <p className="about-body">
-              The work started in journalism. Years spent reporting, interviewing leaders, and
-              writing under deadline taught one thing better than any framework: the truth has
-              to be earned, sourced, and framed before it is useful. That discipline carried into
-              public relations, where the question stopped being "what is the story" and became
-              "how does this story move a market, a policy, a reputation."
+              We started in journalism. Years of reporting, interviewing leaders, and writing under
+              deadline taught us one thing better than any framework: the truth has to be earned,
+              sourced, and framed before it is useful. That discipline carried into our PR work,
+              where the question stopped being "what is the story" and became "how does this story
+              move a market, a policy, a reputation."
             </p>
             <p className="about-body">
-              Strategic communication is a craft. It demands research, narrative, ethics, and a
-              clear sense of audience. Those are exactly the muscles AI work needs now. Models
-              are powerful, but most leaders are drowning in output without strategy. The
-              bottleneck is no longer access to AI. It is judgment.
+              Strategic communication is a craft. It needs research, narrative, ethics, and a
+              clear sense of audience. Those are the same muscles AI work needs now. Models are
+              powerful, but most leaders are drowning in output without strategy. The bottleneck
+              is not access to AI anymore. It is judgment, and that is what we bring.
             </p>
           </div>
         </div>
@@ -99,15 +99,15 @@ function AboutPage() {
           <div className="max-w-3xl space-y-6">
             <h2 className="capability-headline">Strategy first. Tools second. Ethics throughout.</h2>
             <p className="about-body">
-              A journalism background changes how AI gets deployed. Sourcing matters. Verification
-              matters. Bias is named, not waved away. Every workflow we ship comes with a clear
-              data map, a privacy posture, and a human review step where it counts.
+              Our journalism background changes how we deploy AI. Sourcing matters. Verification
+              matters. We name bias instead of waving it away. Every workflow we ship comes with
+              a clear data map, a privacy posture, and a human review step where it counts.
             </p>
             <p className="about-body">
-              A PR background changes how AI gets communicated. Internal narrative, executive
-              positioning, and stakeholder messaging are built into the rollout, not bolted on
-              after launch. The result is AI that leaders can actually stand behind, in
-              boardrooms, in press, and in front of their teams.
+              Our PR background changes how we communicate AI inside your business. We build the
+              internal narrative, executive positioning, and stakeholder messaging into the rollout,
+              not bolted on after launch. The result is AI you can stand behind, in your boardroom,
+              in the press, and in front of your team.
             </p>
           </div>
         </div>
@@ -119,9 +119,9 @@ function AboutPage() {
           <p className="about-section-label">Principles</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
             {[
-              { n: "01", t: "Clarity over hype", d: "We ship plain language, not buzzwords. If a leader cannot explain the system to their board, it is not done." },
-              { n: "02", t: "Ethics as default", d: "Privacy, sourcing, and human review are designed in from day one, not patched in after a problem." },
-              { n: "03", t: "Narrative-led", d: "Every AI rollout has a story. We write it before we build, so adoption follows the work." },
+              { n: "01", t: "Clarity over hype", d: "We ship plain language, not buzzwords. If you cannot explain the system to your board, we are not done." },
+              { n: "02", t: "Ethics as default", d: "We design privacy, sourcing, and human review in from day one, not patched in after a problem." },
+              { n: "03", t: "Narrative-led", d: "Every AI rollout has a story. We write it with you before we build, so adoption follows the work." },
               { n: "04", t: "Outcomes, measured", d: "Time saved, decisions sharpened, output improved. We baseline at the start and track every engagement." },
             ].map((p) => (
               <div key={p.n}>
