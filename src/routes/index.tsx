@@ -227,32 +227,37 @@ function Index() {
 
       {/* CAPABILITIES */}
       <section id="capabilities" className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24 border-t border-accent">
-        <p className="tag-label mb-10" style={{ letterSpacing: "0.12em" }}>/OUR CAPABILITIES</p>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
-          <h2 className="section-title text-left">Capabilities</h2>
-          <p className="section-description lg:max-w-md lg:justify-self-end">
-            We design and deliver AI solutions that solve real business challenges,
-            create measurable impact, and build capabilities that last inside your organization.
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-10 lg:gap-20 mb-16">
+          <p className="capability-eyebrow">Let us be your<br />competitive advantage</p>
+          <h2 className="capability-headline">
+            Strategy, systems, and clarity.
+            <br />
+            How Eddys AI Lab works.
+          </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 lg:pl-[260px] xl:pl-[320px]">
           {[
-            { icon: "fa-solid fa-compass-drafting", title: "AI Strategy & Consulting", body: "Turn ambition into action with a clear AI roadmap. We align AI opportunities with your priorities, define use cases with ROI, and guide adoption with confidence." },
-            { icon: "fa-solid fa-database", title: "Data Enablement", body: "Lay the foundation for AI success. From data strategy and architecture to governance and integration, we make your data ready to power scalable, intelligent solutions." },
-            { icon: "fa-solid fa-cloud", title: "Managed AI Solutions", body: "We architect, design, build, and manage AI agentic solutions tailored to your business, so you can focus on outcomes without the technological hassle." },
-            { icon: "fa-solid fa-clipboard-check", title: "AI Proof of Concept", body: "We co-create and test high-impact AI use cases, proving value in days or weeks, so you know exactly what to invest in and how to scale with confidence." },
-            { icon: "fa-solid fa-arrows-rotate", title: "AI Training & Learning", body: "Make AI part of your DNA. We upskill teams, educate leaders, and embed adoption practices so your people and technology grow stronger together." },
-            { icon: "fa-solid fa-shield-halved", title: "AI Governance & Trust", body: "Operate AI responsibly. We help you implement guardrails, policies, and review systems so your AI stays safe, compliant, and aligned with your values." },
+            { image: serviceAdvisory, title: "Sharper AI direction", body: "We map where AI fits in your work, where it doesn't, and what to build first for real leverage." },
+            { image: serviceSystems, title: "Systems that ship", body: "Workflows, agents, and tooling designed around how you actually operate — not generic templates." },
+            { image: serviceTraining, title: "Leaders in command", body: "Private training that turns AI from a buzzword into a daily instrument for thinking and execution." },
           ].map((c) => (
-            <div key={c.title} className="capability-card">
-              <div className="capability-icon">
-                <i className={c.icon} />
+            <div key={c.title} className="capability-visual-card">
+              <div className="capability-visual-image">
+                <img src={c.image} alt={c.title} loading="lazy" />
               </div>
-              <h3 className="capability-title">{c.title}</h3>
-              <p className="capability-body">{c.body}</p>
+              <h3 className="capability-visual-title">{c.title}</h3>
+              <p className="capability-visual-body">{c.body}</p>
             </div>
           ))}
+        </div>
+
+        <div className="lg:pl-[260px] xl:pl-[320px] mt-20 pt-10 border-t border-accent">
+          <p className="capability-closing">
+            Eddys AI Lab plugs leaders into AI strategy, executive training,
+            <br className="hidden md:block" />
+            and workflow systems built for faster decisions and sharper execution.
+          </p>
         </div>
       </section>
 
