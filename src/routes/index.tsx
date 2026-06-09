@@ -211,64 +211,88 @@ function Index() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
-          {[
-            {
-              n: "Reason 01",
-              t: "Strategy before tools",
-              d: "We do not start by recommending random AI apps. We identify your goals, bottlenecks, workflows, and opportunities first, then design the right AI approach around them.",
-              icon: "fa-compass",
-              variant: "dark",
-            },
-            {
-              n: "Reason 02",
-              t: "Built around your work",
-              d: "Your AI system is not generic. It is shaped around your role, business model, content, clients, habits, and level of technical confidence.",
-              icon: "fa-fingerprint",
-              variant: "lime",
-            },
-            {
-              n: "Reason 03",
-              t: "Education plus execution",
-              d: "You do not just get theory. You learn how to think with AI, then apply it through prompts, workflows, automations, playbooks, and practical systems.",
-              icon: "fa-graduation-cap",
-              variant: "tea",
-            },
-            {
-              n: "Reason 04",
-              t: "Award-winning AI practice",
-              d: "Recognized for our work in AI education and applied AI systems, with cohorts, talks, and engagements that have been awarded and featured across the region.",
-              icon: "fa-award",
-              variant: "tea",
-            },
-          ].map((r) => {
-            const isDark = r.variant === "dark";
-            const isLime = r.variant === "lime";
-            const bg = isDark ? "var(--emerald-pine)" : isLime ? "var(--lime-glow)" : "var(--green-tea)";
-            const fg = isDark ? "#f5f0e0" : "var(--emerald-pine)";
-            const sub = isDark ? "rgba(245,240,224,0.7)" : "rgba(8,71,52,0.75)";
-            const numColor = isDark ? "var(--lime-glow)" : "var(--emerald-pine)";
-            return (
-              <div
-                key={r.n}
-                className="rounded-3xl p-8 lg:p-10 flex flex-col justify-between min-h-[280px]"
-                style={{ backgroundColor: bg, color: fg }}
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <span className="text-xs font-medium tracking-[0.18em] uppercase" style={{ color: numColor, opacity: isDark ? 1 : 0.7 }}>
-                    {r.n}
-                  </span>
-                  <i className={`fa-solid ${r.icon} text-xl`} style={{ color: isDark ? "var(--lime-glow)" : "var(--emerald-pine)" }} />
-                </div>
-                <div className="mt-8">
-                  <h3 className="text-2xl lg:text-3xl font-semibold leading-snug max-w-[18ch]">{r.t}</h3>
-                  <p className="text-sm leading-relaxed mt-5 max-w-md" style={{ color: sub }}>
-                    {r.d}
-                  </p>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
+          {/* Dark card */}
+          <div
+            className="rounded-3xl p-8 flex flex-col justify-between min-h-[280px]"
+            style={{ backgroundColor: "var(--emerald-pine)", color: "#f5f0e0" }}
+          >
+            <div className="flex items-start justify-between gap-4">
+              <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Trained 3,500+ people across 10 countries</h3>
+              <i className="fa-solid fa-globe text-xl" style={{ color: "var(--lime-glow)" }} />
+            </div>
+            <p className="text-sm leading-relaxed mt-10" style={{ color: "rgba(245,240,224,0.7)" }}>
+              We have run cohorts, workshops, and advisory sprints for founders, executives, and operators on three continents.
+            </p>
+          </div>
+
+          {/* Lime card */}
+          <div
+            className="rounded-3xl p-8 flex flex-col justify-between min-h-[280px]"
+            style={{ backgroundColor: "var(--lime-glow)", color: "var(--emerald-pine)" }}
+          >
+            <div className="flex items-start justify-between gap-4">
+              <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Real human guidance, not a chatbot</h3>
+              <i className="fa-solid fa-comment-dots text-xl" />
+            </div>
+            <p className="text-sm leading-relaxed mt-10" style={{ color: "rgba(8,71,52,0.75)" }}>
+              You work directly with us. We sit with your team, look at the real work, and build around the people doing it.
+            </p>
+          </div>
+
+          {/* Light card with stack */}
+          <div
+            className="rounded-3xl p-8 flex flex-col justify-between min-h-[280px] relative overflow-hidden"
+            style={{ backgroundColor: "var(--green-tea)", color: "var(--emerald-pine)" }}
+          >
+            <div className="flex items-start justify-between gap-4">
+              <h3 className="text-2xl font-semibold leading-snug">Model agnostic by design</h3>
+              <i className="fa-solid fa-shuffle text-xl" style={{ color: "var(--emerald-pine)" }} />
+            </div>
+            <div className="my-6 flex flex-col items-center gap-2">
+              <div className="px-4 py-2 rounded-xl bg-white text-xs font-medium shadow-sm">OpenAI</div>
+              <div className="px-4 py-2 rounded-xl bg-white text-xs font-medium shadow-sm">Anthropic</div>
+              <div className="px-4 py-2 rounded-xl bg-white text-xs font-medium shadow-sm">Google &middot; Open-weights</div>
+            </div>
+            <p className="text-sm leading-relaxed" style={{ color: "rgba(8,71,52,0.75)" }}>
+              Your prompts, rules, and systems live with you, not locked inside one vendor.
+            </p>
+          </div>
+
+          {/* Wide card with image */}
+          <div
+            className="rounded-3xl p-8 flex flex-col md:flex-row gap-6 md:col-span-2 min-h-[280px]"
+            style={{ backgroundColor: "var(--green-tea)", color: "var(--emerald-pine)" }}
+          >
+            <div className="flex-1 flex flex-col justify-between">
+              <h3 className="text-2xl font-semibold leading-snug max-w-[18ch]">Working systems in 6 weeks, not 6 months</h3>
+              <p className="text-sm leading-relaxed mt-10 max-w-md" style={{ color: "rgba(8,71,52,0.75)" }}>
+                We keep engagements tight on purpose. You leave with a working system, a trained team, and a clear playbook inside one quarter.
+              </p>
+            </div>
+            <div className="md:w-[44%] rounded-2xl overflow-hidden relative min-h-[200px]">
+              <img src={gallery5} alt="Working session" className="absolute inset-0 w-full h-full object-cover" />
+              <div className="absolute top-4 left-4 bg-white rounded-xl px-3 py-2 text-xs font-medium shadow-sm flex items-center gap-2">
+                <i className="fa-solid fa-check text-[var(--emerald-pine)]" />
+                System shipped
+                <span className="opacity-50">6w</span>
               </div>
-            );
-          })}
+            </div>
+          </div>
+
+          {/* Award-winning card */}
+          <div
+            className="rounded-3xl p-8 flex flex-col justify-between min-h-[280px]"
+            style={{ backgroundColor: "var(--emerald-pine)", color: "#f5f0e0" }}
+          >
+            <div className="flex items-start justify-between gap-4">
+              <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Award-winning AI practice</h3>
+              <i className="fa-solid fa-award text-xl" style={{ color: "var(--lime-glow)" }} />
+            </div>
+            <p className="text-sm leading-relaxed mt-10" style={{ color: "rgba(245,240,224,0.7)" }}>
+              Recognized for our work in AI education and applied systems, featured across cohorts, talks, and engagements in the region.
+            </p>
+          </div>
         </div>
       </section>
 
