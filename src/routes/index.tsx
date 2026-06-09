@@ -5,6 +5,10 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import serviceAdvisory from "@/assets/service-advisory.jpg";
+import serviceTraining from "@/assets/service-training.jpg";
+import serviceSystems from "@/assets/service-systems.jpg";
+import serviceCreator from "@/assets/service-creator.jpg";
 import speakerAsset from "@/assets/speaker.png.asset.json";
 import logoAsset from "@/assets/eddys-logo.png.asset.json";
 
@@ -190,18 +194,21 @@ function Index() {
 
       {/* SERVICES */}
       <section id="services" className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24">
-        <p className="section-description text-center mb-14">
-          A showcase of how we help leaders
-          <br />
-          put AI to work with clarity
-        </p>
+        <div className="text-center mb-14">
+          <h2 className="section-title">Our services</h2>
+          <p className="section-description mt-5">
+            A look at how we help leaders
+            <br />
+            put AI to work with clarity
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {[
-            { slug: "ai-strategy-advisory", title: "AI Strategy Advisory", meta: "Advisory", image: gallery1 },
-            { slug: "executive-ai-training", title: "Executive AI Training", meta: "Training", image: gallery2 },
-            { slug: "ai-workflow-systems", title: "AI Workflow Systems", meta: "Systems", image: gallery4 },
-            { slug: "creator-personal-brand-ai", title: "Creator & Personal Brand AI", meta: "Creator", image: gallery6 },
+            { slug: "ai-strategy-advisory", title: "AI Strategy Advisory", meta: "Advisory", image: serviceAdvisory },
+            { slug: "executive-ai-training", title: "Executive AI Training", meta: "Training", image: serviceTraining },
+            { slug: "ai-workflow-systems", title: "AI Workflow Systems", meta: "Systems", image: serviceSystems },
+            { slug: "creator-personal-brand-ai", title: "Creator & Personal Brand AI", meta: "Creator", image: serviceCreator },
           ].map((s) => (
             <a key={s.slug} href={`/services/${s.slug}`} className="service-tile group">
               <div className="service-tile-image">
