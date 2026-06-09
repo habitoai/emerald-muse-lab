@@ -74,19 +74,19 @@ function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10 lg:gap-20">
           <p className="about-section-label">The background</p>
           <div className="max-w-3xl space-y-6">
-            <h2 className="capability-headline">From newsrooms and press desks to AI strategy rooms.</h2>
+            <h2 className="capability-headline">From newsrooms and press desks to your AI strategy room.</h2>
             <p className="about-body">
-              The work started in journalism. Years spent reporting, interviewing leaders, and
-              writing under deadline taught one thing better than any framework: the truth has
-              to be earned, sourced, and framed before it is useful. That discipline carried into
-              public relations, where the question stopped being "what is the story" and became
-              "how does this story move a market, a policy, a reputation."
+              We started in journalism. Years of reporting, interviewing leaders, and writing under
+              deadline taught us one thing better than any framework: the truth has to be earned,
+              sourced, and framed before it is useful. That discipline carried into our PR work,
+              where the question stopped being "what is the story" and became "how does this story
+              move a market, a policy, a reputation."
             </p>
             <p className="about-body">
-              Strategic communication is a craft. It demands research, narrative, ethics, and a
-              clear sense of audience. Those are exactly the muscles AI work needs now. Models
-              are powerful, but most leaders are drowning in output without strategy. The
-              bottleneck is no longer access to AI. It is judgment.
+              Strategic communication is a craft. It needs research, narrative, ethics, and a
+              clear sense of audience. Those are the same muscles AI work needs now. Models are
+              powerful, but most leaders are drowning in output without strategy. The bottleneck
+              is not access to AI anymore. It is judgment, and that is what we bring.
             </p>
           </div>
         </div>
