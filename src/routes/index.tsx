@@ -55,36 +55,33 @@ function Index() {
       </header>
 
       {/* HERO */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 pt-24 pb-20">
-        <h1 className="hero-title max-w-4xl">
-          Strategic AI integration
-          <br />
-          for business leaders
-        </h1>
-        <div className="mt-12 flex items-center gap-6">
-          <button className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base">
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-40 pb-12">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+          <h1 className="hero-title max-w-4xl">
+            Strategic AI integration
+            <br />
+            for business leaders
+          </h1>
+          <button className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base self-start md:self-end shrink-0">
             Book Call
             <i className="fa-solid fa-arrow-right text-sm" />
           </button>
-          <a href="#contact" className="start-project-text flex items-center gap-2 hover:opacity-70 transition">
-            <span className="w-2 h-2 rounded-full accent-bg-lime inline-block" />
-            Start a project
-          </a>
         </div>
       </section>
 
       {/* HERO IMAGE */}
-      <section className="max-w-[1400px] mx-auto px-6 lg:px-10 pb-24">
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-24">
         <div className="rounded-3xl overflow-hidden">
           <img
             src={speakerAsset.url}
             alt="AI consultancy keynote speaker addressing a business audience"
-            width={1500}
+            width={1600}
             height={1000}
             className="w-full h-auto object-cover"
           />
         </div>
       </section>
+
 
 
       {/* BRANDS */}
