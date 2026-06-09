@@ -441,30 +441,110 @@
   .about-lead { font-size: 18px; line-height: 28px; }
 }
 
-/* Brand logos — monotone, blended into theme */
+/* Brand logos — monotone emerald, animated marquee */
+.brand-marquee-row {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+.brand-marquee-row .brand-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 56px;
+  align-items: center;
+  animation: brand-marquee 35s linear infinite;
+}
+.brand-marquee-row:hover .brand-marquee-track {
+  animation-play-state: paused;
+}
 .brand-logo-img-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 56px;
+  height: 60px;
   padding: 0 4px;
+  flex-shrink: 0;
 }
 .brand-logo-img {
   max-height: 100%;
-  max-width: 140px;
+  max-width: 150px;
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: grayscale(1) brightness(0.45) contrast(1.1);
+  /* Recolor logos to emerald-pine (#084734) */
+  filter: brightness(0) saturate(100%) invert(20%) sepia(45%) saturate(1400%) hue-rotate(118deg) brightness(78%) contrast(95%);
   mix-blend-mode: multiply;
-  opacity: 0.75;
-  transition: opacity 200ms ease, filter 200ms ease;
+  opacity: 0.7;
+  transition: opacity 250ms ease;
 }
 .brand-logo-img-wrap:hover .brand-logo-img {
   opacity: 1;
-  filter: grayscale(1) brightness(0.25) contrast(1.15);
 }
 @media (max-width: 767px) {
   .brand-logo-img-wrap { height: 44px; }
   .brand-logo-img { max-width: 110px; }
+  .brand-marquee-row .brand-marquee-track { gap: 36px; animation-duration: 28s; }
+}
+
+/* Big footer */
+.big-footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #f5f0e0;
+}
+.big-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--footer-bg);
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+.big-footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    color-mix(in oklab, var(--emerald-pine) 70%, transparent) 0%,
+    color-mix(in oklab, var(--emerald-pine) 88%, transparent) 60%,
+    var(--emerald-pine) 100%);
+  z-index: -1;
+}
+.big-footer a { color: #f5f0e0; text-decoration: none; transition: opacity 200ms ease; }
+.big-footer a:hover { opacity: 0.7; }
+.big-footer-title {
+  font-family: "Inter Display", Inter, system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  font-size: clamp(64px, 11vw, 180px);
+  color: #f5f0e0;
+}
+.big-footer-eyebrow {
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+.big-footer-col-title {
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 16px;
+}
+.big-footer-link {
+  font-family: Inter, sans-serif;
+  font-size: 17px;
+  line-height: 32px;
+  font-weight: 400;
+}
+@keyframes brand-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 28px)); }
 }
