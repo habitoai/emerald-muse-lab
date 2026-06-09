@@ -5,6 +5,10 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import serviceAdvisory from "@/assets/service-advisory.jpg";
+import serviceTraining from "@/assets/service-training.jpg";
+import serviceSystems from "@/assets/service-systems.jpg";
+import serviceCreator from "@/assets/service-creator.jpg";
 import speakerAsset from "@/assets/speaker.png.asset.json";
 import logoAsset from "@/assets/eddys-logo.png.asset.json";
 
