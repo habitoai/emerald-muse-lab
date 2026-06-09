@@ -92,13 +92,32 @@ function Index() {
 
       {/* HERO IMAGE */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-8">
-        <div className="rounded-3xl overflow-hidden">
+        <div className="relative rounded-3xl overflow-hidden">
           <img
             src={speakerAsset.url}
             alt="AI consultancy keynote speaker addressing a business audience"
             width={1600}
             height={1000}
             className="w-full h-auto object-cover"
+            style={{ filter: "saturate(0.78) hue-rotate(-12deg) brightness(0.82) contrast(1.05)" }}
+          />
+          {/* Brand-tinted overlay to harmonize the red auditorium with the green system */}
+          <div
+            aria-hidden
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(180deg, color-mix(in oklab, var(--emerald-pine) 35%, transparent) 0%, color-mix(in oklab, var(--emerald-pine) 10%, transparent) 45%, color-mix(in oklab, var(--emerald-pine) 55%, transparent) 100%)",
+              mixBlendMode: "multiply",
+            }}
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(120% 80% at 50% 100%, color-mix(in oklab, var(--lime-glow) 18%, transparent), transparent 60%)",
+            }}
           />
         </div>
       </section>
