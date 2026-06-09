@@ -311,7 +311,7 @@ function Index() {
             should move the needle.
           </h2>
           <p className="section-description mt-6 max-w-md" style={{ opacity: 0.8 }}>
-            Work with an advisor who pairs strategy, ethics, and execution to put AI to work in your business.
+            Work with us as your advisor. We pair strategy, ethics, and execution to put AI to real work in your business.
           </p>
           <button className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base mt-10 shrink-0">
             Book your call
