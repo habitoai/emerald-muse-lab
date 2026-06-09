@@ -90,13 +90,25 @@ function Index() {
         <p className="section-description text-center mb-10">
           Over 190 design projects created for top brands including
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-14 gap-y-8">
+        {/* Desktop */}
+        <div className="hidden md:flex flex-wrap items-center justify-center gap-x-14 gap-y-8">
           {brands.map((b) => (
             <div key={b.name} className="brand-logo">
               <i className={b.icon} />
               <span>{b.name}</span>
             </div>
           ))}
+        </div>
+        {/* Mobile marquee */}
+        <div className="md:hidden brand-marquee">
+          <div className="brand-marquee-track">
+            {[...brands, ...brands].map((b, i) => (
+              <div key={i} className="brand-logo brand-marquee-item">
+                <i className={b.icon} />
+                <span>{b.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -114,7 +126,7 @@ function Index() {
             with less friction.
           </h2>
 
-          <p className="section-description mt-8 max-w-2xl">
+          <p className="section-description mt-8 max-w-md text-balance">
             Eddys AI Lab exists for leaders who do not want more AI noise. They want
             strategy, education, systems, and execution that make their work sharper.
           </p>
@@ -123,8 +135,8 @@ function Index() {
 
       {/* COHORT BANNER */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden">
-          <div className="relative min-h-[460px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden cohort-banner">
+          <div className="relative cohort-banner-image">
             <img
               src={gallery5}
               alt="Cohort learning session"
@@ -132,14 +144,11 @@ function Index() {
             />
           </div>
           <div
-            className="p-10 lg:p-14 flex flex-col justify-between min-h-[460px]"
+            className="cohort-banner-panel flex flex-col justify-between"
             style={{ backgroundColor: "var(--emerald-pine)" }}
           >
             <div>
-              <h3
-                className="font-semibold tracking-tight"
-                style={{ color: "white", fontSize: "56px", lineHeight: "60px", letterSpacing: "-0.02em" }}
-              >
+              <h3 className="cohort-banner-title">
                 AI Clarity
                 <br />
                 Cohort 2026
@@ -147,7 +156,7 @@ function Index() {
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mt-10">
-              <p className="max-w-sm" style={{ color: "rgba(255,255,255,0.75)", fontSize: "16px", lineHeight: "24px" }}>
+              <p className="max-w-sm cohort-banner-body" style={{ color: "rgba(255,255,255,0.75)" }}>
                 A six-week program for leaders who want to use AI with
                 strategy, taste, and real execution. Limited seats.
               </p>
