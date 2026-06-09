@@ -409,12 +409,45 @@ function Index() {
           className="big-footer rounded-3xl"
           style={{ ["--footer-bg" as never]: `url(${footerBg})` }}
         >
-          <div className="max-w-[1600px] mx-auto pt-24 pb-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-16 lg:gap-24 mb-20">
-            <div>
-              <p className="big-footer-eyebrow mb-8">Let&apos;s talk</p>
-              <h2 className="big-footer-title">Put AI<br />to work.</h2>
-              <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
+          <div className="max-w-[1600px] mx-auto pt-24 pb-10 px-2 sm:px-6 lg:px-10">
+            {/* Top: 3 column nav */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 pb-12 md:pb-16 border-b" style={{ borderColor: "rgba(245,240,224,0.18)" }}>
+              <div>
+                <p className="big-footer-col-title">For Leaders</p>
+                <ul className="space-y-2">
+                  <li><a href="/services/ai-strategy-integration" className="big-footer-link">AI Strategy Integration</a></li>
+                  <li><a href="/services/executive-ai-coaching" className="big-footer-link">Executive AI Coaching</a></li>
+                  <li><a href="/services/ai-workflow-systems" className="big-footer-link">AI Workflow Systems</a></li>
+                  <li><a href="/services/ai-content-authority-systems" className="big-footer-link">Content &amp; Authority</a></li>
+                </ul>
+              </div>
+              <div>
+                <p className="big-footer-col-title">Company</p>
+                <ul className="space-y-2">
+                  <li><a href="/about" className="big-footer-link">About</a></li>
+                  <li><a href="#why-us" className="big-footer-link">Why us</a></li>
+                  <li><a href="#services" className="big-footer-link">Services</a></li>
+                  <li><a href="#faq" className="big-footer-link">FAQ</a></li>
+                </ul>
+              </div>
+              <div>
+                <p className="big-footer-col-title">Connect</p>
+                <ul className="space-y-2">
+                  <li><a href="mailto:hello@eddysailab.com" className="big-footer-link">hello@eddysailab.com</a></li>
+                  <li><a href="#" className="big-footer-link">Instagram</a></li>
+                  <li><a href="#" className="big-footer-link">X / Twitter</a></li>
+                  <li><a href="#" className="big-footer-link">LinkedIn</a></li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Eyebrow CTA */}
+            <div id="contact-cta" className="py-12 md:py-16 grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-10 items-end">
+              <div>
+                <p className="big-footer-eyebrow mb-6">Let&apos;s talk</p>
+                <h2 className="big-footer-title">Put AI<br />to work.</h2>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 sm:items-center md:justify-end">
                 <a
                   href="mailto:hello@eddysailab.com"
                   className="inline-flex items-center gap-3 px-7 py-4 rounded-full text-base font-medium"
@@ -423,49 +456,37 @@ function Index() {
                   Book your call
                   <i className="fa-solid fa-arrow-right text-sm" />
                 </a>
-                <a href="mailto:hello@eddysailab.com" className="big-footer-link underline underline-offset-4">
-                  hello@eddysailab.com
-                </a>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-10">
-              <div>
-                <p className="big-footer-col-title">Explore</p>
-                <ul className="space-y-1">
-                  <li><a href="/" className="big-footer-link">Home</a></li>
-                  <li><a href="/about" className="big-footer-link">About</a></li>
-                  <li><a href="#services" className="big-footer-link">Services</a></li>
-                  <li><a href="#faq" className="big-footer-link">FAQ</a></li>
-                </ul>
-              </div>
-              <div>
-                <p className="big-footer-col-title">Follow</p>
-                <ul className="space-y-1">
-                  <li><a href="#" className="big-footer-link">Twitter</a></li>
-                  <li><a href="#" className="big-footer-link">Instagram</a></li>
-                  <li><a href="#" className="big-footer-link">LinkedIn</a></li>
-                  <li><a href="#" className="big-footer-link">YouTube</a></li>
-                </ul>
-              </div>
+            {/* Huge wordmark */}
+            <div className="pt-6 pb-2 select-none leading-none">
+              <span
+                aria-hidden
+                className="block font-semibold tracking-tight"
+                style={{
+                  color: "#f5f0e0",
+                  fontSize: "clamp(80px, 18vw, 280px)",
+                  letterSpacing: "-0.04em",
+                  lineHeight: 0.85,
+                }}
+              >
+                eddys ai lab<sup style={{ fontSize: "0.25em", verticalAlign: "super", opacity: 0.7 }}>®</sup>
+              </span>
             </div>
-          </div>
 
-          <div
-            className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
-            style={{ borderTop: "1px solid rgba(245,240,224,0.18)" }}
-          >
-            <a href="/" className="flex items-center gap-3 text-lg font-semibold" style={{ color: "#f5f0e0" }}>
-              <img src={logoAsset.url} alt="Eddys AI Lab" className="h-8 w-auto" />
-              eddys ai lab
-            </a>
-            <p className="big-footer-link" style={{ fontSize: 14, opacity: 0.65 }}>
-              © {new Date().getFullYear()} Eddys AI Lab. All rights reserved.
-            </p>
-            <div className="flex items-center gap-5 text-lg">
-              <a href="#" aria-label="Twitter"><i className="fa-brands fa-x-twitter" /></a>
-              <a href="#" aria-label="Instagram"><i className="fa-brands fa-instagram" /></a>
-              <a href="#" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in" /></a>
+            <div
+              className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+              style={{ borderTop: "1px solid rgba(245,240,224,0.18)" }}
+            >
+              <p className="big-footer-link" style={{ fontSize: 13, opacity: 0.65 }}>
+                © {new Date().getFullYear()} Eddys AI Lab. All rights reserved.
+              </p>
+              <div className="flex items-center gap-5" style={{ fontSize: 13, opacity: 0.65 }}>
+                <a href="#" className="big-footer-link">Terms of Use</a>
+                <span>|</span>
+                <a href="#" className="big-footer-link">Privacy Policy</a>
+              </div>
             </div>
           </div>
         </div>
