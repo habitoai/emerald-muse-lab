@@ -361,12 +361,10 @@
 /* Stacking scroll section */
 .stack-section {
   position: relative;
+  min-height: 420vh;
   background-color: var(--background);
 }
-.stack-item {
-  height: 140vh;
-}
-.stack-sticky {
+.stack-pin {
   position: sticky;
   top: 0;
   height: 100vh;
@@ -374,19 +372,20 @@
   align-items: center;
   justify-content: center;
   padding: 0 24px;
+  isolation: isolate;
 }
 .stack-card {
-  position: relative;
-  width: 100%;
-  max-width: 1520px;
-  aspect-ratio: 16 / 10;
+  position: absolute;
+  width: min(50vw, 640px);
+  aspect-ratio: 3 / 4;
   border-radius: 24px;
   overflow: hidden;
   background-color: var(--green-tea);
   box-shadow: 0 30px 80px -40px rgba(8, 71, 52, 0.45);
-  transform: scale(0.32);
+  transform: translateY(calc(var(--i) * 104vh));
   transform-origin: center center;
-  will-change: transform;
+  will-change: transform, opacity;
+  z-index: calc(var(--i) + 1);
 }
 .stack-card img {
   width: 100%;
