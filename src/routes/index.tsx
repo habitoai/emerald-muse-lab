@@ -192,48 +192,11 @@ function Index() {
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section id="services" className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24">
-        <div className="text-center mb-14">
-          <h2 className="section-title">Our services</h2>
-          <p className="section-description mt-5">
-            A look at how we help leaders
-            <br />
-            put AI to work with clarity
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-          {[
-            { slug: "ai-strategy-advisory", title: "AI Strategy Advisory", meta: "Advisory", image: serviceAdvisory },
-            { slug: "executive-ai-training", title: "Executive AI Training", meta: "Training", image: serviceTraining },
-            { slug: "ai-workflow-systems", title: "AI Workflow Systems", meta: "Systems", image: serviceSystems },
-            { slug: "creator-personal-brand-ai", title: "Creator & Personal Brand AI", meta: "Creator", image: serviceCreator },
-          ].map((s) => (
-            <a key={s.slug} href={`/services/${s.slug}`} className="service-tile group">
-              <div className="service-tile-image">
-                <img src={s.image} alt={s.title} loading="lazy" className="w-full h-full object-cover" />
-              </div>
-              <div className="service-tile-caption">
-                <span className="service-tile-title">{s.title}</span>
-                <span className="service-tile-meta">{s.meta}</span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
-
-
-
       {/* CAPABILITIES */}
-      <section id="capabilities" className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24 border-t border-accent">
+      <section id="services" className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24 border-t border-accent">
         <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-10 lg:gap-20 mb-16">
-          <p className="capability-eyebrow">Let us be your<br />competitive advantage</p>
-          <h2 className="capability-headline">
-            Strategy, systems, and clarity.
-            <br />
-            How Eddys AI Lab works.
-          </h2>
+          <p className="capability-eyebrow">A look at how we help leaders<br />put AI to work with clarity</p>
+          <h2 className="capability-headline">Our services</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 lg:pl-[260px] xl:pl-[320px]">
