@@ -222,6 +222,28 @@ function Index() {
 
       </section>
 
+      {/* STACKING SCROLL TEST */}
+      <section className="stack-section">
+        {[
+          { image: serviceAdvisory, title: "AI Strategy Advisory", meta: "01 — Advisory" },
+          { image: serviceTraining, title: "Executive AI Training", meta: "02 — Training" },
+          { image: serviceSystems, title: "AI Workflow Systems", meta: "03 — Systems" },
+          { image: serviceCreator, title: "Creator & Personal Brand AI", meta: "04 — Creator" },
+        ].map((c, i) => (
+          <div key={i} className="stack-item">
+            <div className="stack-sticky">
+              <div className="stack-card" style={{ ["--i" as string]: i }}>
+                <img src={c.image} alt={c.title} />
+                <div className="stack-card-overlay">
+                  <span className="stack-card-meta">{c.meta}</span>
+                  <h3 className="stack-card-title">{c.title}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </section>
+
       {/* GALLERY */}
       <section id="works" className="pb-24">
         <div className="gallery-container flex gap-6 px-6 lg:px-10 pb-4">
