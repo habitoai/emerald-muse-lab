@@ -103,7 +103,7 @@ function Index() {
       {/* ABOUT + STATS */}
       <section id="about" className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-10">
-          <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--emerald-pine)" }} />
+          <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
           <span className="tag-label">Who we are</span>
         </div>
 
