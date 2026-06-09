@@ -102,26 +102,22 @@ function Index() {
 
       {/* ABOUT + STATS */}
       <section id="about" className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-10">
-          <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
-          <span className="tag-label">Who we are</span>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <h2 className="section-title">
-            Agency of ideas
-            <br />
-            and impact
-          </h2>
-          <div>
-            <p className="brand-intro mb-6">
-              We turn sharp strategy into brands and experiences people remember
-            </p>
-            <p className="section-description">
-              From identity systems to digital products, we partner with founders and
-              teams who care about craft — shaping work that performs as well as it looks.
-            </p>
+        <div className="flex flex-col items-center text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-8">
+            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
+            <span className="tag-label">What I do</span>
           </div>
+
+          <h2 className="section-title max-w-4xl">
+            I help serious people use AI
+            <br />
+            with clarity, speed, and taste.
+          </h2>
+
+          <p className="section-description mt-8 max-w-2xl">
+            Eddys AI Lab exists for leaders who do not want more AI noise. They want
+            strategy, education, systems, and execution that make their work sharper.
+          </p>
         </div>
 
         {/* STATS */}
