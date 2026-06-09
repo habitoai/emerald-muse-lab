@@ -23,6 +23,9 @@ import brandNdovesha from "@/assets/brands/ndovesha.png.asset.json";
 import reasonStrategy from "@/assets/reason-strategy.png";
 import reasonWorkflow from "@/assets/reason-workflow.png";
 import reasonEducation from "@/assets/reason-education.png";
+import articleRoi from "@/assets/article-ai-roi.jpg";
+import articleTraining from "@/assets/article-team-training.jpg";
+import articleStrategy from "@/assets/article-ai-strategy.jpg";
 
 
 export const Route = createFileRoute("/")({
@@ -347,6 +350,68 @@ function Index() {
                 className="w-full h-full object-cover"
               />
             </div>
+          ))}
+        </div>
+      </section>
+
+
+      {/* Journal / Articles */}
+      <section id="journal" className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24 border-t border-accent">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-14">
+          <div className="max-w-xl">
+            <h2 className="section-title">Journal</h2>
+            <p className="section-description mt-4 opacity-80">
+              Field notes on AI strategy, adoption, and the workflows reshaping how teams ship.
+            </p>
+          </div>
+          <a href="#journal" className="inline-flex items-center gap-2 nav-link text-base opacity-80 hover:opacity-100">
+            See all articles
+            <span aria-hidden>↗</span>
+          </a>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+          {[
+            {
+              date: "May 28, 2026",
+              title: "The honest ROI of AI inside a 20-person team",
+              img: articleRoi,
+              alt: "Laptop with green data visualization",
+            },
+            {
+              date: "Apr 14, 2026",
+              title: "Why most AI training fails — and what we changed",
+              img: articleTraining,
+              alt: "Team workshop with sticky notes",
+            },
+            {
+              date: "Mar 02, 2026",
+              title: "Build vs. buy: choosing your first AI workflow",
+              img: articleStrategy,
+              alt: "Abstract green glass shapes",
+            },
+          ].map((a) => (
+            <a key={a.title} href="#journal" className="service-tile group">
+              <div className="service-tile-image relative">
+                <img
+                  src={a.img}
+                  alt={a.alt}
+                  loading="lazy"
+                  width={768}
+                  height={768}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-5 right-5 w-9 h-9 rounded-full bg-background/90 flex items-center justify-center text-[var(--emerald-pine)] opacity-0 group-hover:opacity-100 transition-opacity">
+                  ↗
+                </div>
+              </div>
+              <div className="mt-5">
+                <div className="text-sm opacity-60 mb-2">{a.date}</div>
+                <h3 className="text-xl md:text-2xl font-semibold leading-tight" style={{ fontFamily: '"Plus Jakarta Sans", system-ui, sans-serif', letterSpacing: "-0.01em" }}>
+                  {a.title}
+                </h3>
+              </div>
+            </a>
           ))}
         </div>
       </section>
