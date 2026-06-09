@@ -106,11 +106,10 @@ function Index() {
           We have shaped AI strategy for teams at brands like
         </p>
         {/* Desktop */}
-        <div className="hidden md:flex flex-wrap items-center justify-center gap-x-14 gap-y-8">
+        <div className="hidden md:flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
           {brands.map((b) => (
-            <div key={b.name} className="brand-logo">
-              <i className={b.icon} />
-              <span>{b.name}</span>
+            <div key={b.name} className="brand-logo-img-wrap" title={b.name}>
+              <img src={b.src} alt={b.name} className="brand-logo-img" loading="lazy" />
             </div>
           ))}
         </div>
@@ -118,9 +117,8 @@ function Index() {
         <div className="md:hidden brand-marquee">
           <div className="brand-marquee-track">
             {[...brands, ...brands].map((b, i) => (
-              <div key={i} className="brand-logo brand-marquee-item">
-                <i className={b.icon} />
-                <span>{b.name}</span>
+              <div key={i} className="brand-logo-img-wrap brand-marquee-item" title={b.name}>
+                <img src={b.src} alt={b.name} className="brand-logo-img" loading="lazy" />
               </div>
             ))}
           </div>
