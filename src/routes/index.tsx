@@ -236,7 +236,7 @@ function Index() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 lg:pl-[260px] xl:pl-[320px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 lg:pl-[260px] xl:pl-[320px]">
           {[
             { slug: "ai-strategy-advisory", image: serviceAdvisory, title: "AI Strategy Advisory", body: "For founders, executives, and creators who need a clear AI direction, roadmap, and execution plan." },
             { slug: "executive-ai-training", image: serviceTraining, title: "Executive AI Training", body: "Private training for business leaders and professionals who want to understand how to use AI in real work, not just theory." },
