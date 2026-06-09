@@ -236,19 +236,20 @@ function Index() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 lg:pl-[260px] xl:pl-[320px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 lg:pl-[260px] xl:pl-[320px]">
           {[
-            { image: serviceAdvisory, title: "Sharper AI direction", body: "We map where AI fits in your work, where it doesn't, and what to build first for real leverage." },
-            { image: serviceSystems, title: "Systems that ship", body: "Workflows, agents, and tooling designed around how you actually operate — not generic templates." },
-            { image: serviceTraining, title: "Leaders in command", body: "Private training that turns AI from a buzzword into a daily instrument for thinking and execution." },
+            { image: serviceAdvisory, title: "AI Strategy Advisory", body: "For founders, executives, and creators who need a clear AI direction, roadmap, and execution plan." },
+            { image: serviceTraining, title: "Executive AI Training", body: "Private training for business leaders and professionals who want to understand how to use AI in real work, not just theory." },
+            { image: serviceSystems, title: "AI Workflow Systems", body: "Design and implementation of AI systems for research, content, operations, client delivery, and decision-making." },
+            { image: serviceCreator, title: "Creator & Personal Brand AI", body: "For high-performing individuals who want to use AI to scale content, thinking, offers, and digital products." },
           ].map((c) => (
-            <div key={c.title} className="capability-visual-card">
+            <a key={c.title} href={`/services/${c.title.toLowerCase().replace(/\s+/g, "-")}`} className="capability-visual-card group">
               <div className="capability-visual-image">
                 <img src={c.image} alt={c.title} loading="lazy" />
               </div>
               <h3 className="capability-visual-title">{c.title}</h3>
               <p className="capability-visual-body">{c.body}</p>
-            </div>
+            </a>
           ))}
         </div>
 
