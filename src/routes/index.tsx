@@ -214,11 +214,11 @@ function Index() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
           {/* Dark card */}
           <div
-            className="rounded-3xl p-8 flex flex-col justify-between min-h-[280px]"
+            className="rounded-3xl p-8 flex flex-col justify-between min-h-[280px] md:row-span-1"
             style={{ backgroundColor: "var(--emerald-pine)", color: "#f5f0e0" }}
           >
             <div className="flex items-start justify-between gap-4">
-              <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Trained 3,500+ people across 10 countries</h3>
+              <h3 className="text-2xl font-semibold leading-snug max-w-[12ch]">Trained 3,500+ people across 10 countries</h3>
               <i className="fa-solid fa-globe text-xl" style={{ color: "var(--lime-glow)" }} />
             </div>
             <p className="text-sm leading-relaxed mt-10" style={{ color: "rgba(245,240,224,0.7)" }}>
@@ -232,7 +232,7 @@ function Index() {
             style={{ backgroundColor: "var(--lime-glow)", color: "var(--emerald-pine)" }}
           >
             <div className="flex items-start justify-between gap-4">
-              <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Real human guidance, not a chatbot</h3>
+              <h3 className="text-2xl font-semibold leading-snug max-w-[12ch]">Real human guidance, not a chatbot</h3>
               <i className="fa-solid fa-comment-dots text-xl" />
             </div>
             <p className="text-sm leading-relaxed mt-10" style={{ color: "rgba(8,71,52,0.75)" }}>
@@ -261,7 +261,7 @@ function Index() {
 
           {/* Wide card with image */}
           <div
-            className="rounded-3xl p-8 flex flex-col md:flex-row gap-6 md:col-span-2 min-h-[280px]"
+            className="rounded-3xl p-8 flex flex-col md:flex-row gap-6 md:col-span-3 min-h-[280px]"
             style={{ backgroundColor: "var(--green-tea)", color: "var(--emerald-pine)" }}
           >
             <div className="flex-1 flex flex-col justify-between">
@@ -278,20 +278,6 @@ function Index() {
                 <span className="opacity-50">6w</span>
               </div>
             </div>
-          </div>
-
-          {/* Award-winning card */}
-          <div
-            className="rounded-3xl p-8 flex flex-col justify-between min-h-[280px]"
-            style={{ backgroundColor: "var(--emerald-pine)", color: "#f5f0e0" }}
-          >
-            <div className="flex items-start justify-between gap-4">
-              <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Award-winning AI practice</h3>
-              <i className="fa-solid fa-award text-xl" style={{ color: "var(--lime-glow)" }} />
-            </div>
-            <p className="text-sm leading-relaxed mt-10" style={{ color: "rgba(245,240,224,0.7)" }}>
-              Recognized for our work in AI education and applied systems, featured across cohorts, talks, and engagements in the region.
-            </p>
           </div>
         </div>
       </section>
