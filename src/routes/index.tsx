@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -43,6 +44,29 @@ const brands = [
 ];
 
 function Index() {
+  const stackRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const stack = stackRef.current;
+    if (!stack) return;
+
+    const updateStack = () => {
+      const rect = stack.getBoundingClientRect();
+      const travel = Math.max(1, rect.height - window.innerHeight);
+      const progress = Math.min(1, Math.max(0, -rect.top / travel));
+      stack.style.setProperty("--stack-progress", String(progress * 3));
+    };
+
+    updateStack();
+    window.addEventListener("scroll", updateStack, { passive: true });
+    window.addEventListener("resize", updateStack);
+
+    return () => {
+      window.removeEventListener("scroll", updateStack);
+      window.removeEventListener("resize", updateStack);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
       {/* NAV */}
@@ -223,7 +247,7 @@ function Index() {
       </section>
 
       {/* STACKING SCROLL TEST */}
-      <section className="stack-section">
+      <section ref={stackRef} className="stack-section">
         <div className="stack-pin">
           {[
             { image: serviceAdvisory, title: "AI Strategy Advisory", meta: "01 — Advisory" },
