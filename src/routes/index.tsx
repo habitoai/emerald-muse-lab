@@ -214,57 +214,45 @@ function Index() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
           {/* Reason 01 — Dark card */}
           <div
-            className="rounded-3xl p-8 flex flex-col justify-between min-h-[300px]"
+            className="rounded-3xl p-8 flex flex-col justify-between min-h-[420px]"
             style={{ backgroundColor: "var(--emerald-pine)", color: "#f5f0e0" }}
           >
-            <div className="flex items-start justify-between gap-4">
-              <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Strategy before tools</h3>
-              <span className="text-xs tracking-[0.2em] uppercase opacity-70">Reason 01</span>
-            </div>
-            <p className="text-sm leading-relaxed mt-10" style={{ color: "rgba(245,240,224,0.7)" }}>
+            <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Strategy before tools</h3>
+            <p className="text-sm leading-relaxed" style={{ color: "rgba(245,240,224,0.7)" }}>
               We do not start by recommending random AI apps. We identify your goals, bottlenecks, workflows, and opportunities first — then design the right AI approach around them.
             </p>
           </div>
 
           {/* Reason 02 — Lime card */}
           <div
-            className="rounded-3xl p-8 flex flex-col justify-between min-h-[300px]"
+            className="rounded-3xl p-8 flex flex-col justify-between min-h-[420px]"
             style={{ backgroundColor: "var(--lime-glow)", color: "var(--emerald-pine)" }}
           >
-            <div className="flex items-start justify-between gap-4">
-              <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Built around your work</h3>
-              <span className="text-xs tracking-[0.2em] uppercase opacity-70">Reason 02</span>
-            </div>
-            <p className="text-sm leading-relaxed mt-10" style={{ color: "rgba(8,71,52,0.75)" }}>
+            <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Built around your work</h3>
+            <p className="text-sm leading-relaxed" style={{ color: "rgba(8,71,52,0.75)" }}>
               Your AI system is not generic. It is shaped around your role, business model, content, clients, habits, and level of technical confidence.
             </p>
           </div>
 
           {/* Reason 03 — Light card */}
           <div
-            className="rounded-3xl p-8 flex flex-col justify-between min-h-[300px]"
+            className="rounded-3xl p-8 flex flex-col justify-between min-h-[420px]"
             style={{ backgroundColor: "var(--green-tea)", color: "var(--emerald-pine)" }}
           >
-            <div className="flex items-start justify-between gap-4">
-              <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Education plus execution</h3>
-              <span className="text-xs tracking-[0.2em] uppercase opacity-60">Reason 03</span>
-            </div>
-            <p className="text-sm leading-relaxed mt-10" style={{ color: "rgba(8,71,52,0.75)" }}>
+            <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Education plus execution</h3>
+            <p className="text-sm leading-relaxed" style={{ color: "rgba(8,71,52,0.75)" }}>
               You do not just get theory. You learn how to think with AI, then apply it through prompts, workflows, automations, playbooks, and practical systems.
             </p>
           </div>
 
           {/* Reason 04 — Wide with image */}
           <div
-            className="rounded-3xl p-8 flex flex-col md:flex-row gap-6 md:col-span-3 min-h-[300px]"
+            className="rounded-3xl p-8 flex flex-col md:flex-row gap-6 md:col-span-3 min-h-[420px]"
             style={{ backgroundColor: "var(--green-tea)", color: "var(--emerald-pine)" }}
           >
             <div className="flex-1 flex flex-col justify-between">
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="text-2xl font-semibold leading-snug max-w-[18ch]">Creator-led and field-tested</h3>
-                <span className="text-xs tracking-[0.2em] uppercase opacity-60">Reason 04</span>
-              </div>
-              <p className="text-sm leading-relaxed mt-10 max-w-md" style={{ color: "rgba(8,71,52,0.75)" }}>
+              <h3 className="text-2xl font-semibold leading-snug max-w-[18ch]">Creator-led and field-tested</h3>
+              <p className="text-sm leading-relaxed max-w-md" style={{ color: "rgba(8,71,52,0.75)" }}>
                 Eddys AI Lab is built from daily AI research, experimentation, content creation, and real-world application — not recycled corporate AI theory.
               </p>
             </div>
