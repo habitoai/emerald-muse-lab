@@ -209,3 +209,92 @@
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+
+/* Services */
+.service-card {
+  display: block;
+  perspective: 1200px;
+  height: 280px;
+  border-radius: 24px;
+  outline: none;
+}
+.service-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-style: preserve-3d;
+}
+.service-card:hover .service-card-inner,
+.service-card:focus-visible .service-card-inner {
+  transform: rotateY(180deg);
+}
+.service-card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 32px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--green-tea);
+}
+.service-card-front {
+  background-color: #fff;
+}
+.service-card-back {
+  background-color: var(--emerald-pine);
+  color: white;
+  transform: rotateY(180deg);
+  border-color: var(--emerald-pine);
+}
+.service-index {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--emerald-pine);
+  opacity: 0.5;
+}
+.service-title {
+  font-weight: 500;
+  color: var(--emerald-pine);
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  max-width: 80%;
+}
+.service-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background-color: var(--green-tea);
+  color: var(--emerald-pine);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+.service-card:hover .service-arrow { background-color: var(--lime-glow); }
+.service-body {
+  font-size: 17px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.85);
+  text-wrap: balance;
+}
+.service-learn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .service-card { height: 220px; }
+  .service-card-face { padding: 24px; }
+  .service-title { font-size: 22px; line-height: 26px; }
+  .service-body { font-size: 15px; line-height: 22px; }
+}
