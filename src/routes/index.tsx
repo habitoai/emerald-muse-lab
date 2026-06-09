@@ -65,7 +65,7 @@ function Index() {
           </h1>
           <button className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base self-start md:self-end shrink-0">
             Book Call
-            <i className="fa-solid fa-arrow-right text-sm" />
+            <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
           </button>
         </div>
       </section>
