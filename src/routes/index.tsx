@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -44,51 +43,6 @@ const brands = [
 ];
 
 function Index() {
-  const stackRef = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    const stack = stackRef.current;
-    if (!stack) return;
-
-    const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
-
-    const updateStack = () => {
-      const rect = stack.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const cards = stack.querySelectorAll<HTMLElement>(".stack-card");
-      const n = cards.length;
-      if (n === 0) return;
-
-      // segments: 1 expand + (n-1) pile + 1 rest = n+1 viewports of scroll
-      const distance = Math.max(1, rect.height - vh);
-      const scrolled = clamp(-rect.top, 0, distance);
-      const t = (scrolled / distance) * (n); // 0..n
-
-      // Card 0: expand from small (scale ~0.4) to full (scale 1) during t in [0..1]
-      const expand = clamp(t, 0, 1);
-      const startScale = 0.4;
-      const scale0 = startScale + (1 - startScale) * expand;
-      cards[0].style.transform = `translateY(0) scale(${scale0})`;
-      cards[0].style.borderRadius = `${24 + (1 - expand) * 12}px`;
-
-      // Cards 1..n-1: stacked below, slide up one-by-one in subsequent segments
-      for (let k = 1; k < n; k++) {
-        const local = clamp(t - k, 0, 1);
-        const y = (1 - local) * vh;
-        cards[k].style.transform = `translateY(${y}px) scale(1)`;
-      }
-    };
-
-    updateStack();
-    window.addEventListener("scroll", updateStack, { passive: true });
-    window.addEventListener("resize", updateStack);
-
-    return () => {
-      window.removeEventListener("scroll", updateStack);
-      window.removeEventListener("resize", updateStack);
-    };
-  }, []);
-
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
       {/* NAV */}
@@ -269,25 +223,6 @@ function Index() {
 
       </section>
 
-      {/* STACKING SCROLL TEST */}
-      <section ref={stackRef} className="stack-section">
-        <div className="stack-pin">
-          {[
-            { image: serviceAdvisory, title: "AI Strategy Advisory", meta: "01 — Advisory" },
-            { image: serviceTraining, title: "Executive AI Training", meta: "02 — Training" },
-            { image: serviceSystems, title: "AI Workflow Systems", meta: "03 — Systems" },
-            { image: serviceCreator, title: "Creator & Personal Brand AI", meta: "04 — Creator" },
-          ].map((c, i) => (
-            <div key={i} className="stack-card" style={{ ["--i" as string]: i }}>
-              <img src={c.image} alt={c.title} />
-              <div className="stack-card-overlay">
-                <span className="stack-card-meta">{c.meta}</span>
-                <h3 className="stack-card-title">{c.title}</h3>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* GALLERY */}
       <section id="works" className="pb-24">
