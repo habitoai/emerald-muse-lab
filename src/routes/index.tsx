@@ -6,6 +6,7 @@ import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
 import speakerAsset from "@/assets/speaker.png.asset.json";
+import logoAsset from "@/assets/eddys-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -41,10 +42,10 @@ function Index() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
       {/* NAV */}
-      <header className="max-w-7xl mx-auto px-6 lg:px-10 pt-8 flex items-center justify-between">
-        <a href="/" className="logo-text text-2xl font-semibold tracking-tight flex items-center gap-2">
-          <i className="fa-solid fa-asterisk text-lg" />
-          orchid
+      <header className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-8 flex items-center justify-between">
+        <a href="/" className="logo-text font-semibold tracking-tight flex items-center gap-3">
+          <img src={logoAsset.url} alt="Eddys AI Lab" className="h-9 w-auto" />
+          <span className="text-2xl">eddys ai lab</span>
         </a>
         <nav className="hidden md:flex items-center gap-10">
           <a className="nav-link text-base hover:opacity-70 transition" href="#works">Works</a>
@@ -55,7 +56,7 @@ function Index() {
       </header>
 
       {/* HERO */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-40 pb-12">
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-56 pb-12">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           <h1 className="hero-title max-w-4xl">
             Strategic AI integration
@@ -70,7 +71,7 @@ function Index() {
       </section>
 
       {/* HERO IMAGE */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-24">
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-8">
         <div className="rounded-3xl overflow-hidden">
           <img
             src={speakerAsset.url}
@@ -85,7 +86,7 @@ function Index() {
 
 
       {/* BRANDS */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-16 border-t border-accent">
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 pt-6 pb-12 border-t border-accent mt-6">
         <p className="section-description text-center mb-10">
           Over 190 design projects created for top brands including
         </p>
@@ -162,11 +163,11 @@ function Index() {
       {/* FOOTER */}
       <footer id="contact" className="border-t border-accent">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <a href="/" className="logo-text text-2xl font-semibold flex items-center gap-2">
-            <i className="fa-solid fa-asterisk text-lg" />
-            orchid
+          <a href="/" className="logo-text text-2xl font-semibold flex items-center gap-3">
+            <img src={logoAsset.url} alt="Eddys AI Lab" className="h-8 w-auto" />
+            eddys ai lab
           </a>
-          <p className="stat-description">© {new Date().getFullYear()} Orchid Studio. All rights reserved.</p>
+          <p className="stat-description">© {new Date().getFullYear()} Eddys AI Lab. All rights reserved.</p>
           <div className="flex items-center gap-5 accent-text-emerald">
             <a href="#" aria-label="Twitter" className="hover:opacity-70"><i className="fa-brands fa-x-twitter" /></a>
             <a href="#" aria-label="Instagram" className="hover:opacity-70"><i className="fa-brands fa-instagram" /></a>
