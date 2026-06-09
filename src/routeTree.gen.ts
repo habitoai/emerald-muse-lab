@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as JournalRouteImport } from './routes/journal'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 
+const JournalRoute = JournalRouteImport.update({
+  id: '/journal',
+  path: '/journal',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -32,35 +38,46 @@ const ServicesSlugRoute = ServicesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/journal': typeof JournalRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/journal': typeof JournalRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/journal': typeof JournalRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/services/$slug'
+  fullPaths: '/' | '/about' | '/journal' | '/services/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/services/$slug'
-  id: '__root__' | '/' | '/about' | '/services/$slug'
+  to: '/' | '/about' | '/journal' | '/services/$slug'
+  id: '__root__' | '/' | '/about' | '/journal' | '/services/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  JournalRoute: typeof JournalRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/journal': {
+      id: '/journal'
+      path: '/journal'
+      fullPath: '/journal'
+      preLoaderRoute: typeof JournalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -88,8 +105,19 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  JournalRoute: JournalRoute,
   ServicesSlugRoute: ServicesSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
