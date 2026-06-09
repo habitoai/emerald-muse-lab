@@ -163,11 +163,11 @@ function Index() {
       {/* FOOTER */}
       <footer id="contact" className="border-t border-accent">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <a href="/" className="logo-text text-2xl font-semibold flex items-center gap-2">
-            <i className="fa-solid fa-asterisk text-lg" />
-            orchid
+          <a href="/" className="logo-text text-2xl font-semibold flex items-center gap-3">
+            <img src={logoAsset.url} alt="Eddys AI Lab" className="h-8 w-auto" />
+            eddys ai lab
           </a>
-          <p className="stat-description">© {new Date().getFullYear()} Orchid Studio. All rights reserved.</p>
+          <p className="stat-description">© {new Date().getFullYear()} Eddys AI Lab. All rights reserved.</p>
           <div className="flex items-center gap-5 accent-text-emerald">
             <a href="#" aria-label="Twitter" className="hover:opacity-70"><i className="fa-brands fa-x-twitter" /></a>
             <a href="#" aria-label="Instagram" className="hover:opacity-70"><i className="fa-brands fa-instagram" /></a>
