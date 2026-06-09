@@ -100,8 +100,8 @@ function Index() {
         </div>
       </section>
 
-      {/* ABOUT + STATS */}
-      <section id="about" className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
+      {/* ABOUT */}
+      <section id="about" className="max-w-7xl mx-auto px-6 lg:px-10 pt-24 pb-16">
         <div className="flex flex-col items-center text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-8">
             <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
@@ -119,25 +119,10 @@ function Index() {
             strategy, education, systems, and execution that make their work sharper.
           </p>
         </div>
-
-        {/* STATS */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 mt-20">
-          {[
-            { n: "90+", d: "Projects that were shipped with care, reviewed end to end" },
-            { n: "100%", d: "Happy clients that quickly come back for new projects and ideas" },
-            { n: "30+", d: "Brands and startups that trusted us to shape their identity" },
-            { n: "120", d: "Design concepts explored before landing on the perfect fit" },
-          ].map((s) => (
-            <div key={s.n}>
-              <div className="stat-number">{s.n}</div>
-              <p className="stat-description mt-3 max-w-[220px]">{s.d}</p>
-            </div>
-          ))}
-        </div>
       </section>
 
       {/* COHORT BANNER */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-24">
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden">
           <div className="relative min-h-[460px]">
             <img
@@ -151,13 +136,6 @@ function Index() {
             style={{ backgroundColor: "var(--emerald-pine)" }}
           >
             <div>
-              <div
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
-                style={{ backgroundColor: "rgba(134, 232, 30, 0.15)" }}
-              >
-                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
-                <span className="text-sm" style={{ color: "var(--lime-glow)" }}>Next cohort</span>
-              </div>
               <h3
                 className="font-semibold tracking-tight"
                 style={{ color: "white", fontSize: "56px", lineHeight: "60px", letterSpacing: "-0.02em" }}
@@ -174,17 +152,30 @@ function Index() {
                 strategy, taste, and real execution. Limited seats.
               </p>
               <button
-                className="rounded-2xl px-6 py-5 flex items-center justify-between gap-6 shrink-0"
-                style={{ backgroundColor: "rgba(255,255,255,0.08)", color: "white", minWidth: "220px" }}
+                className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base shrink-0"
               >
-                <div className="flex flex-col items-start leading-tight">
-                  <span style={{ color: "var(--lime-glow)", fontSize: "12px" }}>Starts March 2026</span>
-                  <span className="font-semibold">Reserve a seat</span>
-                </div>
-                <i className="fa-solid fa-arrow-up-right-from-square" style={{ color: "var(--lime-glow)" }} />
+                Reserve a seat
+                <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* STATS */}
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
+          {[
+            { n: "90+", d: "Projects that were shipped with care, reviewed end to end" },
+            { n: "100%", d: "Happy clients that quickly come back for new projects and ideas" },
+            { n: "30+", d: "Brands and startups that trusted us to shape their identity" },
+            { n: "120", d: "Design concepts explored before landing on the perfect fit" },
+          ].map((s) => (
+            <div key={s.n}>
+              <div className="stat-number">{s.n}</div>
+              <p className="stat-description mt-3 max-w-[220px]">{s.d}</p>
+            </div>
+          ))}
         </div>
       </section>
 
