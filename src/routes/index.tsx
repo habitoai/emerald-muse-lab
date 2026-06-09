@@ -196,16 +196,16 @@ function Index() {
       {/* CAPABILITIES */}
       <section id="services" className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24 border-t border-accent">
         <div className="flex flex-col items-center text-center mb-16 gap-4">
-          <p className="capability-eyebrow">A look at how we help leaders put AI to work with clarity</p>
-          <h2 className="capability-headline">Our services</h2>
+          <p className="capability-eyebrow">Private engagements for leaders, founders, and high performers</p>
+          <h2 className="capability-headline">How we work with you</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {[
-            { slug: "ai-strategy-advisory", image: serviceAdvisory, title: "AI Strategy Advisory", body: "We help founders, executives, and creators land on a clear AI direction, roadmap, and execution plan." },
-            { slug: "executive-ai-training", image: serviceTraining, title: "Executive AI Training", body: "We train leaders and teams to use AI in real work, not slides. Practical, hands on, built around your day." },
-            { slug: "ai-workflow-systems", image: serviceSystems, title: "AI Workflow Systems", body: "We design and ship AI systems for your research, content, operations, client delivery, and decisions." },
-            { slug: "creator-personal-brand-ai", image: serviceCreator, title: "Creator & Personal Brand AI", body: "We help high performers use AI to scale content, thinking, offers, and digital products." },
+            { slug: "ai-strategy-advisory", image: serviceAdvisory, title: "AI Strategy Integration", body: "A private roadmap for leaders who want to see exactly where AI can create real leverage in their business, content, decisions, and operations." },
+            { slug: "executive-ai-training", image: serviceTraining, title: "Executive AI Coaching", body: "One-on-one guidance for business leaders and professionals who want to use AI with confidence, without wasting time on scattered tools." },
+            { slug: "ai-workflow-systems", image: serviceSystems, title: "AI Workflow Systems", body: "Custom systems built around your work, for research, content, automation, knowledge management, client delivery, and day-to-day decisions." },
+            { slug: "creator-personal-brand-ai", image: serviceCreator, title: "AI Content & Authority Systems", body: "For creators, founders, and experts who want to scale their ideas, content, and digital presence with AI, without losing their voice." },
           ].map((c) => (
             <a key={c.slug} href={`/services/${c.slug}`} className="capability-visual-card group">
               <div className="capability-visual-image">
