@@ -99,15 +99,15 @@ function AboutPage() {
           <div className="max-w-3xl space-y-6">
             <h2 className="capability-headline">Strategy first. Tools second. Ethics throughout.</h2>
             <p className="about-body">
-              A journalism background changes how AI gets deployed. Sourcing matters. Verification
-              matters. Bias is named, not waved away. Every workflow we ship comes with a clear
-              data map, a privacy posture, and a human review step where it counts.
+              Our journalism background changes how we deploy AI. Sourcing matters. Verification
+              matters. We name bias instead of waving it away. Every workflow we ship comes with
+              a clear data map, a privacy posture, and a human review step where it counts.
             </p>
             <p className="about-body">
-              A PR background changes how AI gets communicated. Internal narrative, executive
-              positioning, and stakeholder messaging are built into the rollout, not bolted on
-              after launch. The result is AI that leaders can actually stand behind, in
-              boardrooms, in press, and in front of their teams.
+              Our PR background changes how we communicate AI inside your business. We build the
+              internal narrative, executive positioning, and stakeholder messaging into the rollout,
+              not bolted on after launch. The result is AI you can stand behind, in your boardroom,
+              in the press, and in front of your team.
             </p>
           </div>
         </div>
