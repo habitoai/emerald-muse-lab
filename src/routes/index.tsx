@@ -188,6 +188,70 @@ function Index() {
         </div>
       </section>
 
+      {/* SERVICES */}
+      <section id="services" className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
+        <div className="flex flex-col items-center text-center mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-6">
+            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
+            <span className="tag-label">Services</span>
+          </div>
+          <h2 className="section-title max-w-2xl">How we work together</h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            {
+              slug: "ai-strategy-advisory",
+              title: "AI Strategy Advisory",
+              body: "For founders, executives, and creators who need a clear AI direction, roadmap, and execution plan.",
+            },
+            {
+              slug: "executive-ai-training",
+              title: "Executive AI Training",
+              body: "Private training for business leaders and professionals who want to understand how to use AI in real work, not just theory.",
+            },
+            {
+              slug: "ai-workflow-systems",
+              title: "AI Workflow Systems",
+              body: "Design and implementation of AI systems for research, content, operations, client delivery, and decision-making.",
+            },
+            {
+              slug: "creator-personal-brand-ai",
+              title: "Creator & Personal Brand AI Systems",
+              body: "For high-performing individuals who want to use AI to scale content, thinking, offers, and digital products.",
+            },
+          ].map((s, i) => (
+            <a
+              key={s.slug}
+              href={`/services/${s.slug}`}
+              className="service-card group"
+              aria-label={s.title}
+            >
+              <div className="service-card-inner">
+                <div className="service-card-face service-card-front">
+                  <span className="service-index">0{i + 1}</span>
+                  <div className="flex items-end justify-between gap-4 w-full">
+                    <h3 className="service-title">{s.title}</h3>
+                    <span className="service-arrow">
+                      <i className="fa-solid fa-arrow-up-right" />
+                    </span>
+                  </div>
+                </div>
+                <div className="service-card-face service-card-back">
+                  <p className="service-body">{s.body}</p>
+                  <span className="service-learn">
+                    Learn more
+                    <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+
+
       {/* GALLERY */}
       <section id="works" className="pb-24">
         <div className="gallery-container flex gap-6 px-6 lg:px-10 pb-4">
