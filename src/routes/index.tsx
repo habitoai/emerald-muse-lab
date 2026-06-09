@@ -20,6 +20,10 @@ import brandHive from "@/assets/brands/hive-pastries.png.asset.json";
 import brandGorgeous from "@/assets/brands/gorgeous-tech.png.asset.json";
 import brandMku from "@/assets/brands/mount-kenya.png.asset.json";
 import brandNdovesha from "@/assets/brands/ndovesha.png.asset.json";
+import reasonStrategy from "@/assets/reason-strategy.png";
+import reasonWorkflow from "@/assets/reason-workflow.png";
+import reasonEducation from "@/assets/reason-education.png";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
