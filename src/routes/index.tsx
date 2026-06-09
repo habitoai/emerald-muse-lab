@@ -93,7 +93,7 @@ function Index() {
       {/* BRANDS */}
       <section className="max-w-7xl mx-auto px-6 lg:px-10 pt-6 pb-12 border-t border-accent mt-6">
         <p className="section-description text-center mb-10">
-          Over 190 design projects created for top brands including
+          We have shaped AI strategy for teams at brands like
         </p>
         {/* Desktop */}
         <div className="hidden md:flex flex-wrap items-center justify-center gap-x-14 gap-y-8">
