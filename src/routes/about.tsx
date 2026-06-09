@@ -119,9 +119,9 @@ function AboutPage() {
           <p className="about-section-label">Principles</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
             {[
-              { n: "01", t: "Clarity over hype", d: "We ship plain language, not buzzwords. If a leader cannot explain the system to their board, it is not done." },
-              { n: "02", t: "Ethics as default", d: "Privacy, sourcing, and human review are designed in from day one, not patched in after a problem." },
-              { n: "03", t: "Narrative-led", d: "Every AI rollout has a story. We write it before we build, so adoption follows the work." },
+              { n: "01", t: "Clarity over hype", d: "We ship plain language, not buzzwords. If you cannot explain the system to your board, we are not done." },
+              { n: "02", t: "Ethics as default", d: "We design privacy, sourcing, and human review in from day one, not patched in after a problem." },
+              { n: "03", t: "Narrative-led", d: "Every AI rollout has a story. We write it with you before we build, so adoption follows the work." },
               { n: "04", t: "Outcomes, measured", d: "Time saved, decisions sharpened, output improved. We baseline at the start and track every engagement." },
             ].map((p) => (
               <div key={p.n}>
