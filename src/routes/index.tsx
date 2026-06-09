@@ -252,10 +252,7 @@ function Index() {
               <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
               <span className="tag-label">FAQ</span>
             </div>
-            <h2 className="capability-headline mb-6">Questions leaders ask before we start</h2>
-            <p className="section-description max-w-md" style={{ opacity: 0.8 }}>
-              Straight answers on training, privacy, ROI, and how engagements run.
-            </p>
+            <h2 className="capability-headline mb-6">Answers before you book a call</h2>
           </div>
 
           <div className="faq-list">
