@@ -202,10 +202,10 @@ function Index() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {[
-            { slug: "ai-strategy-advisory", image: serviceAdvisory, title: "AI Strategy Advisory", body: "For founders, executives, and creators who need a clear AI direction, roadmap, and execution plan." },
-            { slug: "executive-ai-training", image: serviceTraining, title: "Executive AI Training", body: "Private training for business leaders and professionals who want to understand how to use AI in real work, not just theory." },
-            { slug: "ai-workflow-systems", image: serviceSystems, title: "AI Workflow Systems", body: "Design and implementation of AI systems for research, content, operations, client delivery, and decision-making." },
-            { slug: "creator-personal-brand-ai", image: serviceCreator, title: "Creator & Personal Brand AI", body: "For high-performing individuals who want to use AI to scale content, thinking, offers, and digital products." },
+            { slug: "ai-strategy-advisory", image: serviceAdvisory, title: "AI Strategy Advisory", body: "We help founders, executives, and creators land on a clear AI direction, roadmap, and execution plan." },
+            { slug: "executive-ai-training", image: serviceTraining, title: "Executive AI Training", body: "We train leaders and teams to use AI in real work, not slides. Practical, hands on, built around your day." },
+            { slug: "ai-workflow-systems", image: serviceSystems, title: "AI Workflow Systems", body: "We design and ship AI systems for your research, content, operations, client delivery, and decisions." },
+            { slug: "creator-personal-brand-ai", image: serviceCreator, title: "Creator & Personal Brand AI", body: "We help high performers use AI to scale content, thinking, offers, and digital products." },
           ].map((c) => (
             <a key={c.slug} href={`/services/${c.slug}`} className="capability-visual-card group">
               <div className="capability-visual-image">
