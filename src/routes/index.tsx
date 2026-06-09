@@ -142,6 +142,26 @@ function Index() {
         </div>
       </section>
 
+      {/* GALLERY */}
+      <section id="works" className="pb-24">
+        <div className="gallery-container flex gap-6 px-6 lg:px-10 pb-4">
+          {gallery.map((g, i) => (
+            <div key={i} className="image-card shadow-sm">
+              <span className="plus-icon"><i className="fa-solid fa-plus" /></span>
+              <img
+                src={g.src}
+                alt={g.alt}
+                loading="lazy"
+                width={768}
+                height={960}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+
       {/* FOOTER */}
       <footer id="contact" className="border-t border-accent">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
