@@ -388,6 +388,7 @@ function Index() {
           </div>
         </div>
       </footer>
+      </section>
     </div>
   );
 }
