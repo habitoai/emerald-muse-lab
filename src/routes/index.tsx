@@ -223,7 +223,7 @@ function Index() {
           >
             <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Strategy before tools</h3>
             <div className="flex-1 flex items-center justify-center py-4">
-              <img src={reasonStrategy} alt="" loading="lazy" className="max-h-40 w-auto opacity-90" />
+              <img src={reasonStrategy} alt="" loading="lazy" className="max-h-56 w-auto" />
             </div>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(245,240,224,0.7)" }}>
               We do not start by recommending random AI apps. We identify your goals, bottlenecks, workflows, and opportunities first — then design the right AI approach around them.
@@ -237,7 +237,7 @@ function Index() {
           >
             <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Built around your work</h3>
             <div className="flex-1 flex items-center justify-center py-4">
-              <img src={reasonWorkflow} alt="" loading="lazy" className="max-h-40 w-auto" />
+              <img src={reasonWorkflow} alt="" loading="lazy" className="max-h-56 w-auto" />
             </div>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(8,71,52,0.75)" }}>
               Your AI system is not generic. It is shaped around your role, business model, content, clients, habits, and level of technical confidence.
