@@ -216,13 +216,6 @@ function Index() {
           ))}
         </div>
 
-        <div className="lg:pl-[260px] xl:pl-[320px] mt-20 pt-10 border-t border-accent">
-          <p className="capability-closing">
-            Eddys AI Lab plugs leaders into AI strategy, executive training,
-            <br className="hidden md:block" />
-            and workflow systems built for faster decisions and sharper execution.
-          </p>
-        </div>
       </section>
 
       {/* GALLERY */}
