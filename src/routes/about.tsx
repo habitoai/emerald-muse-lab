@@ -119,10 +119,10 @@ function AboutPage() {
           <p className="about-section-label">Principles</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
             {[
-              { n: "01", t: "Clarity over hype", d: "We ship plain language, not buzzwords. If you cannot explain the system to your board, we are not done." },
-              { n: "02", t: "Ethics as default", d: "We design privacy, sourcing, and human review in from day one, not patched in after a problem." },
-              { n: "03", t: "Narrative-led", d: "Every AI rollout has a story. We write it with you before we build, so adoption follows the work." },
-              { n: "04", t: "Outcomes, measured", d: "Time saved, decisions sharpened, output improved. We baseline at the start and track every engagement." },
+              { n: "Reason 01", t: "Strategy before tools", d: "We do not start by recommending random AI apps. We identify your goals, bottlenecks, workflows, and opportunities first — then design the right AI approach around them." },
+              { n: "Reason 02", t: "Built around your work", d: "Your AI system is not generic. It is shaped around your role, business model, content, clients, habits, and level of technical confidence." },
+              { n: "Reason 03", t: "Education plus execution", d: "You do not just get theory. You learn how to think with AI, then apply it through prompts, workflows, automations, playbooks, and practical systems." },
+              { n: "Reason 04", t: "Creator-led and field-tested", d: "Eddys AI Lab is built from daily AI research, experimentation, content creation, and real-world application — not recycled corporate AI theory." },
             ].map((p) => (
               <div key={p.n}>
                 <div className="stat-number" style={{ fontSize: 36, lineHeight: "42px" }}>{p.n}</div>
