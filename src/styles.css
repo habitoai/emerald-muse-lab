@@ -362,7 +362,6 @@
 .stack-section {
   position: relative;
   min-height: 420vh;
-  --stack-progress: 0;
   background-color: var(--background);
 }
 .stack-pin {
@@ -383,7 +382,7 @@
   overflow: hidden;
   background-color: var(--green-tea);
   box-shadow: 0 30px 80px -40px rgba(8, 71, 52, 0.45);
-  transform: translateY(calc((var(--i) - var(--stack-progress)) * 108vh));
+  transform: translateY(calc(var(--i) * 100vh));
   transform-origin: center center;
   will-change: transform, opacity;
   z-index: calc(var(--i) + 1);

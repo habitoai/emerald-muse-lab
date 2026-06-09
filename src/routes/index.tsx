@@ -54,7 +54,12 @@ function Index() {
       const rect = stack.getBoundingClientRect();
       const travel = Math.max(1, rect.height - window.innerHeight);
       const progress = Math.min(1, Math.max(0, -rect.top / travel));
-      stack.style.setProperty("--stack-progress", String(progress * 3));
+      const cards = stack.querySelectorAll<HTMLElement>(".stack-card");
+
+      cards.forEach((card, index) => {
+        const offset = Math.max(0, index - progress * (cards.length - 1));
+        card.style.transform = `translateY(${offset * window.innerHeight}px)`;
+      });
     };
 
     updateStack();
