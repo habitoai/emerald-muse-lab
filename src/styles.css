@@ -361,12 +361,10 @@
 /* Stacking scroll section */
 .stack-section {
   position: relative;
+  min-height: 420vh;
   background-color: var(--background);
 }
-.stack-item {
-  height: 140vh;
-}
-.stack-sticky {
+.stack-pin {
   position: sticky;
   top: 0;
   height: 100vh;
@@ -374,19 +372,20 @@
   align-items: center;
   justify-content: center;
   padding: 0 24px;
+  isolation: isolate;
 }
 .stack-card {
-  position: relative;
-  width: 100%;
-  max-width: 1520px;
-  aspect-ratio: 16 / 10;
+  position: absolute;
+  width: min(50vw, 640px);
+  aspect-ratio: 3 / 4;
   border-radius: 24px;
   overflow: hidden;
   background-color: var(--green-tea);
   box-shadow: 0 30px 80px -40px rgba(8, 71, 52, 0.45);
-  transform: scale(0.32);
+  transform: translateY(calc(var(--i) * 100vh));
   transform-origin: center center;
-  will-change: transform;
+  will-change: transform, opacity;
+  z-index: calc(var(--i) + 1);
 }
 .stack-card img {
   width: 100%;
@@ -428,27 +427,9 @@
   color: white;
 }
 
-/* Scroll-driven expansion (Chrome 115+, modern Safari/FF) */
-@supports (animation-timeline: view()) {
-  .stack-card {
-    animation: stack-card-grow linear both;
-    animation-timeline: view();
-    animation-range: cover 0% cover 45%;
-  }
-  @keyframes stack-card-grow {
-    from { transform: scale(0.32); }
-    to { transform: scale(1); }
-  }
-}
-
-/* Fallback: IntersectionObserver-less — just rely on sticky scaling via scroll progress on supported browsers; non-supporting browsers show card at full size */
-@supports not (animation-timeline: view()) {
-  .stack-card { transform: scale(1); }
-}
-
 @media (max-width: 768px) {
-  .stack-item { height: 120vh; }
-  .stack-sticky { padding: 0 16px; }
-  .stack-card { aspect-ratio: 4 / 5; border-radius: 18px; }
+  .stack-section { min-height: 390vh; }
+  .stack-pin { padding: 0 16px; }
+  .stack-card { width: min(82vw, 420px); aspect-ratio: 4 / 5; border-radius: 18px; }
   .stack-card-title { font-size: 22px; }
 }

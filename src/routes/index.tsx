@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -43,6 +44,34 @@ const brands = [
 ];
 
 function Index() {
+  const stackRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const stack = stackRef.current;
+    if (!stack) return;
+
+    const updateStack = () => {
+      const rect = stack.getBoundingClientRect();
+      const travel = Math.max(1, rect.height - window.innerHeight);
+      const progress = Math.min(1, Math.max(0, -rect.top / travel));
+      const cards = stack.querySelectorAll<HTMLElement>(".stack-card");
+
+      cards.forEach((card, index) => {
+        const offset = Math.max(0, index - progress * (cards.length - 1));
+        card.style.transform = `translateY(${offset * window.innerHeight}px)`;
+      });
+    };
+
+    updateStack();
+    window.addEventListener("scroll", updateStack, { passive: true });
+    window.addEventListener("resize", updateStack);
+
+    return () => {
+      window.removeEventListener("scroll", updateStack);
+      window.removeEventListener("resize", updateStack);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
       {/* NAV */}
@@ -223,25 +252,23 @@ function Index() {
       </section>
 
       {/* STACKING SCROLL TEST */}
-      <section className="stack-section">
-        {[
-          { image: serviceAdvisory, title: "AI Strategy Advisory", meta: "01 — Advisory" },
-          { image: serviceTraining, title: "Executive AI Training", meta: "02 — Training" },
-          { image: serviceSystems, title: "AI Workflow Systems", meta: "03 — Systems" },
-          { image: serviceCreator, title: "Creator & Personal Brand AI", meta: "04 — Creator" },
-        ].map((c, i) => (
-          <div key={i} className="stack-item">
-            <div className="stack-sticky">
-              <div className="stack-card" style={{ ["--i" as string]: i }}>
-                <img src={c.image} alt={c.title} />
-                <div className="stack-card-overlay">
-                  <span className="stack-card-meta">{c.meta}</span>
-                  <h3 className="stack-card-title">{c.title}</h3>
-                </div>
+      <section ref={stackRef} className="stack-section">
+        <div className="stack-pin">
+          {[
+            { image: serviceAdvisory, title: "AI Strategy Advisory", meta: "01 — Advisory" },
+            { image: serviceTraining, title: "Executive AI Training", meta: "02 — Training" },
+            { image: serviceSystems, title: "AI Workflow Systems", meta: "03 — Systems" },
+            { image: serviceCreator, title: "Creator & Personal Brand AI", meta: "04 — Creator" },
+          ].map((c, i) => (
+            <div key={i} className="stack-card" style={{ ["--i" as string]: i }}>
+              <img src={c.image} alt={c.title} />
+              <div className="stack-card-overlay">
+                <span className="stack-card-meta">{c.meta}</span>
+                <h3 className="stack-card-title">{c.title}</h3>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
 
       {/* GALLERY */}
