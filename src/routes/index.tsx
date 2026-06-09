@@ -20,6 +20,10 @@ import brandHive from "@/assets/brands/hive-pastries.png.asset.json";
 import brandGorgeous from "@/assets/brands/gorgeous-tech.png.asset.json";
 import brandMku from "@/assets/brands/mount-kenya.png.asset.json";
 import brandNdovesha from "@/assets/brands/ndovesha.png.asset.json";
+import reasonStrategy from "@/assets/reason-strategy.png";
+import reasonWorkflow from "@/assets/reason-workflow.png";
+import reasonEducation from "@/assets/reason-education.png";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -218,6 +222,9 @@ function Index() {
             style={{ backgroundColor: "var(--emerald-pine)", color: "#f5f0e0" }}
           >
             <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Strategy before tools</h3>
+            <div className="flex-1 flex items-center justify-center py-4">
+              <img src={reasonStrategy} alt="" loading="lazy" className="max-h-40 w-auto opacity-90" />
+            </div>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(245,240,224,0.7)" }}>
               We do not start by recommending random AI apps. We identify your goals, bottlenecks, workflows, and opportunities first — then design the right AI approach around them.
             </p>
@@ -229,6 +236,9 @@ function Index() {
             style={{ backgroundColor: "var(--lime-glow)", color: "var(--emerald-pine)" }}
           >
             <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Built around your work</h3>
+            <div className="flex-1 flex items-center justify-center py-4">
+              <img src={reasonWorkflow} alt="" loading="lazy" className="max-h-40 w-auto" />
+            </div>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(8,71,52,0.75)" }}>
               Your AI system is not generic. It is shaped around your role, business model, content, clients, habits, and level of technical confidence.
             </p>
@@ -240,10 +250,14 @@ function Index() {
             style={{ backgroundColor: "var(--green-tea)", color: "var(--emerald-pine)" }}
           >
             <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Education plus execution</h3>
+            <div className="flex-1 flex items-center justify-center py-4">
+              <img src={reasonEducation} alt="" loading="lazy" className="max-h-80 w-auto" />
+            </div>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(8,71,52,0.75)" }}>
               You do not just get theory. You learn how to think with AI, then apply it through prompts, workflows, automations, playbooks, and practical systems.
             </p>
           </div>
+
 
           {/* Reason 04 — Wide with image (spans 2 cols, row 2) */}
           <div
