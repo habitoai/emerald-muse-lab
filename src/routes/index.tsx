@@ -321,19 +321,69 @@ function Index() {
       </section>
 
       {/* FOOTER */}
+      <footer
+        id="contact"
+        className="big-footer"
+        style={{ ["--footer-bg" as never]: `url(${footerBg})` }}
+      >
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-24 pb-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-16 lg:gap-24 mb-20">
+            <div>
+              <p className="big-footer-eyebrow mb-8">Let&apos;s talk</p>
+              <h2 className="big-footer-title">Put AI<br />to work.</h2>
+              <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
+                <a
+                  href="mailto:hello@eddysailab.com"
+                  className="inline-flex items-center gap-3 px-7 py-4 rounded-full text-base font-medium"
+                  style={{ backgroundColor: "var(--lime-glow)", color: "var(--emerald-pine)" }}
+                >
+                  Book your call
+                  <i className="fa-solid fa-arrow-right text-sm" />
+                </a>
+                <a href="mailto:hello@eddysailab.com" className="big-footer-link underline underline-offset-4">
+                  hello@eddysailab.com
+                </a>
+              </div>
+            </div>
 
-      <footer id="contact" className="border-t border-accent">
+            <div className="grid grid-cols-2 gap-10">
+              <div>
+                <p className="big-footer-col-title">Explore</p>
+                <ul className="space-y-1">
+                  <li><a href="/" className="big-footer-link">Home</a></li>
+                  <li><a href="/about" className="big-footer-link">About</a></li>
+                  <li><a href="#services" className="big-footer-link">Services</a></li>
+                  <li><a href="#faq" className="big-footer-link">FAQ</a></li>
+                </ul>
+              </div>
+              <div>
+                <p className="big-footer-col-title">Follow</p>
+                <ul className="space-y-1">
+                  <li><a href="#" className="big-footer-link">Twitter</a></li>
+                  <li><a href="#" className="big-footer-link">Instagram</a></li>
+                  <li><a href="#" className="big-footer-link">LinkedIn</a></li>
+                  <li><a href="#" className="big-footer-link">YouTube</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <a href="/" className="logo-text text-2xl font-semibold flex items-center gap-3">
-            <img src={logoAsset.url} alt="Eddys AI Lab" className="h-8 w-auto" />
-            eddys ai lab
-          </a>
-          <p className="stat-description">© {new Date().getFullYear()} Eddys AI Lab. All rights reserved.</p>
-          <div className="flex items-center gap-5 accent-text-emerald">
-            <a href="#" aria-label="Twitter" className="hover:opacity-70"><i className="fa-brands fa-x-twitter" /></a>
-            <a href="#" aria-label="Instagram" className="hover:opacity-70"><i className="fa-brands fa-instagram" /></a>
-            <a href="#" aria-label="LinkedIn" className="hover:opacity-70"><i className="fa-brands fa-linkedin-in" /></a>
+          <div
+            className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+            style={{ borderTop: "1px solid rgba(245,240,224,0.18)" }}
+          >
+            <a href="/" className="flex items-center gap-3 text-lg font-semibold" style={{ color: "#f5f0e0" }}>
+              <img src={logoAsset.url} alt="Eddys AI Lab" className="h-8 w-auto" />
+              eddys ai lab
+            </a>
+            <p className="big-footer-link" style={{ fontSize: 14, opacity: 0.65 }}>
+              © {new Date().getFullYear()} Eddys AI Lab. All rights reserved.
+            </p>
+            <div className="flex items-center gap-5 text-lg">
+              <a href="#" aria-label="Twitter"><i className="fa-brands fa-x-twitter" /></a>
+              <a href="#" aria-label="Instagram"><i className="fa-brands fa-instagram" /></a>
+              <a href="#" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in" /></a>
+            </div>
           </div>
         </div>
       </footer>
