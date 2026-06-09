@@ -43,9 +43,9 @@ function Index() {
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
       {/* NAV */}
       <header className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-8 flex items-center justify-between">
-        <a href="/" className="logo-text font-semibold tracking-tight flex items-center gap-3">
-          <img src={logoAsset.url} alt="Eddys AI Lab" className="h-9 w-auto" />
-          <span className="text-2xl">eddys ai lab</span>
+        <a href="/" className="logo-text font-semibold tracking-tight flex items-center gap-3 leading-none">
+          <img src={logoAsset.url} alt="Eddys AI Lab" className="h-10 w-auto block" />
+          <span className="text-2xl leading-none">eddys ai lab</span>
         </a>
         <nav className="hidden md:flex items-center gap-10">
           <a className="nav-link text-base hover:opacity-70 transition" href="#works">Works</a>
