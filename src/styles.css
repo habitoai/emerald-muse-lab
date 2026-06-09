@@ -306,7 +306,7 @@
   letter-spacing: 0.01em;
 }
 .capability-headline {
-  font-family: "Instrument Serif", "Times New Roman", Georgia, serif;
+  font-family: "Inter", "Inter Display", system-ui, sans-serif;
   font-weight: 400;
   color: var(--emerald-pine);
   font-size: 52px;
@@ -345,7 +345,7 @@
   color: color-mix(in oklab, var(--emerald-pine) 70%, transparent);
 }
 .capability-closing {
-  font-family: "Instrument Serif", "Times New Roman", Georgia, serif;
+  font-family: "Inter", "Inter Display", system-ui, sans-serif;
   font-weight: 400;
   color: var(--emerald-pine);
   font-size: 32px;
@@ -421,7 +421,7 @@
   font-weight: 500;
 }
 .stack-card-title {
-  font-family: "Instrument Serif", "Times New Roman", Georgia, serif;
+  font-family: "Inter", "Inter Display", system-ui, sans-serif;
   font-size: 28px;
   line-height: 1.1;
   font-weight: 400;
@@ -485,7 +485,7 @@
 
 /* About page */
 .about-hero-title {
-  font-family: "Instrument Serif", "Times New Roman", Georgia, serif;
+  font-family: "Inter", "Inter Display", system-ui, sans-serif;
   font-weight: 400;
   color: var(--emerald-pine);
   font-size: 88px;
