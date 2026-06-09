@@ -434,3 +434,85 @@
   .stack-card { width: 92vw; aspect-ratio: 4 / 5; border-radius: 18px; }
   .stack-card-title { font-size: 22px; }
 }
+
+/* FAQ */
+.faq-list { display: flex; flex-direction: column; }
+.faq-item {
+  border-top: 1px solid var(--green-tea);
+  padding: 0;
+}
+.faq-item:last-child { border-bottom: 1px solid var(--green-tea); }
+.faq-item > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 24px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  color: var(--emerald-pine);
+}
+.faq-item > summary::-webkit-details-marker { display: none; }
+.faq-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background-color: var(--green-tea);
+  color: var(--emerald-pine);
+  font-size: 12px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.faq-item[open] .faq-icon { transform: rotate(45deg); background-color: var(--lime-glow); }
+.faq-answer {
+  padding: 0 56px 28px 4px;
+  color: var(--emerald-pine);
+  opacity: 0.78;
+  font-size: 16px;
+  line-height: 26px;
+  max-width: 720px;
+}
+@media (max-width: 768px) {
+  .faq-item > summary { font-size: 17px; line-height: 24px; padding: 20px 0; }
+  .faq-answer { padding: 0 0 24px 0; font-size: 15px; line-height: 24px; }
+}
+
+/* About page */
+.about-hero-title {
+  font-family: "Instrument Serif", "Times New Roman", Georgia, serif;
+  font-weight: 400;
+  color: var(--emerald-pine);
+  font-size: 88px;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+}
+.about-lead {
+  color: var(--emerald-pine);
+  font-size: 22px;
+  line-height: 32px;
+  opacity: 0.85;
+}
+.about-body {
+  color: var(--emerald-pine);
+  font-size: 17px;
+  line-height: 28px;
+  opacity: 0.82;
+}
+.about-section-label {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--emerald-pine);
+  opacity: 0.6;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .about-hero-title { font-size: 48px; }
+  .about-lead { font-size: 18px; line-height: 28px; }
+}
