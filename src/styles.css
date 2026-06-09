@@ -361,7 +361,7 @@
 /* Stacking scroll section */
 .stack-section {
   position: relative;
-  min-height: 420vh;
+  min-height: 500vh;
   background-color: var(--background);
 }
 .stack-pin {
@@ -376,8 +376,8 @@
 }
 .stack-card {
   position: absolute;
-  width: min(50vw, 640px);
-  aspect-ratio: 3 / 4;
+  width: min(92vw, 1520px);
+  aspect-ratio: 16 / 10;
   border-radius: 24px;
   overflow: hidden;
   background-color: var(--green-tea);
@@ -386,6 +386,7 @@
   transform-origin: center center;
   will-change: transform, opacity;
   z-index: calc(var(--i) + 1);
+  transition: box-shadow 0.3s ease;
 }
 .stack-card img {
   width: 100%;
@@ -404,7 +405,7 @@
   align-items: center;
   gap: 8px;
   text-align: center;
-  background: linear-gradient(to top, rgba(8, 71, 52, 0.78), rgba(8, 71, 52, 0));
+  background: linear-gradient(to top, rgba(8, 71, 52, 0.85), rgba(8, 71, 52, 0));
   opacity: 0;
   transition: opacity 0.4s ease;
   color: white;
@@ -428,8 +429,8 @@
 }
 
 @media (max-width: 768px) {
-  .stack-section { min-height: 390vh; }
+  .stack-section { min-height: 500vh; }
   .stack-pin { padding: 0 16px; }
-  .stack-card { width: min(82vw, 420px); aspect-ratio: 4 / 5; border-radius: 18px; }
+  .stack-card { width: 92vw; aspect-ratio: 4 / 5; border-radius: 18px; }
   .stack-card-title { font-size: 22px; }
 }
