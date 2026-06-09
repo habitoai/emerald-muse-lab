@@ -11,6 +11,14 @@ import serviceSystems from "@/assets/service-systems.jpg";
 import serviceCreator from "@/assets/service-creator.jpg";
 import speakerAsset from "@/assets/speaker.png.asset.json";
 import logoAsset from "@/assets/eddys-logo.png.asset.json";
+import brandOsho from "@/assets/brands/osho.png.asset.json";
+import brandBatanat from "@/assets/brands/batanat.png.asset.json";
+import brandDazu from "@/assets/brands/dazu.png.asset.json";
+import brandExcellence from "@/assets/brands/excellence-project.png.asset.json";
+import brandHive from "@/assets/brands/hive-pastries.png.asset.json";
+import brandGorgeous from "@/assets/brands/gorgeous-tech.png.asset.json";
+import brandMku from "@/assets/brands/mount-kenya.png.asset.json";
+import brandNdovesha from "@/assets/brands/ndovesha.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
