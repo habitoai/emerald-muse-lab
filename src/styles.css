@@ -168,3 +168,44 @@
   .stat-number { font-size: 48px; line-height: 54px; }
   .image-card { min-width: 280px; height: 360px; }
 }
+
+/* Cohort banner */
+.cohort-banner-image { min-height: 460px; }
+.cohort-banner-panel { padding: 2.5rem; min-height: 460px; }
+@media (min-width: 1024px) { .cohort-banner-panel { padding: 3.5rem; } }
+.cohort-banner-title {
+  font-weight: 600;
+  color: white;
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+}
+.cohort-banner-body { font-size: 16px; line-height: 24px; }
+
+@media (max-width: 768px) {
+  .cohort-banner-image { min-height: 200px; }
+  .cohort-banner-panel { padding: 1.75rem; min-height: 0; }
+  .cohort-banner-title { font-size: 32px; line-height: 36px; }
+  .cohort-banner-body { font-size: 14px; line-height: 22px; }
+}
+
+/* Brand marquee (mobile) */
+.brand-marquee {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+.brand-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: brand-marquee 18s linear infinite;
+}
+.brand-marquee-item {
+  flex: 0 0 50vw;
+  justify-content: center;
+}
+@keyframes brand-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
