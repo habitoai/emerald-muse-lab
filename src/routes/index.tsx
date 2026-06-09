@@ -90,13 +90,25 @@ function Index() {
         <p className="section-description text-center mb-10">
           Over 190 design projects created for top brands including
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-14 gap-y-8">
+        {/* Desktop */}
+        <div className="hidden md:flex flex-wrap items-center justify-center gap-x-14 gap-y-8">
           {brands.map((b) => (
             <div key={b.name} className="brand-logo">
               <i className={b.icon} />
               <span>{b.name}</span>
             </div>
           ))}
+        </div>
+        {/* Mobile marquee */}
+        <div className="md:hidden brand-marquee">
+          <div className="brand-marquee-track">
+            {[...brands, ...brands].map((b, i) => (
+              <div key={i} className="brand-logo brand-marquee-item">
+                <i className={b.icon} />
+                <span>{b.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
