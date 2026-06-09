@@ -364,7 +364,7 @@ function Index() {
               Field notes on AI strategy, adoption, and the workflows reshaping how teams ship.
             </p>
           </div>
-          <a href="#journal" className="inline-flex items-center gap-2 nav-link text-base opacity-80 hover:opacity-100">
+          <a href="/journal" className="inline-flex items-center gap-2 nav-link text-base opacity-80 hover:opacity-100">
             See all articles
             <span aria-hidden>↗</span>
           </a>
