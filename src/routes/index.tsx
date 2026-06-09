@@ -108,10 +108,10 @@ function Index() {
             <span className="tag-label">What I do</span>
           </div>
 
-          <h2 className="section-title max-w-4xl">
-            I help serious people use AI
+          <h2 className="section-title max-w-3xl">
+            Get more from AI,
             <br />
-            with clarity, speed, and taste.
+            with less friction.
           </h2>
 
           <p className="section-description mt-8 max-w-2xl">
