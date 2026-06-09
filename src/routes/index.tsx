@@ -50,16 +50,33 @@ function Index() {
     const stack = stackRef.current;
     if (!stack) return;
 
+    const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
+
     const updateStack = () => {
       const rect = stack.getBoundingClientRect();
-      const travel = Math.max(1, rect.height - window.innerHeight);
-      const progress = Math.min(1, Math.max(0, -rect.top / travel));
+      const vh = window.innerHeight;
       const cards = stack.querySelectorAll<HTMLElement>(".stack-card");
+      const n = cards.length;
+      if (n === 0) return;
 
-      cards.forEach((card, index) => {
-        const offset = Math.max(0, index - progress * (cards.length - 1));
-        card.style.transform = `translateY(${offset * window.innerHeight}px)`;
-      });
+      // segments: 1 expand + (n-1) pile + 1 rest = n+1 viewports of scroll
+      const distance = Math.max(1, rect.height - vh);
+      const scrolled = clamp(-rect.top, 0, distance);
+      const t = (scrolled / distance) * (n); // 0..n
+
+      // Card 0: expand from small (scale ~0.4) to full (scale 1) during t in [0..1]
+      const expand = clamp(t, 0, 1);
+      const startScale = 0.4;
+      const scale0 = startScale + (1 - startScale) * expand;
+      cards[0].style.transform = `translateY(0) scale(${scale0})`;
+      cards[0].style.borderRadius = `${24 + (1 - expand) * 12}px`;
+
+      // Cards 1..n-1: stacked below, slide up one-by-one in subsequent segments
+      for (let k = 1; k < n; k++) {
+        const local = clamp(t - k, 0, 1);
+        const y = (1 - local) * vh;
+        cards[k].style.transform = `translateY(${y}px) scale(1)`;
+      }
     };
 
     updateStack();
