@@ -5,6 +5,7 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import speakerAsset from "@/assets/speaker.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -72,24 +73,19 @@ function Index() {
         </div>
       </section>
 
-      {/* GALLERY */}
-      <section id="works" className="pb-24">
-        <div className="gallery-container flex gap-6 px-6 lg:px-10 pb-4">
-          {gallery.map((g, i) => (
-            <div key={i} className="image-card shadow-sm">
-              <span className="plus-icon"><i className="fa-solid fa-plus" /></span>
-              <img
-                src={g.src}
-                alt={g.alt}
-                loading="lazy"
-                width={768}
-                height={960}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
+      {/* HERO IMAGE */}
+      <section className="max-w-[1400px] mx-auto px-6 lg:px-10 pb-24">
+        <div className="rounded-3xl overflow-hidden">
+          <img
+            src={speakerAsset.url}
+            alt="AI consultancy keynote speaker addressing a business audience"
+            width={1500}
+            height={1000}
+            className="w-full h-auto object-cover"
+          />
         </div>
       </section>
+
 
       {/* BRANDS */}
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-16 border-t border-accent">
