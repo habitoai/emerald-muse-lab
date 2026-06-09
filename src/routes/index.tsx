@@ -189,61 +189,27 @@ function Index() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
-        <div className="flex flex-col items-center text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-6">
-            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
-            <span className="tag-label">Services</span>
-          </div>
-          <h2 className="section-title max-w-2xl">How we work together</h2>
-        </div>
+      <section id="services" className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24">
+        <p className="section-description text-center mb-14">
+          A showcase of how we help leaders
+          <br />
+          put AI to work with clarity
+        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {[
-            {
-              slug: "ai-strategy-advisory",
-              title: "AI Strategy Advisory",
-              body: "For founders, executives, and creators who need a clear AI direction, roadmap, and execution plan.",
-            },
-            {
-              slug: "executive-ai-training",
-              title: "Executive AI Training",
-              body: "Private training for business leaders and professionals who want to understand how to use AI in real work, not just theory.",
-            },
-            {
-              slug: "ai-workflow-systems",
-              title: "AI Workflow Systems",
-              body: "Design and implementation of AI systems for research, content, operations, client delivery, and decision-making.",
-            },
-            {
-              slug: "creator-personal-brand-ai",
-              title: "Creator & Personal Brand AI Systems",
-              body: "For high-performing individuals who want to use AI to scale content, thinking, offers, and digital products.",
-            },
-          ].map((s, i) => (
-            <a
-              key={s.slug}
-              href={`/services/${s.slug}`}
-              className="service-card group"
-              aria-label={s.title}
-            >
-              <div className="service-card-inner">
-                <div className="service-card-face service-card-front">
-                  <span className="service-index">0{i + 1}</span>
-                  <div className="flex items-end justify-between gap-4 w-full">
-                    <h3 className="service-title">{s.title}</h3>
-                    <span className="service-arrow">
-                      <i className="fa-solid fa-arrow-up-right" />
-                    </span>
-                  </div>
-                </div>
-                <div className="service-card-face service-card-back">
-                  <p className="service-body">{s.body}</p>
-                  <span className="service-learn">
-                    Learn more
-                    <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
-                  </span>
-                </div>
+            { slug: "ai-strategy-advisory", title: "AI Strategy Advisory", meta: "Advisory", image: gallery1 },
+            { slug: "executive-ai-training", title: "Executive AI Training", meta: "Training", image: gallery2 },
+            { slug: "ai-workflow-systems", title: "AI Workflow Systems", meta: "Systems", image: gallery4 },
+            { slug: "creator-personal-brand-ai", title: "Creator & Personal Brand AI", meta: "Creator", image: gallery6 },
+          ].map((s) => (
+            <a key={s.slug} href={`/services/${s.slug}`} className="service-tile group">
+              <div className="service-tile-image">
+                <img src={s.image} alt={s.title} loading="lazy" className="w-full h-full object-cover" />
+              </div>
+              <div className="service-tile-caption">
+                <span className="service-tile-title">{s.title}</span>
+                <span className="service-tile-meta">{s.meta}</span>
               </div>
             </a>
           ))}
