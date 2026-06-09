@@ -122,18 +122,18 @@ function Index() {
         <div className="flex flex-col items-center text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-8">
             <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
-            <span className="tag-label">What I do</span>
+            <span className="tag-label">What we do</span>
           </div>
 
           <h2 className="section-title max-w-3xl">
-            Get more from AI,
+            We help you get more from AI,
             <br />
             with less friction.
           </h2>
 
           <p className="section-description mt-8 max-w-md text-balance">
-            Eddys AI Lab exists for leaders who do not want more AI noise. They want
-            strategy, education, systems, and execution that make their work sharper.
+            We work with leaders who do not want more AI noise. You want strategy,
+            training, systems, and execution that make your work sharper. That is what we build.
           </p>
         </div>
       </section>
