@@ -240,8 +240,8 @@ function Index() {
 
       {/* CAPABILITIES */}
       <section id="services" className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24 border-t border-accent">
-        <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-10 lg:gap-20 mb-16">
-          <p className="capability-eyebrow">A look at how we help leaders<br />put AI to work with clarity</p>
+        <div className="flex flex-col items-center text-center mb-16 gap-4">
+          <p className="capability-eyebrow">A look at how we help leaders put AI to work with clarity</p>
           <h2 className="capability-headline">Our services</h2>
         </div>
 
