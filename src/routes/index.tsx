@@ -259,31 +259,31 @@ function Index() {
             {[
               {
                 q: "Do you offer custom training for corporate teams?",
-                a: "Yes. Every executive training engagement is shaped around the team's industry, current AI maturity, and the workflows they actually run. We build private cohorts for leadership teams, marketing teams, operations, and specialist groups, with live sessions, recorded modules, and follow-up office hours.",
+                a: "Yes. We shape every training around your team, your industry, and the work you actually do. We run private cohorts for leadership, marketing, operations, and specialist teams, with live sessions, recorded modules, and follow-up office hours so it sticks.",
               },
               {
                 q: "How do you handle data privacy and security in your AI workflows?",
-                a: "All systems are designed with a privacy-first posture. We default to enterprise-tier models with no-training agreements, isolate client data per workspace, use redaction patterns for sensitive inputs, and document a clear data map for every workflow. NDAs and DPAs are signed before any client material enters a system.",
+                a: "We treat your data carefully. We use enterprise-tier models that do not train on your inputs, keep each client in their own workspace, redact sensitive information, and write down exactly where data flows. We sign NDAs and data agreements before any of your material touches a system.",
               },
               {
                 q: "What is the expected ROI for my team after the AI Clarity cohort?",
-                a: "Past participants typically reclaim 6 to 12 hours per person per week within 60 days through workflow automation, faster research, and better decision drafts. We measure ROI through three lenses: time saved, decision speed, and quality of output, and you leave the cohort with a documented baseline and target for each.",
+                a: "Most of our past participants save 6 to 12 hours per person per week within 60 days. We measure it three ways: time saved, decisions made faster, and quality of output. You leave the cohort with a clear baseline and target for each.",
               },
               {
                 q: "How long does a typical engagement run?",
-                a: "Strategy advisory runs as a focused 4 to 6 week sprint. Executive training is 3 to 6 weeks depending on cohort size. Workflow systems are scoped per deliverable and usually ship in 2 to 8 weeks. We keep engagements tight on purpose, so you see live results inside a quarter.",
+                a: "Strategy advisory is a focused 4 to 6 week sprint. Training runs 3 to 6 weeks depending on cohort size. Workflow systems usually ship in 2 to 8 weeks. We keep things tight on purpose so you see real results inside a quarter.",
               },
               {
                 q: "Will the systems still work if model providers change?",
-                a: "Yes. Workflows are built on a model-agnostic layer so we can swap providers (OpenAI, Anthropic, Google, open-weights) without rewriting your processes. Prompts, evaluations, and governance live in your workspace, not locked inside a vendor.",
+                a: "Yes. We build on a model-agnostic layer so we can swap providers, OpenAI, Anthropic, Google, open-weights, without rewriting your processes. Your prompts, evaluations, and rules live in your workspace, not locked inside one vendor.",
               },
               {
                 q: "What if my team has very little AI experience?",
-                a: "That is the most common starting point. The training is built so non-technical leaders get fluent fast, with frameworks, hands-on exercises, and templates they can use the same day. No coding background is required.",
+                a: "That is the most common place we start. We teach non-technical leaders to get fluent fast, with simple frameworks, hands-on exercises, and templates you can use the same day. No coding background needed.",
               },
               {
                 q: "How do we get started?",
-                a: "Book a call. We spend 30 minutes mapping your goals, current stack, and constraints, then propose the right format — advisory, training, systems, or a combination — with a clear scope and price before any work begins.",
+                a: "Book a call. We spend 30 minutes mapping your goals, your current stack, and your constraints. Then we propose the right format, advisory, training, systems, or a mix, with a clear scope and price before any work begins.",
               },
             ].map((item, i) => (
               <details key={i} className="faq-item">
