@@ -100,7 +100,8 @@ function Index() {
         <nav className="hidden md:flex items-center gap-10">
           <a className="nav-link text-base hover:opacity-70 transition" href="#works">Works</a>
           <a className="nav-link text-base hover:opacity-70 transition" href="#journal">Journal</a>
-          <a className="nav-link text-base hover:opacity-70 transition" href="#about">About</a>
+          <a className="nav-link text-base hover:opacity-70 transition" href="/about">About</a>
+          <a className="nav-link text-base hover:opacity-70 transition" href="#faq">FAQ</a>
           <a className="nav-link text-base hover:opacity-70 transition" href="#contact">Contact</a>
         </nav>
       </header>
