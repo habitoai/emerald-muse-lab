@@ -321,12 +321,13 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer
-        id="contact"
-        className="big-footer"
-        style={{ ["--footer-bg" as never]: `url(${footerBg})` }}
-      >
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-24 pb-10">
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-8">
+        <footer
+          id="contact"
+          className="big-footer rounded-3xl"
+          style={{ ["--footer-bg" as never]: `url(${footerBg})` }}
+        >
+          <div className="max-w-[1600px] mx-auto pt-24 pb-10">
           <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-16 lg:gap-24 mb-20">
             <div>
               <p className="big-footer-eyebrow mb-8">Let&apos;s talk</p>
