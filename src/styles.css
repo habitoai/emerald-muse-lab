@@ -357,3 +357,98 @@
   .capability-headline { font-size: 32px; }
   .capability-closing { font-size: 22px; }
 }
+
+/* Stacking scroll section */
+.stack-section {
+  position: relative;
+  background-color: var(--background);
+}
+.stack-item {
+  height: 140vh;
+}
+.stack-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+.stack-card {
+  position: relative;
+  width: 100%;
+  max-width: 1520px;
+  aspect-ratio: 16 / 10;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: var(--green-tea);
+  box-shadow: 0 30px 80px -40px rgba(8, 71, 52, 0.45);
+  transform: scale(0.32);
+  transform-origin: center center;
+  will-change: transform;
+}
+.stack-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.stack-card-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 28px 36px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  background: linear-gradient(to top, rgba(8, 71, 52, 0.78), rgba(8, 71, 52, 0));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  color: white;
+}
+.stack-card:hover .stack-card-overlay {
+  opacity: 1;
+}
+.stack-card-meta {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lime-glow);
+  font-weight: 500;
+}
+.stack-card-title {
+  font-family: "Instrument Serif", "Times New Roman", Georgia, serif;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 400;
+  color: white;
+}
+
+/* Scroll-driven expansion (Chrome 115+, modern Safari/FF) */
+@supports (animation-timeline: view()) {
+  .stack-card {
+    animation: stack-card-grow linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 45%;
+  }
+  @keyframes stack-card-grow {
+    from { transform: scale(0.32); }
+    to { transform: scale(1); }
+  }
+}
+
+/* Fallback: IntersectionObserver-less — just rely on sticky scaling via scroll progress on supported browsers; non-supporting browsers show card at full size */
+@supports not (animation-timeline: view()) {
+  .stack-card { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .stack-item { height: 120vh; }
+  .stack-sticky { padding: 0 16px; }
+  .stack-card { aspect-ratio: 4 / 5; border-radius: 18px; }
+  .stack-card-title { font-size: 22px; }
+}
