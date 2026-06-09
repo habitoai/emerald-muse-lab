@@ -42,12 +42,14 @@ const gallery = [
 ];
 
 const brands = [
-  { name: "logoipsum", icon: "fa-solid fa-asterisk" },
-  { name: "waterline", icon: "fa-solid fa-water" },
-  { name: "blooms®", icon: "fa-solid fa-seedling" },
-  { name: "arch+", icon: "fa-solid fa-archway" },
-  { name: "scientific", icon: "fa-solid fa-atom" },
-  { name: "log...", icon: "fa-solid fa-circle-nodes" },
+  { name: "Osho", src: brandOsho.url },
+  { name: "Batanat", src: brandBatanat.url },
+  { name: "Dazu AI Hub", src: brandDazu.url },
+  { name: "Excellence Project", src: brandExcellence.url },
+  { name: "The Hive Pastries", src: brandHive.url },
+  { name: "Gorgeous Technical Institute", src: brandGorgeous.url },
+  { name: "Mount Kenya University", src: brandMku.url },
+  { name: "Ndovesha", src: brandNdovesha.url },
 ];
 
 function Index() {
