@@ -307,11 +307,11 @@
 }
 .capability-headline {
   font-family: "Inter", "Inter Display", system-ui, sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--emerald-pine);
   font-size: 52px;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 .capability-visual-card {
   display: flex;
