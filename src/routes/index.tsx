@@ -26,7 +26,7 @@ import brandExcellence from "@/assets/brands/excellence-project.png.asset.json";
 import brandHive from "@/assets/brands/hive-pastries.png.asset.json";
 import brandGorgeous from "@/assets/brands/gorgeous-tech.png.asset.json";
 import brandMku from "@/assets/brands/mount-kenya.png.asset.json";
-import brandNdovesha from "@/assets/brands/ndovesha.png.asset.json";
+import brandTie from "@/assets/brands/tie-events.png.asset.json";
 import reasonStrategy from "@/assets/reason-strategy.png";
 import reasonWorkflow from "@/assets/reason-workflow.png";
 import reasonEducation from "@/assets/reason-education.png";
@@ -64,7 +64,7 @@ const brands = [
   { name: "The Hive Pastries", src: brandHive.url },
   { name: "Gorgeous Technical Institute", src: brandGorgeous.url },
   { name: "Mount Kenya University", src: brandMku.url },
-  { name: "Ndovesha", src: brandNdovesha.url },
+  { name: "TIE Events", src: brandTie.url },
 ];
 
 function Index() {
