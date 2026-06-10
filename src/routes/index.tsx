@@ -535,8 +535,7 @@ function Index() {
             </div>
 
             {/* Right: newsletter */}
-            <div
-              className="rounded-md p-6 flex flex-col gap-6"
+            <div className="md:col-span-2 lg:col-span-1 rounded-md p-5 sm:p-6 flex flex-col gap-6"
               style={{ backgroundColor: "#161616" }}
             >
               <form
