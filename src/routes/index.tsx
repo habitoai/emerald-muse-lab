@@ -339,24 +339,6 @@ function Index() {
       </section>
 
 
-      {/* GALLERY */}
-      <section id="works" className="pb-24">
-        <div className="gallery-container flex gap-6 px-6 lg:px-10 pb-4">
-          {gallery.map((g, i) => (
-            <div key={i} className="image-card shadow-sm">
-              <span className="plus-icon"><i className="fa-solid fa-plus" /></span>
-              <img
-                src={g.src}
-                alt={g.alt}
-                loading="lazy"
-                width={768}
-                height={960}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
 
 
       {/* Journal / Articles */}
@@ -498,12 +480,12 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer id="contact" className="text-[#f5f0e0] px-6 lg:px-10">
+      <footer id="contact" className="text-[#f5f0e0] px-3 sm:px-6 lg:px-10">
         <div
-          className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-20 pb-10 rounded-3xl"
+          className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 pt-12 sm:pt-16 lg:pt-20 pb-8 sm:pb-10 rounded-2xl sm:rounded-3xl"
           style={{ backgroundColor: "#0a0a0a" }}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1.4fr_1fr] gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.1fr_1.4fr_1fr] gap-8 md:gap-10 lg:gap-16">
             {/* Left: brand + tagline */}
             <div className="flex flex-col justify-between gap-10">
               <div
