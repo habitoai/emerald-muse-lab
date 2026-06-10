@@ -498,94 +498,120 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-8">
-        <footer
-          id="contact"
-          className="big-footer rounded-3xl"
-          style={{ ["--footer-bg" as never]: `url(${footerBg})` }}
-        >
-          <div className="max-w-[1600px] mx-auto pt-24 pb-10 px-2 sm:px-6 lg:px-10">
-            {/* Top: 3 column nav */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 pb-12 md:pb-16 border-b" style={{ borderColor: "rgba(245,240,224,0.18)" }}>
-              <div>
-                <p className="big-footer-col-title">For Leaders</p>
-                <ul className="space-y-2">
-                  <li><a href="/services/ai-strategy-integration" className="big-footer-link">AI Strategy Integration</a></li>
-                  <li><a href="/services/executive-ai-coaching" className="big-footer-link">Executive AI Coaching</a></li>
-                  <li><a href="/services/ai-workflow-systems" className="big-footer-link">AI Workflow Systems</a></li>
-                  <li><a href="/services/ai-content-authority-systems" className="big-footer-link">Content &amp; Authority</a></li>
-                </ul>
-              </div>
-              <div>
-                <p className="big-footer-col-title">Company</p>
-                <ul className="space-y-2">
-                  <li><a href="/about" className="big-footer-link">About</a></li>
-                  <li><a href="#why-us" className="big-footer-link">Why us</a></li>
-                  <li><a href="#services" className="big-footer-link">Services</a></li>
-                  <li><a href="#faq" className="big-footer-link">FAQ</a></li>
-                </ul>
-              </div>
-              <div>
-                <p className="big-footer-col-title">Connect</p>
-                <ul className="space-y-2">
-                  <li><a href="mailto:hello@eddysailab.com" className="big-footer-link">hello@eddysailab.com</a></li>
-                  <li><a href="#" className="big-footer-link">Instagram</a></li>
-                  <li><a href="#" className="big-footer-link">X / Twitter</a></li>
-                  <li><a href="#" className="big-footer-link">LinkedIn</a></li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Eyebrow CTA */}
-            <div id="contact-cta" className="py-12 md:py-16 grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-10 items-end">
-              <div>
-                <p className="big-footer-eyebrow mb-6">Let&apos;s talk</p>
-                <h2 className="big-footer-title">Put AI<br />to work.</h2>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 sm:items-center md:justify-end">
-                <a
-                  href="mailto:hello@eddysailab.com"
-                  className="inline-flex items-center gap-3 px-7 py-4 rounded-full text-base font-medium"
-                  style={{ backgroundColor: "var(--lime-glow)", color: "var(--emerald-pine)" }}
-                >
-                  Book your call
-                  <i className="fa-solid fa-arrow-right text-sm" />
-                </a>
-              </div>
-            </div>
-
-            {/* Huge wordmark */}
-            <div className="pt-6 pb-2 select-none leading-none">
-              <span
-                aria-hidden
-                className="block font-semibold tracking-tight"
-                style={{
-                  color: "#f5f0e0",
-                  fontSize: "clamp(80px, 18vw, 280px)",
-                  letterSpacing: "-0.04em",
-                  lineHeight: 0.85,
-                }}
+      <footer
+        id="contact"
+        className="text-[#f5f0e0]"
+        style={{ backgroundColor: "#0a0a0a" }}
+      >
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-20 pb-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1.4fr_1fr] gap-12 lg:gap-16">
+            {/* Left: brand + tagline */}
+            <div className="flex flex-col justify-between gap-10">
+              <div
+                className="w-12 h-12 rounded-md flex items-center justify-center"
+                style={{ border: "1.5px solid #f5f0e0" }}
+                aria-label="Eddy's AI Lab"
               >
-                eddys ai lab<sup style={{ fontSize: "0.25em", verticalAlign: "super", opacity: 0.7 }}>®</sup>
-              </span>
+                <i className="fa-solid fa-layer-group text-lg" style={{ color: "#f5f0e0" }} />
+              </div>
+              <h3 className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight">
+                Practical AI.<br />Built for leaders.
+              </h3>
             </div>
 
-            <div
-              className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
-              style={{ borderTop: "1px solid rgba(245,240,224,0.18)" }}
-            >
-              <p className="big-footer-link" style={{ fontSize: 13, opacity: 0.65 }}>
-                © {new Date().getFullYear()} Eddys AI Lab. All rights reserved.
-              </p>
-              <div className="flex items-center gap-5" style={{ fontSize: 13, opacity: 0.65 }}>
-                <a href="#" className="big-footer-link">Terms of Use</a>
-                <span>|</span>
-                <a href="#" className="big-footer-link">Privacy Policy</a>
+            {/* Middle: link grid + CTA */}
+            <div>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { label: "Advisory", href: "/services/ai-strategy-integration" },
+                  { label: "Clients", href: "#why-us" },
+                  { label: "Training", href: "/services/executive-ai-coaching" },
+                  { label: "Journal", href: "/journal" },
+                  { label: "Systems", href: "/services/ai-workflow-systems" },
+                  { label: "Gallery", href: "/gallery" },
+                  { label: "Authority", href: "/services/ai-content-authority-systems" },
+                  { label: "About", href: "/about" },
+                ].map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="px-5 py-4 rounded-md text-sm font-medium hover:opacity-100 opacity-90 transition"
+                    style={{ backgroundColor: "#161616" }}
+                  >
+                    {item.label}
+                  </a>
+                ))}
               </div>
+              <a
+                href="mailto:hello@eddysailab.com"
+                className="mt-3 flex items-center justify-between px-5 py-4 rounded-md text-sm font-semibold tracking-wide uppercase"
+                style={{ backgroundColor: "#f5f0e0", color: "#0a0a0a" }}
+              >
+                Talk to Edwin
+                <span
+                  className="w-9 h-9 rounded-md flex items-center justify-center"
+                  style={{ backgroundColor: "var(--lime-glow)" }}
+                >
+                  <i className="fa-solid fa-arrow-right text-xs" style={{ color: "#0a0a0a" }} />
+                </span>
+              </a>
+            </div>
+
+            {/* Right: newsletter */}
+            <div
+              className="rounded-md p-6 flex flex-col gap-6"
+              style={{ backgroundColor: "#161616" }}
+            >
+              <form
+                onSubmit={(e) => e.preventDefault()}
+                className="flex items-center gap-2 border-b pb-3"
+                style={{ borderColor: "rgba(245,240,224,0.2)" }}
+              >
+                <input
+                  type="email"
+                  placeholder="Your work email"
+                  className="flex-1 bg-transparent outline-none text-sm placeholder:opacity-50"
+                  style={{ color: "#f5f0e0" }}
+                />
+                <button
+                  type="submit"
+                  className="w-8 h-8 rounded-md flex items-center justify-center"
+                  style={{ backgroundColor: "var(--lime-glow)" }}
+                  aria-label="Subscribe"
+                >
+                  <i className="fa-solid fa-arrow-right text-xs" style={{ color: "#0a0a0a" }} />
+                </button>
+              </form>
+              <p className="text-xs opacity-50 leading-relaxed">
+                By providing this information, you agree to be kept informed about Eddy&apos;s AI Lab insights, programs, and events.
+              </p>
+              <p className="text-sm leading-relaxed mt-auto">
+                Get field notes on AI strategy, executive coaching, and the systems we build with leaders.
+              </p>
             </div>
           </div>
+
+          {/* Bottom bar */}
+          <div
+            className="mt-16 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+            style={{ borderTop: "1px solid rgba(245,240,224,0.12)" }}
+          >
+            <div className="flex items-center gap-4 text-sm opacity-70">
+              <a href="#" aria-label="LinkedIn" className="hover:opacity-100">
+                <i className="fa-brands fa-linkedin-in" />
+              </a>
+              <a href="#" aria-label="X" className="hover:opacity-100">
+                <i className="fa-brands fa-x-twitter" />
+              </a>
+              <a href="#" className="ml-2 hover:opacity-100">Privacy Policy</a>
+              <a href="#" className="hover:opacity-100">Terms of Service</a>
+            </div>
+            <p className="text-sm opacity-60">
+              © {new Date().getFullYear()} Eddy&apos;s AI Lab. Founded by Edwin Rogoi.
+            </p>
+          </div>
+        </div>
       </footer>
-      </section>
     </div>
   );
 }
