@@ -35,10 +35,10 @@ import articleStrategy from "@/assets/article-ai-strategy.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Orchid — Creative Agency" },
-      { name: "description", content: "Agency of ideas and impact. We turn sharp strategy into brands and experiences people remember." },
-      { property: "og:title", content: "Orchid — Creative Agency" },
-      { property: "og:description", content: "Agency of ideas and impact." },
+      { title: "Eddys AI Lab — Practical AI for Leaders" },
+      { name: "description", content: "We help business leaders put AI to work — strategy, training, and systems built around your real work." },
+      { property: "og:title", content: "Eddys AI Lab — Practical AI for Leaders" },
+      { property: "og:description", content: "We help business leaders put AI to work — strategy, training, and systems built around your real work." },
     ],
   }),
   component: Index,
