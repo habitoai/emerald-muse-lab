@@ -80,7 +80,7 @@ function JournalPage() {
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14 lg:gap-x-10 lg:gap-y-20">
           {posts.map((p) => (
-            <a key={p.title} href="/journal" className="group block">
+            <a key={p.title} href={`/journal/${p.slug}`} className="group block">
               <div className="overflow-hidden rounded-2xl bg-[var(--green-tea)] aspect-[4/3]">
                 <img
                   src={p.img}
