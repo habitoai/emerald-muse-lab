@@ -1,5 +1,7 @@
 import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
-import logoAsset from "@/assets/eddys-logo.png.asset.json";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import { SiteFooter } from "@/components/site/SiteFooter";
+import { FinalCTA } from "@/components/site/FinalCTA";
 
 const services: Record<string, { title: string; body: string; intro: string }> = {
   "ai-strategy-advisory": {
