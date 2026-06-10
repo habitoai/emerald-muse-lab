@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState, useCallback } from "react";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { FinalCTA } from "@/components/site/FinalCTA";
@@ -58,10 +59,40 @@ const items: Item[] = [
 ];
 
 function GalleryPage() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const isOpen = activeIndex !== null;
+
+  const close = useCallback(() => setActiveIndex(null), []);
+  const next = useCallback(
+    () => setActiveIndex((i) => (i === null ? i : (i + 1) % items.length)),
+    [],
+  );
+  const prev = useCallback(
+    () =>
+      setActiveIndex((i) => (i === null ? i : (i - 1 + items.length) % items.length)),
+    [],
+  );
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowRight") next();
+      if (e.key === "ArrowLeft") prev();
+    };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [isOpen, close, next, prev]);
+
+  const active = activeIndex !== null ? items[activeIndex] : null;
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
       <SiteHeader active="works" />
-
 
       {/* HERO */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-32 pb-12">
@@ -96,12 +127,14 @@ function GalleryPage() {
       {/* MASONRY GRID */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-24">
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 lg:gap-8 [column-fill:_balance]">
-          {items.map((it) => (
-            <figure
-              key={it.caption}
-              className="group mb-6 lg:mb-8 break-inside-avoid"
-            >
-              <div className="overflow-hidden rounded-2xl bg-[var(--green-tea)]">
+          {items.map((it, idx) => (
+            <figure key={it.caption} className="group mb-6 lg:mb-8 break-inside-avoid">
+              <button
+                type="button"
+                onClick={() => setActiveIndex(idx)}
+                className="block w-full overflow-hidden rounded-2xl bg-[var(--green-tea)] cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--emerald-pine)]"
+                aria-label={`Open ${it.caption}`}
+              >
                 <img
                   src={it.src}
                   alt={it.alt}
@@ -110,7 +143,7 @@ function GalleryPage() {
                     it.tall ? "aspect-[3/4]" : "aspect-[4/3]"
                   }`}
                 />
-              </div>
+              </button>
               <figcaption
                 className="flex items-center justify-between mt-3 px-1 text-sm"
                 style={{ color: "var(--emerald-pine)" }}
@@ -122,6 +155,68 @@ function GalleryPage() {
           ))}
         </div>
       </section>
+
+      {/* LIGHTBOX */}
+      {isOpen && active && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={active.caption}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 backdrop-blur-sm p-4 sm:p-8"
+          onClick={close}
+        >
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              close();
+            }}
+            aria-label="Close"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white text-xl flex items-center justify-center transition"
+          >
+            ✕
+          </button>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              prev();
+            }}
+            aria-label="Previous"
+            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-white/20 text-white text-2xl flex items-center justify-center transition"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              next();
+            }}
+            aria-label="Next"
+            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-white/20 text-white text-2xl flex items-center justify-center transition"
+          >
+            ›
+          </button>
+
+          <figure
+            className="relative max-w-[92vw] max-h-[88vh] flex flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={active.src}
+              alt={active.alt}
+              className="max-w-[92vw] max-h-[78vh] object-contain rounded-xl shadow-2xl"
+            />
+            <figcaption className="mt-4 flex items-center justify-between gap-6 w-full text-white/90 text-sm">
+              <span>{active.caption}</span>
+              <span className="text-white/60">
+                {active.place} · {(activeIndex ?? 0) + 1} / {items.length}
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      )}
 
       <FinalCTA
         eyebrow="In the room"
