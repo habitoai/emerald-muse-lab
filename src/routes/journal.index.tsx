@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logoAsset from "@/assets/eddys-logo.png.asset.json";
 import { posts } from "@/lib/journal-posts";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import { SiteFooter } from "@/components/site/SiteFooter";
+import { FinalCTA } from "@/components/site/FinalCTA";
 
 export const Route = createFileRoute("/journal/")({
   head: () => ({

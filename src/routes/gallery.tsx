@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logoAsset from "@/assets/eddys-logo.png.asset.json";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import { SiteFooter } from "@/components/site/SiteFooter";
+import { FinalCTA } from "@/components/site/FinalCTA";
 import g1 from "@/assets/gallery-1.jpg";
 import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
