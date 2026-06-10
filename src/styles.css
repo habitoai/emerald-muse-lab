@@ -469,7 +469,7 @@
   width: max-content;
   gap: 56px;
   align-items: center;
-  animation: brand-marquee 35s linear infinite;
+  animation: brand-marquee-row-scroll 35s linear infinite;
   will-change: transform;
   transform: translate3d(0, 0, 0);
 }
@@ -562,7 +562,7 @@
   line-height: 32px;
   font-weight: 400;
 }
-@keyframes brand-marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(calc(-50% - 28px)); }
+@keyframes brand-marquee-row-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(calc(-50% - 28px), 0, 0); }
 }
