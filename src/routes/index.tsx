@@ -74,7 +74,7 @@ function Index() {
 
 
       {/* HERO */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-56 pb-12">
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-32 pb-12">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           <h1 className="hero-title max-w-4xl">
             We help business leaders
