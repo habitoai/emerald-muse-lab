@@ -96,23 +96,49 @@ function ArticlePage() {
         </div>
       </section>
 
-      {/* META */}
-      <section className="max-w-3xl mx-auto px-6 lg:px-10 pb-12">
-        <div className="flex items-center justify-between text-sm" style={{ color: "var(--emerald-pine)" }}>
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full accent-bg-tea flex items-center justify-center font-semibold">
+      {/* AUTHOR PROFILE */}
+      <section className="max-w-3xl mx-auto px-6 lg:px-10 pb-10">
+        <div className="flex items-center justify-between gap-6">
+          <div className="flex items-center gap-4">
+            <div
+              className="w-12 h-12 rounded-full accent-bg-tea flex items-center justify-center font-semibold"
+              style={{ color: "var(--emerald-pine)" }}
+              aria-hidden
+            >
               {post.author.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
             </div>
-            <div>
-              <div className="font-medium">{post.author.name}</div>
-              <div className="opacity-60">{post.author.role}</div>
+            <div className="leading-tight" style={{ color: "var(--emerald-pine)" }}>
+              <div className="font-medium text-base">{post.author.name}</div>
+              <div className="opacity-60 text-sm">{post.author.role}</div>
             </div>
           </div>
-          <div className="opacity-60">
-            {post.date} · {post.read}
+          <div className="flex items-center gap-2">
+            {[
+              { icon: "fa-brands fa-x-twitter", label: "Share on X", href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}` },
+              { icon: "fa-brands fa-linkedin-in", label: "Share on LinkedIn", href: "https://www.linkedin.com/" },
+              { icon: "fa-solid fa-arrow-up-from-bracket", label: "Copy link", href: "#" },
+            ].map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                aria-label={s.label}
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full accent-bg-tea flex items-center justify-center hover:opacity-80 transition"
+                style={{ color: "var(--emerald-pine)" }}
+              >
+                <i className={`${s.icon} text-sm`} />
+              </a>
+            ))}
           </div>
         </div>
+        <div className="mt-6 h-px w-full bg-[var(--green-tea)]" />
+        <div className="mt-6 text-sm opacity-60" style={{ color: "var(--emerald-pine)" }}>
+          {post.date} · {post.read}
+        </div>
       </section>
+
+
 
       {/* BODY */}
       <article className="max-w-3xl mx-auto px-6 lg:px-10 pb-24">
