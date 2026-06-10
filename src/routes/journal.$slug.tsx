@@ -1,6 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
-import logoAsset from "@/assets/eddys-logo.png.asset.json";
 import { getPost, posts, type Post } from "@/lib/journal-posts";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import { SiteFooter } from "@/components/site/SiteFooter";
 
 export const Route = createFileRoute("/journal/$slug")({
   loader: ({ params }) => {
