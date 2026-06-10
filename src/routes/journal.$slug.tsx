@@ -40,7 +40,7 @@ export const Route = createFileRoute("/journal/$slug")({
 });
 
 function ArticlePage() {
-  const { post } = Route.useLoaderData();
+  const { post } = Route.useLoaderData() as { post: Post };
   const more = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
   return (
