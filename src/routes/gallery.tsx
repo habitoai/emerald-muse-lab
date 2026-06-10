@@ -98,28 +98,10 @@ function GalleryPage() {
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-32 pb-12">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-8">
-              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
-              <span className="tag-label">In the room</span>
-            </div>
             <h1 className="about-hero-title">Gallery</h1>
             <p className="about-lead mt-6 max-w-md">
-              Moments from cohorts, keynotes, and client sprints — wherever the work happens.
+              Moments from cohorts and keynotes.
             </p>
-          </div>
-          <div className="flex items-end gap-10" style={{ color: "var(--emerald-pine)" }}>
-            <div>
-              <div className="stat-number" style={{ fontSize: 56, lineHeight: 1 }}>10</div>
-              <div className="stat-description mt-2">Countries</div>
-            </div>
-            <div>
-              <div className="stat-number" style={{ fontSize: 56, lineHeight: 1 }}>40+</div>
-              <div className="stat-description mt-2">Cohorts</div>
-            </div>
-            <div>
-              <div className="stat-number" style={{ fontSize: 56, lineHeight: 1 }}>3.5K</div>
-              <div className="stat-description mt-2">Leaders trained</div>
-            </div>
           </div>
         </div>
       </section>
