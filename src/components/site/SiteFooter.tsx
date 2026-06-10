@@ -34,7 +34,7 @@ export function SiteFooter() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="px-5 py-4 rounded-md text-sm font-medium hover:opacity-100 opacity-90 transition"
+                  className="px-5 py-4 rounded-md text-sm font-medium opacity-90 hover:opacity-100 transition-opacity duration-200 ease-out"
                   style={{ backgroundColor: "#161616" }}
                 >
                   {item.label}

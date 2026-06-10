@@ -26,7 +26,7 @@ export function SiteHeader({ active }: { active?: NavKey }) {
           <a
             key={item.key}
             href={item.href}
-            className={`nav-link text-base hover:opacity-70 transition${
+            className={`nav-link text-base opacity-90 hover:opacity-60 transition-opacity duration-200 ease-out${
               active === item.key ? " underline underline-offset-8" : ""
             }`}
           >

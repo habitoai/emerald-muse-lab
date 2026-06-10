@@ -27,9 +27,9 @@ import brandHive from "@/assets/brands/hive-pastries.png.asset.json";
 import brandGorgeous from "@/assets/brands/gorgeous-tech.png.asset.json";
 import brandMku from "@/assets/brands/mount-kenya.png.asset.json";
 import brandNdovesha from "@/assets/brands/ndovesha.png.asset.json";
-import reasonStrategy from "@/assets/reason-strategy.png";
-import reasonWorkflow from "@/assets/reason-workflow.png";
-import reasonEducation from "@/assets/reason-education.png";
+import reasonStrategy from "@/assets/reason-strategy.webp";
+import reasonWorkflow from "@/assets/reason-workflow.webp";
+import reasonEducation from "@/assets/reason-education.webp";
 import articleRoi from "@/assets/article-ai-roi.jpg";
 import articleTraining from "@/assets/article-team-training.jpg";
 import articleStrategy from "@/assets/article-ai-strategy.jpg";
@@ -96,6 +96,10 @@ function Index() {
             alt="AI consultancy keynote speaker addressing a business audience"
             width={1600}
             height={1000}
+            loading="eager"
+            decoding="async"
+            // @ts-expect-error - fetchpriority is valid HTML, not yet in React types
+            fetchpriority="high"
             className="w-full h-auto object-cover"
             style={{ filter: "saturate(0.78) hue-rotate(-12deg) brightness(0.82) contrast(1.05)" }}
           />
