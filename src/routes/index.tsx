@@ -459,6 +459,8 @@ function Index() {
 
       <FinalCTA />
 
+      <ContactForm />
+
       <SiteFooter />
     </div>
   );
