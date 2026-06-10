@@ -102,38 +102,13 @@ function JournalPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-24">
-        <div
-          className="rounded-3xl px-8 lg:px-16 py-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8"
-          style={{ backgroundColor: "var(--emerald-pine)" }}
-        >
-          <h2 className="cohort-banner-title">Let&apos;s map your AI strategy.</h2>
-          <a
-            href="/#contact"
-            className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base shrink-0"
-          >
-            Book a private call
-            <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
-          </a>
-        </div>
-      </section>
+      <FinalCTA
+        eyebrow="Strategy advisory"
+        title={<>Let&apos;s map your AI strategy.</>}
+        body="Subscribe to the journal, or book a private call to scope your AI sprint."
+      />
 
-      {/* FOOTER */}
-      <footer className="border-t border-accent">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <a href="/" className="logo-text text-2xl font-semibold flex items-center gap-3">
-            <img src={logoAsset.url} alt="Eddys AI Lab" className="h-8 w-auto" />
-            eddys ai lab
-          </a>
-          <p className="stat-description">© {new Date().getFullYear()} Eddys AI Lab. All rights reserved.</p>
-          <div className="flex items-center gap-5 accent-text-emerald">
-            <a href="#" aria-label="Twitter" className="hover:opacity-70"><i className="fa-brands fa-x-twitter" /></a>
-            <a href="#" aria-label="Instagram" className="hover:opacity-70"><i className="fa-brands fa-instagram" /></a>
-            <a href="#" aria-label="LinkedIn" className="hover:opacity-70"><i className="fa-brands fa-linkedin-in" /></a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
