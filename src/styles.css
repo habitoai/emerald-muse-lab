@@ -472,8 +472,9 @@
   width: auto;
   height: auto;
   object-fit: contain;
-  opacity: 0.95;
+  opacity: 0.85;
   transition: opacity 250ms ease;
+  filter: brightness(0) invert(1);
 }
 .brand-logo-img-wrap:hover .brand-logo-img {
   opacity: 1;
