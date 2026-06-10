@@ -145,7 +145,7 @@ function GalleryPage() {
             href="/#contact"
             className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base shrink-0"
           >
-            Book Call
+            Book a private call
             <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
           </a>
         </div>
