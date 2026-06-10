@@ -123,17 +123,25 @@ function Index() {
 
 
       {/* BRANDS */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 pt-6 pb-12 border-t border-accent mt-6">
-        <p className="section-description text-center mb-10">
-          We have shaped AI strategy for teams at brands like
-        </p>
-        <div className="brand-marquee-row">
-          <div className="brand-marquee-track">
-            {[...brands, ...brands].map((b, i) => (
-              <div key={i} className="brand-logo-img-wrap" title={b.name}>
-                <img src={b.src} alt={b.name} className="brand-logo-img" loading="lazy" />
-              </div>
-            ))}
+      <section className="max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-10 pt-6 pb-12 mt-6">
+        <div className="rounded-2xl sm:rounded-3xl py-12 px-6 lg:px-10" style={{ backgroundColor: "#0a0a0a" }}>
+          <p className="section-description text-center mb-10" style={{ color: "rgba(245,240,224,0.75)" }}>
+            Our corporate clients include
+          </p>
+          <div className="brand-marquee-row">
+            <div className="brand-marquee-track">
+              {[...brands, ...brands].map((b, i) => (
+                <div key={i} className="brand-logo-img-wrap" title={b.name}>
+                  <img
+                    src={b.src}
+                    alt={b.name}
+                    className="brand-logo-img"
+                    loading="lazy"
+                    style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
