@@ -19,6 +19,19 @@
   --green-tea: #e6f5d4;
   --background: #fcfbf8;
   --foreground: #084734;
+
+  /* Motion tokens */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @layer base {
@@ -47,12 +60,12 @@
   min-width: 380px;
   height: 480px;
   position: relative;
-  transition: transform 0.3s ease;
+  transition: transform 200ms var(--ease-out);
   border-radius: 16px;
   overflow: hidden;
 }
 .image-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 .plus-icon {
@@ -140,8 +153,11 @@
 .btn-primary {
   background-color: var(--emerald-pine);
   color: white;
+  transition: transform 160ms var(--ease-out), background-color 200ms var(--ease-out);
+  will-change: transform;
 }
 .btn-primary:hover { background-color: #065a42; }
+.btn-primary:active { transform: scale(0.97); }
 
 .brand-logo {
   opacity: 0.7;
