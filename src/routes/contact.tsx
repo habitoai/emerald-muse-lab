@@ -44,13 +44,6 @@ function ContactPage() {
           them into something real.
         </h1>
 
-        <p
-          className="mt-6 text-lg opacity-70"
-          style={{ color: "var(--emerald-pine)" }}
-        >
-          Tell us what&apos;s on your mind.
-        </p>
-
         <div
           className="mt-14 h-px w-full"
           style={{ backgroundColor: "var(--green-tea)" }}
