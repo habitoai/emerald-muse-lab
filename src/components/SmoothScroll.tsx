@@ -21,8 +21,6 @@ export function SmoothScroll() {
       autoRaf: true,
     });
 
-    window.lenis = lenis;
-
     // Anchor link support (e.g. /#contact)
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null;
@@ -40,7 +38,6 @@ export function SmoothScroll() {
     return () => {
       document.removeEventListener("click", handleAnchorClick);
       lenis.destroy();
-      if (window.lenis === lenis) delete window.lenis;
     };
   }, []);
 
