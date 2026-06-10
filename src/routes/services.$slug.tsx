@@ -1,5 +1,7 @@
 import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
-import logoAsset from "@/assets/eddys-logo.png.asset.json";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import { SiteFooter } from "@/components/site/SiteFooter";
+import { FinalCTA } from "@/components/site/FinalCTA";
 
 const services: Record<string, { title: string; body: string; intro: string }> = {
   "ai-strategy-advisory": {
@@ -76,16 +78,7 @@ function ServicePage() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
-      <header className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-8 flex items-center justify-between">
-        <Link to="/" className="logo-text font-semibold tracking-tight flex items-center gap-3 leading-none">
-          <img src={logoAsset.url} alt="Eddys AI Lab" className="h-10 w-auto block" />
-          <span className="text-2xl leading-none">eddys ai lab</span>
-        </Link>
-        <Link to="/" className="nav-link text-base hover:opacity-70 transition">
-          <i className="fa-solid fa-arrow-left mr-2" />
-          Back
-        </Link>
-      </header>
+      <SiteHeader />
 
       <section className="max-w-3xl mx-auto px-6 lg:px-10 pt-32 pb-24">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-8">
@@ -96,13 +89,21 @@ function ServicePage() {
         <p className="section-description mt-6 text-balance">{service.intro}</p>
         <p className="section-description mt-4 text-balance">{service.body}</p>
 
-        <div className="mt-12">
-          <Link to="/" className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base">
-            Book a call
+        <div className="mt-12 flex items-center gap-4">
+          <a href="/#contact" className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base">
+            Book a private call
             <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
+          </a>
+          <Link to="/" className="nav-link text-base hover:opacity-70 transition">
+            <i className="fa-solid fa-arrow-left mr-2" />
+            Back home
           </Link>
         </div>
       </section>
+
+      <FinalCTA />
+
+      <SiteFooter />
     </div>
   );
 }

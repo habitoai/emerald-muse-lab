@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logoAsset from "@/assets/eddys-logo.png.asset.json";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import { SiteFooter } from "@/components/site/SiteFooter";
+import { FinalCTA } from "@/components/site/FinalCTA";
 import g1 from "@/assets/gallery-1.jpg";
 import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
@@ -58,21 +60,8 @@ const items: Item[] = [
 function GalleryPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
-      {/* NAV */}
-      <header className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-8 flex items-center justify-between">
-        <a href="/" className="logo-text font-semibold tracking-tight flex items-center gap-3 leading-none">
-          <img src={logoAsset.url} alt="Eddys AI Lab" className="h-10 w-auto block" />
-          <span className="text-2xl leading-none">eddys ai lab</span>
-        </a>
-        <nav className="hidden md:flex items-center gap-10">
-          <a className="nav-link text-base hover:opacity-70 transition" href="/#works">Works</a>
-          <a className="nav-link text-base hover:opacity-70 transition" href="/#services">Services</a>
-          <a className="nav-link text-base hover:opacity-70 transition" href="/about">About</a>
-          <a className="nav-link text-base hover:opacity-70 transition" href="/journal">Journal</a>
-          <a className="nav-link text-base hover:opacity-70 transition underline underline-offset-8" href="/gallery">Gallery</a>
-          <a className="nav-link text-base hover:opacity-70 transition" href="/#contact">Contact</a>
-        </nav>
-      </header>
+      <SiteHeader active="works" />
+
 
       {/* HERO */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-32 pb-12">
@@ -134,38 +123,13 @@ function GalleryPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-24">
-        <div
-          className="rounded-3xl px-8 lg:px-16 py-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8"
-          style={{ backgroundColor: "var(--emerald-pine)" }}
-        >
-          <h2 className="cohort-banner-title">Want us in the room next?</h2>
-          <a
-            href="/#contact"
-            className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base shrink-0"
-          >
-            Book a private call
-            <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
-          </a>
-        </div>
-      </section>
+      <FinalCTA
+        eyebrow="In the room"
+        title={<>Want us in the room next?</>}
+        body="Bring us in for a keynote, cohort, or private workshop."
+      />
 
-      {/* FOOTER */}
-      <footer className="border-t border-accent">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <a href="/" className="logo-text text-2xl font-semibold flex items-center gap-3">
-            <img src={logoAsset.url} alt="Eddys AI Lab" className="h-8 w-auto" />
-            eddys ai lab
-          </a>
-          <p className="stat-description">© {new Date().getFullYear()} Eddys AI Lab. All rights reserved.</p>
-          <div className="flex items-center gap-5 accent-text-emerald">
-            <a href="#" aria-label="Twitter" className="hover:opacity-70"><i className="fa-brands fa-x-twitter" /></a>
-            <a href="#" aria-label="Instagram" className="hover:opacity-70"><i className="fa-brands fa-instagram" /></a>
-            <a href="#" aria-label="LinkedIn" className="hover:opacity-70"><i className="fa-brands fa-linkedin-in" /></a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
