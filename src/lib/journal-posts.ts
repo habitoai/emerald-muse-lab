@@ -32,7 +32,7 @@ export const posts: Post[] = [
     lede: "Most AI ROI decks are fiction. Here is what actually moved inside a real 20-person team after six months of work, and what quietly did not.",
     img: articleRoi,
     alt: "Laptop with green data visualization",
-    author: { name: "Eddys Mawiyoo", role: "Founder, Eddys AI Lab" },
+    author: { name: "Edwin Rogoi", role: "Founder, Eddy's AI Lab" },
     body: [
       { type: "p", text: "Every founder I meet wants a number. How much will AI save us, how fast, how do we know. The honest answer is that the savings rarely show up where the slide deck promised — and they almost never show up in month one." },
       { type: "h2", text: "Where the time actually came back" },
@@ -57,7 +57,7 @@ export const posts: Post[] = [
     lede: "Generic prompt workshops produce excited teams and zero adoption. Here is the structure we now use to make training stick past the second week.",
     img: articleTraining,
     alt: "Team workshop with sticky notes",
-    author: { name: "Eddys Mawiyoo", role: "Founder, Eddys AI Lab" },
+    author: { name: "Edwin Rogoi", role: "Founder, Eddy's AI Lab" },
     body: [
       { type: "p", text: "We have trained more than 3,500 leaders in person since 2022. The first thousand taught us that the standard \"intro to prompting\" workshop is almost entirely useless on day 14." },
       { type: "h2", text: "What kills adoption" },
@@ -82,7 +82,7 @@ export const posts: Post[] = [
     lede: "Should you wire up a custom GPT, license a vertical tool, or wait? A short decision frame we use with clients in week one.",
     img: articleStrategy,
     alt: "Abstract green glass shapes",
-    author: { name: "Eddys Mawiyoo", role: "Founder, Eddys AI Lab" },
+    author: { name: "Edwin Rogoi", role: "Founder, Eddy's AI Lab" },
     body: [
       { type: "p", text: "Most teams overspend on tooling before they understand their own workflow. The right first move is almost never the shiniest SaaS in the category." },
       { type: "h2", text: "A simple three-question filter" },
@@ -106,7 +106,7 @@ export const posts: Post[] = [
     lede: "Your team does not need another all-hands about AI. They need a clear position from you on three specific things.",
     img: articleChange,
     alt: "Figure in translucent coat walking",
-    author: { name: "Eddys Mawiyoo", role: "Founder, Eddys AI Lab" },
+    author: { name: "Edwin Rogoi", role: "Founder, Eddy's AI Lab" },
     body: [
       { type: "p", text: "Most leaders are still oscillating between \"AI will replace half of you\" and \"AI is just another tool.\" Both messages corrode trust. The team needs a position, not a vibe." },
       { type: "h2", text: "Three things to be explicit about" },
@@ -128,7 +128,7 @@ export const posts: Post[] = [
     lede: "Week-by-week, this is the rollout we use when a client wants their first internal GPT shipped without breaking anything.",
     img: articleProcess,
     alt: "Ceramic vase with dried branches",
-    author: { name: "Eddys Mawiyoo", role: "Founder, Eddys AI Lab" },
+    author: { name: "Edwin Rogoi", role: "Founder, Eddy's AI Lab" },
     body: [
       { type: "h2", text: "Week 1 — Map the workflow" },
       { type: "p", text: "Sit with the operator for a full day. Document every decision they make and every artifact they touch. No tools chosen yet." },
@@ -149,7 +149,7 @@ export const posts: Post[] = [
     lede: "The productivity numbers look good. The team is quieter than usual. Here is what we have learned about the soft cost of fast adoption.",
     img: articleCulture,
     alt: "Water droplet ripple on cream surface",
-    author: { name: "Eddys Mawiyoo", role: "Founder, Eddys AI Lab" },
+    author: { name: "Edwin Rogoi", role: "Founder, Eddy's AI Lab" },
     body: [
       { type: "p", text: "Six months in, the dashboards smile. Throughput is up, errors are down, and the Slack workspace is unusually peaceful. That last part is the warning sign." },
       { type: "h2", text: "What gets quieter" },
