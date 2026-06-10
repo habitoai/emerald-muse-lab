@@ -498,116 +498,145 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer id="contact" className="text-[#f5f0e0] px-6 lg:px-10">
+      <footer id="contact" className="text-[#f5f0e0] px-6 lg:px-10 pb-10">
         <div
-          className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-20 pb-10 rounded-3xl"
+          className="max-w-[1600px] mx-auto rounded-[28px] overflow-hidden relative"
           style={{ backgroundColor: "#0a0a0a" }}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1.4fr_1fr] gap-12 lg:gap-16">
-            {/* Left: brand + tagline */}
-            <div className="flex flex-col justify-between gap-10">
-              <div
-                className="w-12 h-12 rounded-md flex items-center justify-center"
-                style={{ border: "1.5px solid #f5f0e0" }}
-                aria-label="Eddy's AI Lab"
-              >
-                <i className="fa-solid fa-layer-group text-lg" style={{ color: "#f5f0e0" }} />
-              </div>
-              <h3 className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight">
-                Practical AI.<br />Built for leaders.
-              </h3>
+          {/* Top status strip */}
+          <div
+            className="flex flex-wrap items-center justify-between gap-4 px-8 lg:px-12 py-5 text-xs uppercase tracking-[0.18em]"
+            style={{ borderBottom: "1px solid rgba(245,240,224,0.1)" }}
+          >
+            <div className="flex items-center gap-3 opacity-80">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping" style={{ backgroundColor: "var(--lime-glow)" }} />
+                <span className="relative inline-flex rounded-full h-2 w-2" style={{ backgroundColor: "var(--lime-glow)" }} />
+              </span>
+              Booking Q3 — 2 advisory seats open
             </div>
+            <div className="opacity-60">Nairobi · Remote worldwide</div>
+            <div className="opacity-60">hello@eddysailab.com</div>
+          </div>
 
-            {/* Middle: link grid + CTA */}
-            <div>
-              <div className="grid grid-cols-2 gap-3">
-                {[
-                  { label: "Advisory", href: "/services/ai-strategy-integration" },
-                  { label: "Clients", href: "#why-us" },
-                  { label: "Training", href: "/services/executive-ai-coaching" },
-                  { label: "Journal", href: "/journal" },
-                  { label: "Systems", href: "/services/ai-workflow-systems" },
-                  { label: "Gallery", href: "/gallery" },
-                  { label: "Authority", href: "/services/ai-content-authority-systems" },
-                  { label: "About", href: "/about" },
-                ].map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    className="px-5 py-4 rounded-md text-sm font-medium hover:opacity-100 opacity-90 transition"
-                    style={{ backgroundColor: "#161616" }}
-                  >
-                    {item.label}
-                  </a>
-                ))}
+          {/* Main grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 px-8 lg:px-12 pt-14 pb-12">
+            {/* Left: oversized statement + CTA */}
+            <div className="lg:col-span-7 flex flex-col justify-between gap-12">
+              <div>
+                <p className="text-xs uppercase tracking-[0.22em] opacity-60 mb-6">
+                  <span className="inline-block w-8 h-px align-middle mr-3" style={{ backgroundColor: "rgba(245,240,224,0.4)" }} />
+                  Eddy&apos;s AI Lab — Est. 2024
+                </p>
+                <h3 className="text-[clamp(2.4rem,5.2vw,4.6rem)] font-semibold leading-[0.95] tracking-tight">
+                  Practical AI,<br />
+                  <span className="italic font-light opacity-70">built quietly</span><br />
+                  for serious leaders.
+                </h3>
               </div>
+
               <a
                 href="mailto:hello@eddysailab.com"
-                className="mt-3 flex items-center justify-between px-5 py-4 rounded-md text-sm font-semibold tracking-wide uppercase"
-                style={{ backgroundColor: "#f5f0e0", color: "#0a0a0a" }}
+                className="group inline-flex items-center gap-5 self-start pr-3 pl-6 py-3 rounded-full transition"
+                style={{ border: "1px solid rgba(245,240,224,0.25)" }}
               >
-                Talk to Edwin
+                <span className="text-sm uppercase tracking-[0.18em]">Talk to Edwin</span>
                 <span
-                  className="w-9 h-9 rounded-md flex items-center justify-center"
+                  className="w-10 h-10 rounded-full flex items-center justify-center transition group-hover:rotate-45"
                   style={{ backgroundColor: "var(--lime-glow)" }}
                 >
-                  <i className="fa-solid fa-arrow-right text-xs" style={{ color: "#0a0a0a" }} />
+                  <i className="fa-solid fa-arrow-up text-xs rotate-45" style={{ color: "#0a0a0a" }} />
                 </span>
               </a>
             </div>
 
-            {/* Right: newsletter */}
-            <div
-              className="rounded-md p-6 flex flex-col gap-6"
-              style={{ backgroundColor: "#161616" }}
-            >
-              <form
-                onSubmit={(e) => e.preventDefault()}
-                className="flex items-center gap-2 border-b pb-3"
-                style={{ borderColor: "rgba(245,240,224,0.2)" }}
-              >
-                <input
-                  type="email"
-                  placeholder="Your work email"
-                  className="flex-1 bg-transparent outline-none text-sm placeholder:opacity-50"
-                  style={{ color: "#f5f0e0" }}
-                />
-                <button
-                  type="submit"
-                  className="w-8 h-8 rounded-md flex items-center justify-center"
-                  style={{ backgroundColor: "var(--lime-glow)" }}
-                  aria-label="Subscribe"
+            {/* Right: sitemap + newsletter stacked */}
+            <div className="lg:col-span-5 flex flex-col gap-8">
+              <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm">
+                <p className="col-span-2 text-xs uppercase tracking-[0.2em] opacity-50 mb-1">Index</p>
+                {[
+                  { label: "01 — Advisory", href: "/services/ai-strategy-integration" },
+                  { label: "05 — Journal", href: "/journal" },
+                  { label: "02 — Training", href: "/services/executive-ai-coaching" },
+                  { label: "06 — Gallery", href: "/gallery" },
+                  { label: "03 — Systems", href: "/services/ai-workflow-systems" },
+                  { label: "07 — About", href: "/about" },
+                  { label: "04 — Authority", href: "/services/ai-content-authority-systems" },
+                  { label: "08 — Clients", href: "#why-us" },
+                ].map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="group flex items-center justify-between py-2 transition"
+                    style={{ borderBottom: "1px solid rgba(245,240,224,0.08)" }}
+                  >
+                    <span className="opacity-80 group-hover:opacity-100">{item.label}</span>
+                    <i className="fa-solid fa-arrow-right text-[10px] opacity-0 -translate-x-2 group-hover:opacity-60 group-hover:translate-x-0 transition" />
+                  </a>
+                ))}
+              </div>
+
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] opacity-50 mb-3">Field Notes — monthly</p>
+                <form
+                  onSubmit={(e) => e.preventDefault()}
+                  className="flex items-center gap-3 pb-3"
+                  style={{ borderBottom: "1px solid rgba(245,240,224,0.3)" }}
                 >
-                  <i className="fa-solid fa-arrow-right text-xs" style={{ color: "#0a0a0a" }} />
-                </button>
-              </form>
-              <p className="text-xs opacity-50 leading-relaxed">
-                By providing this information, you agree to be kept informed about Eddy&apos;s AI Lab insights, programs, and events.
-              </p>
-              <p className="text-sm leading-relaxed mt-auto">
-                Get field notes on AI strategy, executive coaching, and the systems we build with leaders.
-              </p>
+                  <input
+                    type="email"
+                    placeholder="you@company.com"
+                    className="flex-1 bg-transparent outline-none text-base placeholder:opacity-40"
+                    style={{ color: "#f5f0e0" }}
+                  />
+                  <button
+                    type="submit"
+                    className="text-xs uppercase tracking-[0.18em] opacity-80 hover:opacity-100"
+                  >
+                    Subscribe →
+                  </button>
+                </form>
+                <p className="text-xs opacity-40 mt-3 leading-relaxed">
+                  No spam. Cancel anytime. Read by ~3,200 founders & operators.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Oversized wordmark */}
+          <div className="px-8 lg:px-12 pt-4 pb-2 overflow-hidden">
+            <div
+              className="font-semibold leading-none tracking-[-0.04em] select-none"
+              style={{
+                fontSize: "clamp(4rem, 17vw, 16rem)",
+                background: "linear-gradient(180deg, rgba(245,240,224,0.18) 0%, rgba(245,240,224,0.02) 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              eddy&apos;s ai lab
             </div>
           </div>
 
           {/* Bottom bar */}
           <div
-            className="mt-16 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
-            style={{ borderTop: "1px solid rgba(245,240,224,0.12)" }}
+            className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-8 lg:px-12 py-6"
+            style={{ borderTop: "1px solid rgba(245,240,224,0.1)" }}
           >
-            <div className="flex items-center gap-4 text-sm opacity-70">
-              <a href="#" aria-label="LinkedIn" className="hover:opacity-100">
-                <i className="fa-brands fa-linkedin-in" />
-              </a>
-              <a href="#" aria-label="X" className="hover:opacity-100">
-                <i className="fa-brands fa-x-twitter" />
-              </a>
-              <a href="#" className="ml-2 hover:opacity-100">Privacy Policy</a>
-              <a href="#" className="hover:opacity-100">Terms of Service</a>
-            </div>
-            <p className="text-sm opacity-60">
-              © {new Date().getFullYear()} Eddy&apos;s AI Lab. Founded by Edwin Rogoi.
+            <p className="text-xs opacity-50 tracking-wide">
+              © {new Date().getFullYear()} Eddy&apos;s AI Lab · Founded by Edwin Rogoi
             </p>
+            <div className="flex items-center gap-5 text-xs">
+              <a href="#" aria-label="LinkedIn" className="opacity-60 hover:opacity-100 flex items-center gap-2">
+                <i className="fa-brands fa-linkedin-in" /> LinkedIn
+              </a>
+              <a href="#" aria-label="X" className="opacity-60 hover:opacity-100 flex items-center gap-2">
+                <i className="fa-brands fa-x-twitter" /> X / Twitter
+              </a>
+              <a href="#" className="opacity-60 hover:opacity-100">Privacy</a>
+              <a href="#" className="opacity-60 hover:opacity-100">Terms</a>
+            </div>
           </div>
         </div>
       </footer>
