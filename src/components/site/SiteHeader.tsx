@@ -1,14 +1,21 @@
 import { Link } from "@tanstack/react-router";
+import { Menu } from "lucide-react";
 import logoAsset from "@/assets/eddys-logo.png.asset.json";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetClose,
+} from "@/components/ui/sheet";
 
 type NavKey = "works" | "journal" | "about" | "faq" | "contact";
 
-const NAV: { key: NavKey; label: string; href: string }[] = [
+const NAV: { key: NavKey; label: string; href: string; isHash?: boolean }[] = [
   { key: "works", label: "Works", href: "/gallery" },
   { key: "journal", label: "Journal", href: "/journal" },
   { key: "about", label: "About", href: "/about" },
-  { key: "faq", label: "FAQ", href: "/#faq" },
-  { key: "contact", label: "Contact", href: "/#contact" },
+  { key: "faq", label: "FAQ", href: "/#faq", isHash: true },
+  { key: "contact", label: "Contact", href: "/#contact", isHash: true },
 ];
 
 export function SiteHeader({ active }: { active?: NavKey }) {
@@ -21,6 +28,8 @@ export function SiteHeader({ active }: { active?: NavKey }) {
         <img src={logoAsset.url} alt="Eddys AI Lab" className="h-10 w-auto block" />
         <span className="text-2xl leading-none">eddys ai lab</span>
       </Link>
+
+      {/* Desktop */}
       <nav className="hidden md:flex items-center gap-10">
         {NAV.map((item) => (
           <a
@@ -34,6 +43,44 @@ export function SiteHeader({ active }: { active?: NavKey }) {
           </a>
         ))}
       </nav>
+
+      {/* Mobile */}
+      <Sheet>
+        <SheetTrigger asChild>
+          <button
+            className="md:hidden p-2 -mr-2 cursor-pointer"
+            aria-label="Open menu"
+          >
+            <Menu className="h-6 w-6" style={{ color: "var(--emerald-pine)" }} />
+          </button>
+        </SheetTrigger>
+        <SheetContent
+          side="right"
+          className="w-full sm:w-[360px] border-[var(--green-tea)]"
+          style={{ backgroundColor: "var(--background)" }}
+        >
+          <nav className="flex flex-col gap-8 mt-12">
+            {NAV.map((item) => {
+              const linkClass = `nav-link text-2xl font-medium hover:opacity-70 transition${
+                active === item.key ? " underline underline-offset-8" : ""
+              }`;
+              return (
+                <SheetClose asChild key={item.key}>
+                  {item.isHash ? (
+                    <a href={item.href} className={linkClass}>
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link to={item.href} className={linkClass}>
+                      {item.label}
+                    </Link>
+                  )}
+                </SheetClose>
+              );
+            })}
+          </nav>
+        </SheetContent>
+      </Sheet>
     </header>
   );
 }
