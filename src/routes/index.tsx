@@ -96,6 +96,10 @@ function Index() {
             alt="AI consultancy keynote speaker addressing a business audience"
             width={1600}
             height={1000}
+            loading="eager"
+            decoding="async"
+            // @ts-expect-error - fetchpriority is valid HTML, not yet in React types
+            fetchpriority="high"
             className="w-full h-auto object-cover"
             style={{ filter: "saturate(0.78) hue-rotate(-12deg) brightness(0.82) contrast(1.05)" }}
           />
