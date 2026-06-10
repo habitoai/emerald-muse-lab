@@ -30,17 +30,6 @@ function ContactPage() {
 
       {/* HERO */}
       <section className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-32 pb-10">
-        <div
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-10"
-          style={{ backgroundColor: "var(--green-tea)" }}
-        >
-          <span
-            className="w-2 h-2 rounded-full"
-            style={{ backgroundColor: "var(--lime-glow)" }}
-          />
-          <span className="tag-label">Get in touch</span>
-        </div>
-
         <h1
           className="font-semibold tracking-tight max-w-4xl"
           style={{
@@ -54,13 +43,6 @@ function ContactPage() {
           <br />
           them into something real.
         </h1>
-
-        <p
-          className="mt-6 text-lg opacity-70"
-          style={{ color: "var(--emerald-pine)" }}
-        >
-          Tell us what&apos;s on your mind.
-        </p>
 
         <div
           className="mt-14 h-px w-full"
