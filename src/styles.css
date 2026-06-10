@@ -472,15 +472,13 @@
   width: auto;
   height: auto;
   object-fit: contain;
-  /* Recolor logos to emerald-pine (#084734) */
-  filter: brightness(0) saturate(100%) invert(20%) sepia(45%) saturate(1400%) hue-rotate(118deg) brightness(78%) contrast(95%);
-  mix-blend-mode: multiply;
-  opacity: 0.7;
+  opacity: 0.95;
   transition: opacity 250ms ease;
 }
 .brand-logo-img-wrap:hover .brand-logo-img {
   opacity: 1;
 }
+
 @media (max-width: 767px) {
   .brand-logo-img-wrap { height: 44px; }
   .brand-logo-img { max-width: 110px; }
