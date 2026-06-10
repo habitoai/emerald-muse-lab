@@ -137,7 +137,7 @@ function Index() {
                     alt={b.name}
                     className="brand-logo-img"
                     loading="lazy"
-                    style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
+                    
                   />
                 </div>
               ))}
