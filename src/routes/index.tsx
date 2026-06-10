@@ -124,7 +124,7 @@ function Index() {
 
       {/* BRANDS */}
       <section className="max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-10 pt-6 pb-12 mt-6">
-        <div className="rounded-2xl sm:rounded-3xl py-12 px-6 lg:px-10" style={{ backgroundColor: "#0a0a0a" }}>
+        <div className="rounded-2xl sm:rounded-3xl py-12 px-6 lg:px-10" style={{ backgroundColor: "var(--emerald-pine)" }}>
           <p className="section-description text-center mb-10" style={{ color: "rgba(245,240,224,0.75)" }}>
             Our corporate clients include
           </p>
