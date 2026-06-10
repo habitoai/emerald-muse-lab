@@ -6,10 +6,14 @@ import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
 import g5 from "@/assets/gallery-5.jpg";
 import g6 from "@/assets/gallery-6.jpg";
-import serviceAdvisory from "@/assets/service-advisory.jpg";
-import serviceTraining from "@/assets/service-training.jpg";
-import serviceSystems from "@/assets/service-systems.jpg";
-import serviceCreator from "@/assets/service-creator.jpg";
+import serviceAdvisoryAsset from "@/assets/service-advisory.png.asset.json";
+import serviceTrainingAsset from "@/assets/service-training.png.asset.json";
+import serviceSystemsAsset from "@/assets/service-systems.png.asset.json";
+import serviceCreatorAsset from "@/assets/service-creator.png.asset.json";
+const serviceAdvisory = serviceAdvisoryAsset.url;
+const serviceTraining = serviceTrainingAsset.url;
+const serviceSystems = serviceSystemsAsset.url;
+const serviceCreator = serviceCreatorAsset.url;
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
