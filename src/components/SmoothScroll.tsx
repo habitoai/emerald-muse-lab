@@ -1,5 +1,8 @@
+"use client";
+
 import { useEffect } from "react";
 import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 
 export function SmoothScroll() {
   useEffect(() => {
@@ -14,6 +17,8 @@ export function SmoothScroll() {
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       touchMultiplier: 1.2,
+      anchors: { offset: -80 },
+      autoRaf: true,
     });
 
     // Anchor link support (e.g. /#contact)
@@ -30,16 +35,8 @@ export function SmoothScroll() {
     };
     document.addEventListener("click", handleAnchorClick);
 
-    let rafId = 0;
-    const raf = (time: number) => {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    };
-    rafId = requestAnimationFrame(raf);
-
     return () => {
       document.removeEventListener("click", handleAnchorClick);
-      cancelAnimationFrame(rafId);
       lenis.destroy();
     };
   }, []);
