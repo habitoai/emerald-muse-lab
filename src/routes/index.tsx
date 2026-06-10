@@ -18,7 +18,7 @@ const serviceTraining = serviceTrainingAsset.url;
 const serviceSystems = serviceSystemsAsset.url;
 const serviceCreator = serviceCreatorAsset.url;
 import speakerAsset from "@/assets/speaker.png.asset.json";
-import logoAsset from "@/assets/eddys-logo.png.asset.json";
+
 import brandOsho from "@/assets/brands/osho.png.asset.json";
 import brandBatanat from "@/assets/brands/batanat.png.asset.json";
 import brandDazu from "@/assets/brands/dazu.png.asset.json";
@@ -81,10 +81,10 @@ function Index() {
             <br />
             put AI to work.
           </h1>
-          <button className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base self-start md:self-end shrink-0">
+          <a href="/#contact" className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base self-start md:self-end shrink-0">
             Book a private call
             <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
-          </button>
+          </a>
         </div>
       </section>
 
