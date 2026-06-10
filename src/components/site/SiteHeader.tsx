@@ -15,7 +15,7 @@ const NAV: { key: NavKey; label: string; href: string; isHash?: boolean }[] = [
   { key: "journal", label: "Journal", href: "/journal" },
   { key: "about", label: "About", href: "/about" },
   { key: "faq", label: "FAQ", href: "/#faq", isHash: true },
-  { key: "contact", label: "Contact", href: "/#contact", isHash: true },
+  { key: "contact", label: "Contact", href: "/contact" },
 ];
 
 export function SiteHeader({ active }: { active?: NavKey }) {
