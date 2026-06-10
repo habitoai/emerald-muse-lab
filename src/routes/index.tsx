@@ -91,7 +91,7 @@ function Index() {
             put AI to work.
           </h1>
           <button className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base self-start md:self-end shrink-0">
-            Book Call
+            Book a private call
             <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
           </button>
         </div>
@@ -214,10 +214,10 @@ function Index() {
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
           {[
-            { n: "3,500+", d: "Leaders and teams trained in person across our cohorts and workshops since 2022" },
-            { n: "10", d: "Countries where we have delivered AI advisory, training, or build sprints on the ground" },
-            { n: "6 wks", d: "Typical time from kickoff to a working AI workflow live inside a client team" },
-            { n: "500K", d: "Kenyans we are on a mission to give free, structured AI literacy training to by 2030" },
+            { n: "3,500+", d: "Learners reached" },
+            { n: "10+", d: "AI systems designed" },
+            { n: "6-week", d: "Implementation sprint" },
+            { n: "500K+", d: "Content reach" },
           ].map((s) => (
             <div key={s.n}>
               <div className="stat-number">{s.n}</div>
@@ -256,7 +256,7 @@ function Index() {
               <img src={reasonStrategy} alt="" loading="lazy" className="max-h-56 w-auto" />
             </div>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(245,240,224,0.7)" }}>
-              We do not start by recommending random AI apps. We identify your goals, bottlenecks, workflows, and opportunities first — then design the right AI approach around them.
+              We identify where AI can create real leverage before recommending platforms, prompts, or automations.
             </p>
           </div>
 
@@ -270,7 +270,7 @@ function Index() {
               <img src={reasonWorkflow} alt="" loading="lazy" className="max-h-56 w-auto" />
             </div>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(8,71,52,0.75)" }}>
-              Your AI system is not generic. It is shaped around your role, business model, content, clients, habits, and level of technical confidence.
+              Your AI system is shaped around your goals, workflows, content, clients, and decision-making style.
             </p>
           </div>
 
@@ -284,7 +284,7 @@ function Index() {
               <img src={reasonEducation} alt="" loading="lazy" className="max-h-80 w-auto" />
             </div>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(8,71,52,0.75)" }}>
-              You do not just get theory. You learn how to think with AI, then apply it through prompts, workflows, automations, playbooks, and practical systems.
+              You learn how to think with AI, then apply it through practical workflows, prompts, playbooks, and systems.
             </p>
           </div>
 
@@ -297,7 +297,7 @@ function Index() {
             <div className="flex-1 flex flex-col justify-between">
               <h3 className="text-2xl font-semibold leading-snug max-w-[18ch]">Creator-led and field-tested</h3>
               <p className="text-sm leading-relaxed max-w-md" style={{ color: "rgba(8,71,52,0.75)" }}>
-                Eddys AI Lab is built from daily AI research, experimentation, content creation, and real-world application — not recycled corporate AI theory.
+                Built from daily AI research, experimentation, teaching, content creation, and practical implementation.
               </p>
             </div>
             <div className="md:w-[44%] rounded-2xl overflow-hidden relative min-h-[220px]">
@@ -473,7 +473,7 @@ function Index() {
             Work with us as your advisor. We pair strategy, ethics, and execution to put AI to real work in your business.
           </p>
           <button className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base mt-10 shrink-0">
-            Book your call
+            Book a private call
             <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
           </button>
         </div>
