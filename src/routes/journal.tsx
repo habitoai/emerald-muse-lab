@@ -1,11 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/eddys-logo.png.asset.json";
-import articleRoi from "@/assets/article-ai-roi.jpg";
-import articleTraining from "@/assets/article-team-training.jpg";
-import articleStrategy from "@/assets/article-ai-strategy.jpg";
-import articleChange from "@/assets/article-change.jpg";
-import articleProcess from "@/assets/article-process.jpg";
-import articleCulture from "@/assets/article-culture.jpg";
+import { posts } from "@/lib/journal-posts";
 
 export const Route = createFileRoute("/journal")({
   head: () => ({
@@ -26,58 +21,7 @@ export const Route = createFileRoute("/journal")({
   component: JournalPage,
 });
 
-type Post = {
-  date: string;
-  read: string;
-  title: string;
-  img: string;
-  alt: string;
-};
 
-const posts: Post[] = [
-  {
-    date: "May 28, 2026",
-    read: "6 min read",
-    title: "The honest ROI of AI inside a 20-person team",
-    img: articleRoi,
-    alt: "Laptop with green data visualization",
-  },
-  {
-    date: "Apr 14, 2026",
-    read: "7 min read",
-    title: "Why most AI training fails — and what we changed",
-    img: articleTraining,
-    alt: "Team workshop with sticky notes",
-  },
-  {
-    date: "Mar 02, 2026",
-    read: "5 min read",
-    title: "Build vs. buy: choosing your first AI workflow",
-    img: articleStrategy,
-    alt: "Abstract green glass shapes",
-  },
-  {
-    date: "Feb 11, 2026",
-    read: "4 min read",
-    title: "Leading through the AI shift without the hype",
-    img: articleChange,
-    alt: "Figure in translucent coat walking",
-  },
-  {
-    date: "Jan 22, 2026",
-    read: "4 min read",
-    title: "A 30-day rollout playbook for your first GPT in ops",
-    img: articleProcess,
-    alt: "Ceramic vase with dried branches",
-  },
-  {
-    date: "Dec 05, 2025",
-    read: "5 min read",
-    title: "The culture cost of AI nobody warned you about",
-    img: articleCulture,
-    alt: "Water droplet ripple on cream surface",
-  },
-];
 
 function JournalPage() {
   return (
@@ -136,7 +80,7 @@ function JournalPage() {
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14 lg:gap-x-10 lg:gap-y-20">
           {posts.map((p) => (
-            <a key={p.title} href="/journal" className="group block">
+            <a key={p.title} href={`/journal/${p.slug}`} className="group block">
               <div className="overflow-hidden rounded-2xl bg-[var(--green-tea)] aspect-[4/3]">
                 <img
                   src={p.img}
