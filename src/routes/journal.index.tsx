@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/eddys-logo.png.asset.json";
 import { posts } from "@/lib/journal-posts";
 
-export const Route = createFileRoute("/journal")({
+export const Route = createFileRoute("/journal/")({
   head: () => ({
     meta: [
       { title: "Journal — Eddys AI Lab" },
