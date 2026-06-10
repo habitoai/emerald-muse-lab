@@ -522,14 +522,10 @@ function Index() {
             <div>
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { label: "Advisory", href: "/services/ai-strategy-integration" },
-                  { label: "Clients", href: "#why-us" },
-                  { label: "Training", href: "/services/executive-ai-coaching" },
-                  { label: "Journal", href: "/journal" },
-                  { label: "Systems", href: "/services/ai-workflow-systems" },
-                  { label: "Gallery", href: "/gallery" },
-                  { label: "Authority", href: "/services/ai-content-authority-systems" },
+                  { label: "Works", href: "#works" },
+                  { label: "Journal", href: "#journal" },
                   { label: "About", href: "/about" },
+                  { label: "FAQ", href: "#faq" },
                 ].map((item) => (
                   <a
                     key={item.label}
