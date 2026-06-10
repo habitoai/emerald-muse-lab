@@ -470,6 +470,8 @@
   gap: 56px;
   align-items: center;
   animation: brand-marquee 35s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 .brand-marquee-row:hover .brand-marquee-track {
   animation-play-state: paused;
