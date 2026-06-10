@@ -82,7 +82,7 @@ function Index() {
             <br />
             put AI to work.
           </h1>
-          <a href="/#contact" className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base self-start md:self-end shrink-0">
+          <a href="/contact" className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base self-start md:self-end shrink-0">
             Book a private call
             <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
           </a>
@@ -195,12 +195,13 @@ function Index() {
                 Our six-week program for leaders who want to use AI with strategy,
                 taste, and real execution. We keep seats limited so you get our attention.
               </p>
-              <button
+              <a
+                href="/contact"
                 className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base shrink-0"
               >
                 Reserve a seat
                 <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
-              </button>
+              </a>
             </div>
           </div>
         </div>
