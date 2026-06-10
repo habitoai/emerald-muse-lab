@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { FinalCTA } from "@/components/site/FinalCTA";
+import { ContactForm } from "@/components/site/ContactForm";
 import footerBg from "@/assets/footer-bg.jpg";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -457,6 +458,8 @@ function Index() {
       </section>
 
       <FinalCTA />
+
+      <ContactForm />
 
       <SiteFooter />
     </div>

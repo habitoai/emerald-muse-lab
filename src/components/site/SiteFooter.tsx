@@ -7,7 +7,7 @@ const LINKS = [
 
 export function SiteFooter() {
   return (
-    <footer id="contact" className="text-[#f5f0e0] px-3 sm:px-6 lg:px-10">
+    <footer className="text-[#f5f0e0] px-3 sm:px-6 lg:px-10">
       <div
         className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 pt-12 sm:pt-16 lg:pt-20 pb-8 sm:pb-10 rounded-2xl sm:rounded-3xl"
         style={{ backgroundColor: "#0a0a0a" }}
