@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Eddys is a strategic AI advisor with a foundation in journalism and PR. He helps leaders use AI with clarity, ethics, and sharp communication.",
+          "Edwin Rogoi is a strategic AI advisor with a foundation in journalism and PR. He helps leaders use AI with clarity, ethics, and sharp communication.",
       },
       { property: "og:title", content: "About — Eddys AI Lab" },
       {
@@ -61,7 +61,7 @@ function AboutPage() {
         <div className="rounded-3xl overflow-hidden">
           <img
             src={speakerAsset.url}
-            alt="Eddys speaking on stage to a business audience"
+            alt="Edwin Rogoi speaking on stage to a business audience"
             className="w-full h-auto object-cover"
             width={1600}
             height={1000}

@@ -301,7 +301,7 @@ function Index() {
               </p>
             </div>
             <div className="md:w-[44%] rounded-2xl overflow-hidden relative min-h-[220px]">
-              <img src={gallery5} alt="Eddy in the lab" className="absolute inset-0 w-full h-full object-cover" />
+              <img src={gallery5} alt="Edwin Rogoi in the lab" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
 
