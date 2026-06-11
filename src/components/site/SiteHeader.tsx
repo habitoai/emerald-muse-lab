@@ -24,7 +24,7 @@ export function SiteHeader({ active }: { active?: NavKey }) {
         className="logo-text font-semibold tracking-tight inline-flex items-center gap-3 leading-none"
       >
         <img src={logoAsset.url} alt="Eddys AI Lab" className="h-9 w-auto block shrink-0 relative top-[2px]" />
-        <span className="text-3xl leading-none relative top-[3px]">Eddys AI Lab</span>
+        <span className="text-3xl leading-none relative top-[5px]">Eddys AI Lab</span>
       </Link>
 
       {/* Desktop */}
