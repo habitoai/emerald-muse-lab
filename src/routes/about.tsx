@@ -46,7 +46,7 @@ function AboutPage() {
 
       {/* HERO */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-40 pb-16">
-        <h1 className="about-hero-title max-w-5xl">Meet EdwinRogoi</h1>
+        <h1 className="about-hero-title max-w-5xl">Meet Edwin Rogoi</h1>
         <p className="about-lead mt-10 max-w-3xl">
           Edwin Rogoi is the award-winning visionary founder of Eddy&apos;s AI Lab and a leading voice in the movement to democratize Artificial Intelligence across Kenya and beyond. Driven by a mission to make AI accessible, practical, and impactful for everyone, Edwin works tirelessly to ensure that technology is not seen as an intimidating barrier but as a transformative tool for personal and professional growth. His dedication to this cause was recently recognized on a national stage when he was honored as the Assistive Technology Enabler of the Year, a testament to his commitment to inclusive innovation.
         </p>
