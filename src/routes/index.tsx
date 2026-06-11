@@ -32,20 +32,27 @@ import reasonStrategy from "@/assets/reason-strategy.png";
 import reasonWorkflow from "@/assets/reason-workflow.png";
 import reasonEducation from "@/assets/reason-education.png";
 
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Eddys AI Lab — Practical AI for Leaders" },
-      { name: "description", content: "We help business leaders put AI to work — strategy, training, and systems built around your real work." },
+      {
+        name: "description",
+        content:
+          "We help business leaders put AI to work — strategy, training, and systems built around your real work.",
+      },
       { property: "og:title", content: "Eddys AI Lab — Practical AI for Leaders" },
-      { property: "og:description", content: "We help business leaders put AI to work — strategy, training, and systems built around your real work." },
-      { property: "og:url", content: "https://emerald-muse-lab.lovable.app/" },
+      {
+        property: "og:description",
+        content:
+          "We help business leaders put AI to work — strategy, training, and systems built around your real work.",
+      },
       { name: "twitter:title", content: "Eddys AI Lab — Practical AI for Leaders" },
-      { name: "twitter:description", content: "We help business leaders put AI to work — strategy, training, and systems built around your real work." },
-    ],
-    links: [
-      { rel: "canonical", href: "https://emerald-muse-lab.lovable.app/" },
+      {
+        name: "twitter:description",
+        content:
+          "We help business leaders put AI to work — strategy, training, and systems built around your real work.",
+      },
     ],
   }),
   component: Index,
@@ -76,7 +83,6 @@ function Index() {
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
       <SiteHeader />
 
-
       {/* HERO */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-32 pb-12">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
@@ -85,7 +91,10 @@ function Index() {
             <br />
             put AI to work.
           </h1>
-          <a href="/contact" className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base self-start md:self-end shrink-0">
+          <a
+            href="/contact"
+            className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base self-start md:self-end shrink-0"
+          >
             Book a private call
             <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
           </a>
@@ -124,25 +133,23 @@ function Index() {
         </div>
       </section>
 
-
-
       {/* BRANDS */}
       <section className="max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-10 pt-6 pb-12 mt-6">
-        <div className="rounded-2xl sm:rounded-3xl py-12 px-6 lg:px-10" style={{ backgroundColor: "var(--emerald-pine)" }}>
-          <p className="section-description text-center mb-10" style={{ color: "rgba(245,240,224,0.75)" }}>
+        <div
+          className="rounded-2xl sm:rounded-3xl py-12 px-6 lg:px-10"
+          style={{ backgroundColor: "var(--emerald-pine)" }}
+        >
+          <p
+            className="section-description text-center mb-10"
+            style={{ color: "rgba(245,240,224,0.75)" }}
+          >
             Our Corporate Partners
           </p>
           <div className="brand-marquee-row">
             <div className="brand-marquee-track">
               {[...brands, ...brands].map((b, i) => (
                 <div key={i} className="brand-logo-img-wrap" title={b.name}>
-                  <img
-                    src={b.src}
-                    alt={b.name}
-                    className="brand-logo-img"
-                    loading="lazy"
-                    
-                  />
+                  <img src={b.src} alt={b.name} className="brand-logo-img" loading="lazy" />
                 </div>
               ))}
             </div>
@@ -154,7 +161,10 @@ function Index() {
       <section id="about" className="max-w-7xl mx-auto px-6 lg:px-10 pt-24 pb-16">
         <div className="flex flex-col items-center text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-8">
-            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
+            <span
+              className="w-2 h-2 rounded-full"
+              style={{ backgroundColor: "var(--lime-glow)" }}
+            />
             <span className="tag-label">What we do</span>
           </div>
 
@@ -165,8 +175,8 @@ function Index() {
           </h2>
 
           <p className="section-description mt-8 max-w-md text-balance">
-            We work with leaders who do not want more AI noise. You want strategy,
-            training, systems, and execution that make your work sharper. That is what we build.
+            We work with leaders who do not want more AI noise. You want strategy, training,
+            systems, and execution that make your work sharper. That is what we build.
           </p>
         </div>
       </section>
@@ -194,16 +204,22 @@ function Index() {
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mt-10">
-              <p className="max-w-sm cohort-banner-body" style={{ color: "rgba(255,255,255,0.75)" }}>
-                Our six-week program for leaders who want to use AI with strategy,
-                taste, and real execution. We keep seats limited so you get our attention.
+              <p
+                className="max-w-sm cohort-banner-body"
+                style={{ color: "rgba(255,255,255,0.75)" }}
+              >
+                Our six-week program for leaders who want to use AI with strategy, taste, and real
+                execution. We keep seats limited so you get our attention.
               </p>
               <a
                 href="/contact"
                 className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base shrink-0"
               >
                 Reserve a seat
-                <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
+                <i
+                  className="fa-solid fa-arrow-right text-sm"
+                  style={{ color: "var(--lime-glow)" }}
+                />
               </a>
             </div>
           </div>
@@ -232,9 +248,15 @@ function Index() {
       </section>
 
       {/* WHY US */}
-      <section id="why-us" className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24 border-t border-accent">
+      <section
+        id="why-us"
+        className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24 border-t border-accent"
+      >
         <div className="flex flex-col items-center text-center mb-14 gap-5">
-          <div className="flex items-center gap-1.5 text-lg" style={{ color: "var(--emerald-pine)" }}>
+          <div
+            className="flex items-center gap-1.5 text-lg"
+            style={{ color: "var(--emerald-pine)" }}
+          >
             {Array.from({ length: 5 }).map((_, i) => (
               <i key={i} className="fa-solid fa-star" />
             ))}
@@ -255,12 +277,15 @@ function Index() {
             className="rounded-3xl p-8 flex flex-col justify-between min-h-[420px]"
             style={{ backgroundColor: "var(--emerald-pine)", color: "#f5f0e0" }}
           >
-            <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Strategy before tools</h3>
+            <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">
+              Strategy before tools
+            </h3>
             <div className="flex-1 flex items-center justify-center py-4">
               <img src={reasonStrategy} alt="" loading="lazy" className="max-h-56 w-auto" />
             </div>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(245,240,224,0.7)" }}>
-              We identify where AI can create real leverage before recommending platforms, prompts, or automations.
+              We identify where AI can create real leverage before recommending platforms, prompts,
+              or automations.
             </p>
           </div>
 
@@ -269,12 +294,15 @@ function Index() {
             className="rounded-3xl p-8 flex flex-col justify-between min-h-[420px]"
             style={{ backgroundColor: "var(--lime-glow)", color: "var(--emerald-pine)" }}
           >
-            <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Built around your work</h3>
+            <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">
+              Built around your work
+            </h3>
             <div className="flex-1 flex items-center justify-center py-4">
               <img src={reasonWorkflow} alt="" loading="lazy" className="max-h-56 w-auto" />
             </div>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(8,71,52,0.75)" }}>
-              Your AI system is shaped around your goals, workflows, content, clients, and decision-making style.
+              Your AI system is shaped around your goals, workflows, content, clients, and
+              decision-making style.
             </p>
           </div>
 
@@ -283,15 +311,17 @@ function Index() {
             className="rounded-3xl p-8 flex flex-col justify-between min-h-[420px] md:row-span-2 md:min-h-full"
             style={{ backgroundColor: "var(--green-tea)", color: "var(--emerald-pine)" }}
           >
-            <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">Education plus execution</h3>
+            <h3 className="text-2xl font-semibold leading-snug max-w-[14ch]">
+              Education plus execution
+            </h3>
             <div className="flex-1 flex items-center justify-center py-4">
               <img src={reasonEducation} alt="" loading="lazy" className="max-h-80 w-auto" />
             </div>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(8,71,52,0.75)" }}>
-              You learn how to think with AI, then apply it through practical workflows, prompts, playbooks, and systems.
+              You learn how to think with AI, then apply it through practical workflows, prompts,
+              playbooks, and systems.
             </p>
           </div>
-
 
           {/* Reason 04 — Wide with image (spans 2 cols, row 2) */}
           <div
@@ -299,32 +329,66 @@ function Index() {
             style={{ backgroundColor: "var(--green-tea)", color: "var(--emerald-pine)" }}
           >
             <div className="flex-1 flex flex-col justify-between">
-              <h3 className="text-2xl font-semibold leading-snug max-w-[18ch]">Creator-led and field-tested</h3>
-              <p className="text-sm leading-relaxed max-w-md" style={{ color: "rgba(8,71,52,0.75)" }}>
-                Built from daily AI research, experimentation, teaching, content creation, and practical implementation.
+              <h3 className="text-2xl font-semibold leading-snug max-w-[18ch]">
+                Creator-led and field-tested
+              </h3>
+              <p
+                className="text-sm leading-relaxed max-w-md"
+                style={{ color: "rgba(8,71,52,0.75)" }}
+              >
+                Built from daily AI research, experimentation, teaching, content creation, and
+                practical implementation.
               </p>
             </div>
             <div className="md:w-[44%] rounded-2xl overflow-hidden relative min-h-[220px]">
-              <img src={gallery5} alt="Edwin Rogoi in the lab" className="absolute inset-0 w-full h-full object-cover" />
+              <img
+                src={gallery5}
+                alt="Edwin Rogoi in the lab"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
           </div>
-
         </div>
       </section>
 
       {/* CAPABILITIES */}
-      <section id="services" className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24 border-t border-accent">
+      <section
+        id="services"
+        className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24 border-t border-accent"
+      >
         <div className="flex flex-col items-center text-center mb-16 gap-4">
-          <p className="capability-eyebrow">Private engagements for leaders, founders, and high performers</p>
+          <p className="capability-eyebrow">
+            Private engagements for leaders, founders, and high performers
+          </p>
           <h2 className="capability-headline">How we work with you</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {[
-            { slug: "ai-strategy-advisory", image: serviceAdvisory, title: "AI Strategy Integration", body: "A private roadmap for leaders who want to see exactly where AI can create real leverage in their business, content, decisions, and operations." },
-            { slug: "executive-ai-training", image: serviceTraining, title: "Executive AI Coaching", body: "One-on-one guidance for business leaders and professionals who want to use AI with confidence, without wasting time on scattered tools." },
-            { slug: "ai-workflow-systems", image: serviceSystems, title: "AI Workflow Systems", body: "Custom systems built around your work, for research, content, automation, knowledge management, client delivery, and day-to-day decisions." },
-            { slug: "creator-personal-brand-ai", image: serviceCreator, title: "AI Content & Authority Systems", body: "For creators, founders, and experts who want to scale their ideas, content, and digital presence with AI, without losing their voice." },
+            {
+              slug: "ai-strategy-advisory",
+              image: serviceAdvisory,
+              title: "AI Strategy Integration",
+              body: "A private roadmap for leaders who want to see exactly where AI can create real leverage in their business, content, decisions, and operations.",
+            },
+            {
+              slug: "executive-ai-training",
+              image: serviceTraining,
+              title: "Executive AI Coaching",
+              body: "One-on-one guidance for business leaders and professionals who want to use AI with confidence, without wasting time on scattered tools.",
+            },
+            {
+              slug: "ai-workflow-systems",
+              image: serviceSystems,
+              title: "AI Workflow Systems",
+              body: "Custom systems built around your work, for research, content, automation, knowledge management, client delivery, and day-to-day decisions.",
+            },
+            {
+              slug: "creator-personal-brand-ai",
+              image: serviceCreator,
+              title: "AI Content & Authority Systems",
+              body: "For creators, founders, and experts who want to scale their ideas, content, and digital presence with AI, without losing their voice.",
+            },
           ].map((c) => (
             <a key={c.slug} href={`/services/${c.slug}`} className="capability-visual-card group">
               <div className="capability-visual-image">
@@ -332,27 +396,33 @@ function Index() {
               </div>
               <h3 className="capability-visual-title">{c.title}</h3>
               <p className="capability-visual-body">{c.body}</p>
-              <span className="mt-3 inline-flex items-center gap-2 text-sm font-medium" style={{ color: "var(--emerald-pine)" }}>
+              <span
+                className="mt-3 inline-flex items-center gap-2 text-sm font-medium"
+                style={{ color: "var(--emerald-pine)" }}
+              >
                 Learn more
-                <i className="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1" style={{ color: "var(--lime-glow)" }} />
+                <i
+                  className="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"
+                  style={{ color: "var(--lime-glow)" }}
+                />
               </span>
             </a>
           ))}
         </div>
-
       </section>
 
-
-
-
-
-
       {/* FAQ */}
-      <section id="faq" className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24 border-t border-accent">
+      <section
+        id="faq"
+        className="max-w-[1600px] mx-auto px-6 lg:px-10 py-24 border-t border-accent"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-8">
-              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
+              <span
+                className="w-2 h-2 rounded-full"
+                style={{ backgroundColor: "var(--lime-glow)" }}
+              />
               <span className="tag-label">FAQ</span>
             </div>
             <h2 className="capability-headline mb-6">Answers before you book a call</h2>
