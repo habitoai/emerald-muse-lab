@@ -418,8 +418,8 @@
 }
 .about-lead {
   color: var(--emerald-pine);
-  font-size: 22px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 28px;
   opacity: 0.85;
 }
 .about-body {
