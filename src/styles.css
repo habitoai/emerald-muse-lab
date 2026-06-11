@@ -441,54 +441,52 @@
   .about-lead { font-size: 18px; line-height: 28px; }
 }
 
-/* Stats marquee — monotone, awwwards-style */
+/* Stats marquee — laurel-wreath badges, monotone */
 .stats-marquee {
   overflow: hidden;
   position: relative;
   mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
-  border-top: 1px solid color-mix(in oklab, var(--emerald-pine) 18%, transparent);
-  border-bottom: 1px solid color-mix(in oklab, var(--emerald-pine) 18%, transparent);
-  padding: 28px 0;
+  padding: 12px 0;
 }
 .stats-marquee-track {
   display: flex;
   width: max-content;
-  gap: 72px;
+  gap: 88px;
   align-items: center;
-  animation: stats-marquee-scroll 40s linear infinite;
+  animation: stats-marquee-scroll 45s linear infinite;
 }
 .stats-marquee:hover .stats-marquee-track { animation-play-state: paused; }
 .stats-marquee-item {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   flex-shrink: 0;
-  color: var(--emerald-pine);
+  color: color-mix(in oklab, var(--emerald-pine) 55%, transparent);
 }
-.stats-marquee-icon {
-  width: 28px;
-  height: 28px;
-  color: var(--emerald-pine);
-  opacity: 0.9;
+.stats-laurel {
+  width: 44px;
+  height: 60px;
+  flex-shrink: 0;
 }
 .stats-marquee-label {
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-  font-size: 26px;
-  line-height: 1;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  color: var(--emerald-pine);
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: color-mix(in oklab, var(--emerald-pine) 70%, transparent);
   white-space: nowrap;
+  text-align: center;
 }
 @keyframes stats-marquee-scroll {
   from { transform: translateX(0); }
-  to { transform: translateX(calc(-50% - 36px)); }
+  to { transform: translateX(calc(-50% - 44px)); }
 }
 @media (max-width: 768px) {
-  .stats-marquee-label { font-size: 20px; }
-  .stats-marquee-icon { width: 22px; height: 22px; }
-  .stats-marquee-track { gap: 48px; animation-duration: 30s; }
+  .stats-marquee-label { font-size: 16px; }
+  .stats-laurel { width: 34px; height: 46px; }
+  .stats-marquee-track { gap: 56px; animation-duration: 32s; }
 }
 
 /* Brand logos — monotone emerald, animated marquee */

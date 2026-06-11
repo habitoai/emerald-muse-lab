@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Trophy, Users, GraduationCap, Globe2, Award, Target } from "lucide-react";
 import speakerAsset from "@/assets/speaker.png.asset.json";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
@@ -26,13 +25,34 @@ export const Route = createFileRoute("/about")({
 });
 
 const stats = [
-  { icon: Trophy, label: "Award-winning AI educator" },
-  { icon: Users, label: "40K+ community" },
-  { icon: GraduationCap, label: "3.5K+ learners trained" },
-  { icon: Globe2, label: "10 countries reached" },
-  { icon: Award, label: "Assistive Technology Enabler of the Year" },
-  { icon: Target, label: "500K Kenya AI literacy goal" },
+  "Award-winning AI educator",
+  "40K+ community",
+  "3.5K+ learners trained",
+  "10 countries reached",
+  "Assistive Technology Enabler of the Year",
+  "500K Kenya AI literacy goal",
 ];
+
+function Laurel({ flip = false }: { flip?: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 60 80"
+      className="stats-laurel"
+      style={flip ? { transform: "scaleX(-1)" } : undefined}
+      aria-hidden="true"
+    >
+      <g fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round">
+        <path d="M48 6 Q26 38 30 76" />
+        <path d="M44 14 Q34 14 30 22" />
+        <path d="M42 22 Q32 22 28 30" />
+        <path d="M39 31 Q29 31 26 39" />
+        <path d="M37 40 Q27 40 25 48" />
+        <path d="M35 49 Q25 49 24 57" />
+        <path d="M33 58 Q24 58 24 66" />
+      </g>
+    </svg>
+  );
+}
 
 function AboutPage() {
   return (
@@ -64,19 +84,17 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* STATS — monotone marquee */}
-      <section className="py-20 border-t border-accent">
+      {/* STATS — monotone laurel marquee */}
+      <section className="py-20">
         <div className="stats-marquee">
           <div className="stats-marquee-track">
-            {[...stats, ...stats].map((s, i) => {
-              const Icon = s.icon;
-              return (
-                <div key={i} className="stats-marquee-item">
-                  <Icon className="stats-marquee-icon" strokeWidth={1.5} />
-                  <span className="stats-marquee-label">{s.label}</span>
-                </div>
-              );
-            })}
+            {[...stats, ...stats].map((label, i) => (
+              <div key={i} className="stats-marquee-item">
+                <Laurel />
+                <span className="stats-marquee-label">{label}</span>
+                <Laurel flip />
+              </div>
+            ))}
           </div>
         </div>
       </section>
