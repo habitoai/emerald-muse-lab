@@ -110,7 +110,7 @@ export function SiteFooter() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold transition hover:brightness-110"
-              style={{ backgroundColor: "#E4405F", color: "#fff" }}
+              style={{ backgroundImage: "linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4)", color: "#fff" }}
             >
               <i className="fa-brands fa-instagram" />
               Follow me on Instagram
@@ -120,7 +120,7 @@ export function SiteFooter() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold transition hover:brightness-110"
-              style={{ backgroundColor: "#FE2C55", color: "#fff" }}
+              style={{ backgroundColor: "#000", color: "#fff" }}
             >
               <i className="fa-brands fa-tiktok" />
               Follow me on TikTok
