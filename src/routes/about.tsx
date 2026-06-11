@@ -63,13 +63,15 @@ function AboutPage() {
 
       {/* STATS — monotone laurel marquee */}
       <section className="py-20">
-        <div className="stats-marquee">
-          <div className="stats-marquee-track">
-            {[...stats, ...stats].map((item, i) => (
-              <div key={i} className="stats-marquee-item">
-                <img src={item.src} alt={item.alt} className="stats-laurel-img" loading="lazy" />
-              </div>
-            ))}
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
+          <div className="stats-marquee">
+            <div className="stats-marquee-track">
+              {[...stats, ...stats].map((item, i) => (
+                <div key={i} className="stats-marquee-item">
+                  <img src={item.src} alt={item.alt} className="stats-laurel-img" loading="lazy" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
