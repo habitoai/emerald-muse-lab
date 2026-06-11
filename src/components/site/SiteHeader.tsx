@@ -21,10 +21,10 @@ export function SiteHeader({ active }: { active?: NavKey }) {
     <header className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-8 flex items-center justify-between">
       <Link
         to="/"
-        className="logo-text font-semibold tracking-tight inline-flex items-center gap-2 leading-none"
+        className="logo-text font-semibold tracking-tight inline-flex items-center gap-3 leading-none"
       >
-        <img src={logoAsset.url} alt="Eddys AI Lab" className="h-11 w-auto block shrink-0" />
-        <span className="text-3xl leading-none relative top-[1px]">Eddys AI Lab</span>
+        <img src={logoAsset.url} alt="Eddys AI Lab" className="h-10 w-auto block shrink-0" />
+        <span className="text-3xl leading-none">Eddys AI Lab</span>
       </Link>
 
       {/* Desktop */}
