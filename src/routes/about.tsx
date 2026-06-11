@@ -1,5 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import speakerAsset from "@/assets/speaker.png.asset.json";
+import laurelAward from "@/assets/laurels/laurel-award.png.asset.json";
+import laurelCountries from "@/assets/laurels/laurel-countries.png.asset.json";
+import laurelKenya from "@/assets/laurels/laurel-kenya.png.asset.json";
+import laurelLearners from "@/assets/laurels/laurel-learners.png.asset.json";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { FinalCTA } from "@/components/site/FinalCTA";
