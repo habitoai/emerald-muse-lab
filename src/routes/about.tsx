@@ -26,12 +26,12 @@ export const Route = createFileRoute("/about")({
 });
 
 const stats = [
-  "Award-winning AI educator+",
-  "40K+ community+",
-  "3.5K+ learners trained+",
-  "10 countries reached+",
-  "Assistive Technology Enabler of the Year+",
-  "500K Kenya AI literacy goal+",
+  { icon: Trophy, label: "Award-winning AI educator" },
+  { icon: Users, label: "40K+ community" },
+  { icon: GraduationCap, label: "3.5K+ learners trained" },
+  { icon: Globe2, label: "10 countries reached" },
+  { icon: Award, label: "Assistive Technology Enabler of the Year" },
+  { icon: Target, label: "500K Kenya AI literacy goal" },
 ];
 
 function AboutPage() {
