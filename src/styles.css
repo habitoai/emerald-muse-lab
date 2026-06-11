@@ -483,9 +483,14 @@
   from { transform: translateX(0); }
   to { transform: translateX(calc(-50% - 44px)); }
 }
+.stats-laurel-img {
+  height: 120px;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+}
 @media (max-width: 768px) {
-  .stats-marquee-label { font-size: 16px; }
-  .stats-laurel { width: 34px; height: 46px; }
+  .stats-laurel-img { height: 84px; }
   .stats-marquee-track { gap: 56px; animation-duration: 32s; }
 }
 
