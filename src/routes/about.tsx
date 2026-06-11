@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Trophy, Users, GraduationCap, Globe2, Award, Target } from "lucide-react";
 import speakerAsset from "@/assets/speaker.png.asset.json";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
@@ -25,12 +26,12 @@ export const Route = createFileRoute("/about")({
 });
 
 const stats = [
-  "Award-winning AI educator+",
-  "40K+ community+",
-  "3.5K+ learners trained+",
-  "10 countries reached+",
-  "Assistive Technology Enabler of the Year+",
-  "500K Kenya AI literacy goal+",
+  { icon: Trophy, label: "Award-winning AI educator" },
+  { icon: Users, label: "40K+ community" },
+  { icon: GraduationCap, label: "3.5K+ learners trained" },
+  { icon: Globe2, label: "10 countries reached" },
+  { icon: Award, label: "Assistive Technology Enabler of the Year" },
+  { icon: Target, label: "500K Kenya AI literacy goal" },
 ];
 
 function AboutPage() {
@@ -63,20 +64,20 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* STATS */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 py-20 border-t border-accent">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl">
-          {stats.map((s) => (
-            <div
-              key={s}
-              className="px-6 py-5 rounded-2xl"
-              style={{ backgroundColor: "var(--green-tea)" }}
-            >
-              <p className="font-semibold text-lg" style={{ color: "var(--emerald-pine)" }}>
-                {s}
-              </p>
-            </div>
-          ))}
+      {/* STATS — monotone marquee */}
+      <section className="py-20 border-t border-accent">
+        <div className="stats-marquee">
+          <div className="stats-marquee-track">
+            {[...stats, ...stats].map((s, i) => {
+              const Icon = s.icon;
+              return (
+                <div key={i} className="stats-marquee-item">
+                  <Icon className="stats-marquee-icon" strokeWidth={1.5} />
+                  <span className="stats-marquee-label">{s.label}</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
