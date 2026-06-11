@@ -91,22 +91,46 @@ export function SiteFooter() {
 
         {/* Bottom bar */}
         <div
-          className="mt-16 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+          className="mt-16 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
           style={{ borderTop: "1px solid rgba(245,240,224,0.12)" }}
         >
-          <div className="flex items-center gap-4 text-sm opacity-70">
-            <a href="#" aria-label="LinkedIn" className="hover:opacity-100">
+          <div className="flex flex-col gap-3">
+            <a
+              href="https://www.linkedin.com/in/rogoi-edwin?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold transition hover:brightness-110"
+              style={{ backgroundColor: "#0077B5", color: "#fff" }}
+            >
               <i className="fa-brands fa-linkedin-in" />
+              Follow me on LinkedIn
             </a>
-            <a href="#" aria-label="X" className="hover:opacity-100">
-              <i className="fa-brands fa-x-twitter" />
-            </a>
-            <a href="#" className="ml-2 hover:opacity-100">Privacy Policy</a>
-            <a href="#" className="hover:opacity-100">Terms of Service</a>
+            <div className="flex items-center gap-3 text-sm opacity-70">
+              <a
+                href="https://www.instagram.com/eddys_ai.lab?igsh=eXY4M29lZHJ6aHB5"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="hover:opacity-100 transition"
+              >
+                <i className="fa-brands fa-instagram" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@eddys_ai_lab?_r=1&_t=ZS-977yAYS6cqI"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                className="hover:opacity-100 transition"
+              >
+                <i className="fa-brands fa-tiktok" />
+              </a>
+            </div>
           </div>
-          <p className="text-sm opacity-60">
-            © {new Date().getFullYear()} Eddy&apos;s AI Lab. Founded by Edwin Rogoi.
-          </p>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-sm opacity-60">
+            <a href="#" className="hover:opacity-100 transition">Privacy Policy</a>
+            <a href="#" className="hover:opacity-100 transition">Terms of Service</a>
+            <p>© {new Date().getFullYear()} Eddy&apos;s AI Lab. Founded by Edwin Rogoi.</p>
+          </div>
         </div>
       </div>
     </footer>
