@@ -8,11 +8,9 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 
-type NavKey = "works" | "journal" | "about" | "faq" | "contact";
+type NavKey = "about" | "faq" | "contact";
 
 const NAV: { key: NavKey; label: string; href: string; isHash?: boolean }[] = [
-  { key: "works", label: "Works", href: "/gallery" },
-  { key: "journal", label: "Journal", href: "/journal" },
   { key: "about", label: "About", href: "/about" },
   { key: "faq", label: "FAQ", href: "/#faq", isHash: true },
   { key: "contact", label: "Contact", href: "/contact" },
