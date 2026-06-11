@@ -36,7 +36,7 @@ export function ContactForm() {
     const body = encodeURIComponent(
       `From: ${result.data.name} <${result.data.email}>\n\n${result.data.message}`,
     );
-    window.location.href = `mailto:hello@eddysailab.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:edwin@eddysailab.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
@@ -68,11 +68,11 @@ export function ContactForm() {
           </div>
           <div className="space-y-5">
             <a
-              href="mailto:hello@eddysailab.com"
+              href="mailto:edwin@eddysailab.com"
               className="block text-lg font-medium hover:underline underline-offset-4"
               style={{ color: "var(--emerald-pine)" }}
             >
-              hello@eddysailab.com
+              edwin@eddysailab.com
             </a>
             <p
               className="text-base leading-relaxed opacity-80"
@@ -112,8 +112,8 @@ export function ContactForm() {
               </h3>
               <p className="opacity-70 text-sm max-w-sm mx-auto" style={{ color: "var(--emerald-pine)" }}>
                 Your email client should have opened with the details. If not, write us at{" "}
-                <a className="underline" href="mailto:hello@eddysailab.com">
-                  hello@eddysailab.com
+                <a className="underline" href="mailto:edwin@eddysailab.com">
+                  edwin@eddysailab.com
                 </a>
                 .
               </p>

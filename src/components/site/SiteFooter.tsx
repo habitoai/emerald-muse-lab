@@ -42,7 +42,7 @@ export function SiteFooter() {
               ))}
             </div>
             <a
-              href="mailto:hello@eddysailab.com"
+              href="mailto:edwin@eddysailab.com"
               className="mt-3 flex items-center justify-between px-5 py-4 rounded-md text-sm font-semibold tracking-wide uppercase"
               style={{ backgroundColor: "#f5f0e0", color: "#0a0a0a" }}
             >
