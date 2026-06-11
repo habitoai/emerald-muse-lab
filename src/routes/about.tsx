@@ -88,6 +88,13 @@ function AboutPage() {
             <p className="about-body">
               His expertise is built upon a rigorous academic and professional foundation, holding multiple certifications that span the diverse tenets and applications of Artificial Intelligence. From technical architecture to real-world business implementation, Edwin&apos;s deep knowledge allows him to translate complex concepts into actionable strategies. Despite his extensive credentials, he remains a firm believer that in the fast-paced world of technology, the most valuable asset is an open mind; he is a lifelong student who never stops learning, constantly staying at the forefront of AI advancements to provide the most current insights to his community.
             </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 py-4">
+              {[person1, person2, person3, person4].map((src, i) => (
+                <div key={i} className="rounded-2xl overflow-hidden aspect-square bg-muted">
+                  <img src={src} alt="Community member" width={768} height={768} loading="lazy" className="w-full h-full object-cover" />
+                </div>
+              ))}
+            </div>
             <p className="about-body">
               Through the leadership of Eddy&apos;s AI Lab, Edwin has cultivated a massive digital ecosystem, reaching a community of over 40,000 individuals and counting from different countries. His impact is measured in the success of those he mentors; in just a few months, he has directly trained over 3,500 people across 10 countries, helping students, entrepreneurs, and corporate teams harness AI for everything from workflow automation to strategic growth. Currently, Edwin is pursuing his most ambitious goal yet: to provide free AI literacy training to 500,000 Kenyans, paving the way for a future where every citizen is equipped to thrive in an AI-driven economy.
             </p>
