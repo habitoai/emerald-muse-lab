@@ -44,10 +44,7 @@ function ContactPage() {
           them into something real.
         </h1>
 
-        <div
-          className="mt-14 h-px w-full"
-          style={{ backgroundColor: "var(--green-tea)" }}
-        />
+        <div className="mt-14 h-px w-full" style={{ backgroundColor: "var(--green-tea)" }} />
       </section>
 
       <ContactForm />

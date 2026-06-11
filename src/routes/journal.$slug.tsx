@@ -25,7 +25,9 @@ export const Route = createFileRoute("/journal/$slug")({
     <div className="min-h-screen flex items-center justify-center px-6">
       <div className="text-center">
         <h1 className="about-hero-title">Article not found</h1>
-        <a href="/journal" className="nav-link underline mt-6 inline-block">Back to journal</a>
+        <a href="/journal" className="nav-link underline mt-6 inline-block">
+          Back to journal
+        </a>
       </div>
     </div>
   ),
@@ -33,7 +35,9 @@ export const Route = createFileRoute("/journal/$slug")({
     <div className="min-h-screen flex items-center justify-center px-6">
       <div className="text-center">
         <h1 className="about-hero-title">Something went wrong</h1>
-        <button onClick={reset} className="nav-link underline mt-6">Try again</button>
+        <button onClick={reset} className="nav-link underline mt-6">
+          Try again
+        </button>
       </div>
     </div>
   ),
@@ -47,7 +51,6 @@ function ArticlePage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
       <SiteHeader />
-
 
       {/* TITLE */}
       <section className="max-w-3xl mx-auto px-6 lg:px-10 pt-28 pb-10 text-center">
@@ -94,7 +97,11 @@ function ArticlePage() {
               style={{ color: "var(--emerald-pine)" }}
               aria-hidden
             >
-              {post.author.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+              {post.author.name
+                .split(" ")
+                .map((n) => n[0])
+                .join("")
+                .slice(0, 2)}
             </div>
             <div className="leading-tight" style={{ color: "var(--emerald-pine)" }}>
               <div className="font-medium text-base">{post.author.name}</div>
@@ -103,8 +110,16 @@ function ArticlePage() {
           </div>
           <div className="flex items-center gap-2">
             {[
-              { icon: "fa-brands fa-x-twitter", label: "Share on X", href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}` },
-              { icon: "fa-brands fa-linkedin-in", label: "Share on LinkedIn", href: "https://www.linkedin.com/" },
+              {
+                icon: "fa-brands fa-x-twitter",
+                label: "Share on X",
+                href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}`,
+              },
+              {
+                icon: "fa-brands fa-linkedin-in",
+                label: "Share on LinkedIn",
+                href: "https://www.linkedin.com/",
+              },
               { icon: "fa-solid fa-arrow-up-from-bracket", label: "Copy link", href: "#" },
             ].map((s) => (
               <a
@@ -126,8 +141,6 @@ function ArticlePage() {
           {post.date} · {post.read}
         </div>
       </section>
-
-
 
       {/* BODY */}
       <article className="max-w-3xl mx-auto px-6 lg:px-10 pb-24">
@@ -172,12 +185,19 @@ function ArticlePage() {
         <div className="flex items-end justify-between mb-10">
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-4">
-              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
+              <span
+                className="w-2 h-2 rounded-full"
+                style={{ backgroundColor: "var(--lime-glow)" }}
+              />
               <span className="tag-label">Continue reading</span>
             </div>
-            <h2 className="section-title" style={{ fontSize: 40, lineHeight: 1.1 }}>More from the journal</h2>
+            <h2 className="section-title" style={{ fontSize: 40, lineHeight: 1.1 }}>
+              More from the journal
+            </h2>
           </div>
-          <a href="/journal" className="nav-link text-base opacity-80 hover:opacity-100">All articles ↗</a>
+          <a href="/journal" className="nav-link text-base opacity-80 hover:opacity-100">
+            All articles ↗
+          </a>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {more.map((p: Post) => (
@@ -193,7 +213,9 @@ function ArticlePage() {
                 />
               </div>
               <div className="mt-4">
-                <div className="text-sm opacity-60 mb-2" style={{ color: "var(--emerald-pine)" }}>{p.read}</div>
+                <div className="text-sm opacity-60 mb-2" style={{ color: "var(--emerald-pine)" }}>
+                  {p.read}
+                </div>
                 <h3
                   className="text-xl md:text-2xl leading-tight font-semibold"
                   style={{

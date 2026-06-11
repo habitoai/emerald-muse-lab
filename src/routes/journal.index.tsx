@@ -23,20 +23,20 @@ export const Route = createFileRoute("/journal/")({
   component: JournalPage,
 });
 
-
-
 function JournalPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
       <SiteHeader />
-
 
       {/* HERO */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-32 pb-12">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-8">
-              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
+              <span
+                className="w-2 h-2 rounded-full"
+                style={{ backgroundColor: "var(--lime-glow)" }}
+              />
               <span className="tag-label">Discover</span>
             </div>
             <h1 className="about-hero-title">Our journal</h1>

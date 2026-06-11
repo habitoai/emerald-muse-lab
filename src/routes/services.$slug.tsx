@@ -29,7 +29,7 @@ const services: Record<string, { title: string; body: string; intro: string }> =
 export const Route = createFileRoute("/services/$slug")({
   head: ({ params }) => {
     const s = services[params.slug];
-    const title = s ? `${s.title} — Eddys AI Lab` : "Service — Eddys AI Lab";
+    const title = s ? `${s.title} - Eddys AI Lab` : "Service - Eddys AI Lab";
     const description = s?.body ?? "Eddys AI Lab service.";
     return {
       meta: [
@@ -43,25 +43,33 @@ export const Route = createFileRoute("/services/$slug")({
   notFoundComponent: () => (
     <div className="max-w-3xl mx-auto px-6 py-32 text-center">
       <h1 className="section-title">Service not found</h1>
-      <Link to="/" className="nav-link underline mt-6 inline-block">Back home</Link>
+      <Link to="/" className="nav-link underline mt-6 inline-block">
+        Back home
+      </Link>
     </div>
   ),
-  errorComponent: ({ reset }) => {
-    const router = useRouter();
-    return (
-      <div className="max-w-3xl mx-auto px-6 py-32 text-center">
-        <h1 className="section-title">Something went wrong</h1>
-        <button
-          onClick={() => { reset(); router.invalidate(); }}
-          className="btn-primary rounded-full px-6 py-3 mt-6"
-        >
-          Try again
-        </button>
-      </div>
-    );
-  },
+  errorComponent: ServiceErrorComponent,
   component: ServicePage,
 });
+
+function ServiceErrorComponent({ reset }: { reset: () => void }) {
+  const router = useRouter();
+
+  return (
+    <div className="max-w-3xl mx-auto px-6 py-32 text-center">
+      <h1 className="section-title">Something went wrong</h1>
+      <button
+        onClick={() => {
+          reset();
+          router.invalidate();
+        }}
+        className="btn-primary rounded-full px-6 py-3 mt-6"
+      >
+        Try again
+      </button>
+    </div>
+  );
+}
 
 function ServicePage() {
   const { slug } = Route.useParams();
@@ -71,7 +79,9 @@ function ServicePage() {
     return (
       <div className="max-w-3xl mx-auto px-6 py-32 text-center">
         <h1 className="section-title">Service not found</h1>
-        <Link to="/" className="nav-link underline mt-6 inline-block">Back home</Link>
+        <Link to="/" className="nav-link underline mt-6 inline-block">
+          Back home
+        </Link>
       </div>
     );
   }
@@ -90,7 +100,10 @@ function ServicePage() {
         <p className="section-description mt-4 text-balance">{service.body}</p>
 
         <div className="mt-12 flex items-center gap-4">
-          <a href="/contact" className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base">
+          <a
+            href="/contact"
+            className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base"
+          >
             Book a private call
             <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
           </a>
