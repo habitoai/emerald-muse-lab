@@ -18,7 +18,7 @@ const serviceAdvisory = serviceAdvisoryAsset.url;
 const serviceTraining = serviceTrainingAsset.url;
 const serviceSystems = serviceSystemsAsset.url;
 const serviceCreator = serviceCreatorAsset.url;
-import speakerAsset from "@/assets/speaker.png.asset.json";
+import speakerAsset from "@/assets/hero-speaker.jpg.asset.json";
 
 import brandOsho from "@/assets/brands/osho.png.asset.json";
 import brandBatanat from "@/assets/brands/batanat.png.asset.json";
