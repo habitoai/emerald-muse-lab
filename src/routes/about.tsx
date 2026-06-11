@@ -42,10 +42,6 @@ function AboutPage() {
 
       {/* HERO */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-40 pb-16">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full accent-bg-tea mb-8">
-          <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
-          <span className="tag-label">About</span>
-        </div>
         <h1 className="about-hero-title max-w-5xl">Meet EdwinRogoi</h1>
         <p className="about-lead mt-10 max-w-3xl">
           Edwin Rogoi is the award-winning visionary founder of Eddy&apos;s AI Lab and a leading voice in the movement to democratize Artificial Intelligence across Kenya and beyond. Driven by a mission to make AI accessible, practical, and impactful for everyone, Edwin works tirelessly to ensure that technology is not seen as an intimidating barrier but as a transformative tool for personal and professional growth. His dedication to this cause was recently recognized on a national stage when he was honored as the Assistive Technology Enabler of the Year, a testament to his commitment to inclusive innovation.
@@ -67,13 +63,15 @@ function AboutPage() {
 
       {/* STATS — monotone laurel marquee */}
       <section className="py-20">
-        <div className="stats-marquee">
-          <div className="stats-marquee-track">
-            {[...stats, ...stats].map((item, i) => (
-              <div key={i} className="stats-marquee-item">
-                <img src={item.src} alt={item.alt} className="stats-laurel-img" loading="lazy" />
-              </div>
-            ))}
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
+          <div className="stats-marquee">
+            <div className="stats-marquee-track">
+              {[...stats, ...stats].map((item, i) => (
+                <div key={i} className="stats-marquee-item">
+                  <img src={item.src} alt={item.alt} className="stats-laurel-img" loading="lazy" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
