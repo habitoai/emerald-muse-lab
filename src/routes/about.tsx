@@ -11,24 +11,32 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Edwin Rogoi is a strategic AI advisor with a foundation in journalism and PR. He helps leaders use AI with clarity, ethics, and sharp communication.",
+          "Meet Edwin Rogoi, award-winning founder of Eddy's AI Lab. AI educator, strategist, and visionary driving AI literacy across Kenya and beyond.",
       },
       { property: "og:title", content: "About — Eddys AI Lab" },
       {
         property: "og:description",
         content:
-          "A strategic advisor for leaders. Background in journalism and PR, focused on AI strategy, ethics, and communication.",
+          "Meet Edwin Rogoi, award-winning founder of Eddy's AI Lab. AI educator, strategist, and visionary driving AI literacy across Kenya and beyond.",
       },
     ],
   }),
   component: AboutPage,
 });
 
+const stats = [
+  "Award-winning AI educator+",
+  "40K+ community+",
+  "3.5K+ learners trained+",
+  "10 countries reached+",
+  "Assistive Technology Enabler of the Year+",
+  "500K Kenya AI literacy goal+",
+];
+
 function AboutPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
       <SiteHeader active="about" />
-
 
       {/* HERO */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-40 pb-16">
@@ -36,13 +44,9 @@ function AboutPage() {
           <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "var(--lime-glow)" }} />
           <span className="tag-label">About</span>
         </div>
-        <h1 className="about-hero-title max-w-5xl">
-          We are your strategic advisors
-          <br />for the AI shift.
-        </h1>
-        <p className="about-lead mt-10 max-w-2xl">
-          We are not tech people who picked up AI. We come from journalism and PR, and we help you
-          use AI with clarity, taste, and ethics, not noise.
+        <h1 className="about-hero-title max-w-5xl">Meet EdwinRogoi</h1>
+        <p className="about-lead mt-10 max-w-3xl">
+          Edwin Rogoi is the award-winning visionary founder of Eddy&apos;s AI Lab and a leading voice in the movement to democratize Artificial Intelligence across Kenya and beyond. Driven by a mission to make AI accessible, practical, and impactful for everyone, Edwin works tirelessly to ensure that technology is not seen as an intimidating barrier but as a transformative tool for personal and professional growth. His dedication to this cause was recently recognized on a national stage when he was honored as the Assistive Technology Enabler of the Year, a testament to his commitment to inclusive innovation.
         </p>
       </section>
 
@@ -59,67 +63,34 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* STORY */}
+      {/* STATS */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 py-20 border-t border-accent">
-        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10 lg:gap-20">
-          <p className="about-section-label">The background</p>
-          <div className="max-w-3xl space-y-6">
-            <h2 className="capability-headline">From newsrooms and press desks to your AI strategy room.</h2>
-            <p className="about-body">
-              We started in journalism. Years of reporting, interviewing leaders, and writing under
-              deadline taught us one thing better than any framework: the truth has to be earned,
-              sourced, and framed before it is useful. That discipline carried into our PR work,
-              where the question stopped being "what is the story" and became "how does this story
-              move a market, a policy, a reputation."
-            </p>
-            <p className="about-body">
-              Strategic communication is a craft. It needs research, narrative, ethics, and a
-              clear sense of audience. Those are the same muscles AI work needs now. Models are
-              powerful, but most leaders are drowning in output without strategy. The bottleneck
-              is not access to AI anymore. It is judgment, and that is what we bring.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl">
+          {stats.map((s) => (
+            <div
+              key={s}
+              className="px-6 py-5 rounded-2xl"
+              style={{ backgroundColor: "var(--green-tea)" }}
+            >
+              <p className="font-semibold text-lg" style={{ color: "var(--emerald-pine)" }}>
+                {s}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* APPROACH */}
+      {/* ABOUT EDWIN ROGOI */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 py-20 border-t border-accent">
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10 lg:gap-20">
-          <p className="about-section-label">The approach</p>
+          <p className="about-section-label">About Edwin Rogoi</p>
           <div className="max-w-3xl space-y-6">
-            <h2 className="capability-headline">Strategy first. Tools second. Ethics throughout.</h2>
             <p className="about-body">
-              Our journalism background changes how we deploy AI. Sourcing matters. Verification
-              matters. We name bias instead of waving it away. Every workflow we ship comes with
-              a clear data map, a privacy posture, and a human review step where it counts.
+              His expertise is built upon a rigorous academic and professional foundation, holding multiple certifications that span the diverse tenets and applications of Artificial Intelligence. From technical architecture to real-world business implementation, Edwin&apos;s deep knowledge allows him to translate complex concepts into actionable strategies. Despite his extensive credentials, he remains a firm believer that in the fast-paced world of technology, the most valuable asset is an open mind; he is a lifelong student who never stops learning, constantly staying at the forefront of AI advancements to provide the most current insights to his community.
             </p>
             <p className="about-body">
-              Our PR background changes how we communicate AI inside your business. We build the
-              internal narrative, executive positioning, and stakeholder messaging into the rollout,
-              not bolted on after launch. The result is AI you can stand behind, in your boardroom,
-              in the press, and in front of your team.
+              Through the leadership of Eddy&apos;s AI Lab, Edwin has cultivated a massive digital ecosystem, reaching a community of over 40,000 individuals and counting from different countries. His impact is measured in the success of those he mentors; in just a few months, he has directly trained over 3,500 people across 10 countries, helping students, entrepreneurs, and corporate teams harness AI for everything from workflow automation to strategic growth. Currently, Edwin is pursuing his most ambitious goal yet: to provide free AI literacy training to 500,000 Kenyans, paving the way for a future where every citizen is equipped to thrive in an AI-driven economy.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* PRINCIPLES */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 py-20 border-t border-accent">
-        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10 lg:gap-20">
-          <p className="about-section-label">Principles</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
-            {[
-              { n: "Reason 01", t: "Strategy before tools", d: "We do not start by recommending random AI apps. We identify your goals, bottlenecks, workflows, and opportunities first — then design the right AI approach around them." },
-              { n: "Reason 02", t: "Built around your work", d: "Your AI system is not generic. It is shaped around your role, business model, content, clients, habits, and level of technical confidence." },
-              { n: "Reason 03", t: "Education plus execution", d: "You do not just get theory. You learn how to think with AI, then apply it through prompts, workflows, automations, playbooks, and practical systems." },
-              { n: "Reason 04", t: "Creator-led and field-tested", d: "Eddys AI Lab is built from daily AI research, experimentation, content creation, and real-world application — not recycled corporate AI theory." },
-            ].map((p) => (
-              <div key={p.n}>
-                <div className="stat-number" style={{ fontSize: 36, lineHeight: "42px" }}>{p.n}</div>
-                <h3 className="mt-3 text-xl font-semibold" style={{ color: "var(--emerald-pine)" }}>{p.t}</h3>
-                <p className="about-body mt-2">{p.d}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
