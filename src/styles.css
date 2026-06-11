@@ -452,7 +452,7 @@
 .stats-marquee-track {
   display: flex;
   width: max-content;
-  gap: 88px;
+  gap: 40px;
   align-items: center;
   animation: stats-marquee-scroll 45s linear infinite;
 }
@@ -481,7 +481,7 @@
 }
 @keyframes stats-marquee-scroll {
   from { transform: translateX(0); }
-  to { transform: translateX(calc(-50% - 44px)); }
+  to { transform: translateX(calc(-50% - 20px)); }
 }
 .stats-laurel-img {
   height: 120px;
@@ -492,7 +492,7 @@
 }
 @media (max-width: 768px) {
   .stats-laurel-img { height: 84px; }
-  .stats-marquee-track { gap: 56px; animation-duration: 32s; }
+  .stats-marquee-track { gap: 24px; animation-duration: 32s; }
 }
 
 /* Brand logos — monotone emerald, animated marquee */
