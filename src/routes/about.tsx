@@ -29,34 +29,11 @@ export const Route = createFileRoute("/about")({
 });
 
 const stats = [
-  "Award-winning AI educator",
-  "40K+ community",
-  "3.5K+ learners trained",
-  "10 countries reached",
-  "Assistive Technology Enabler of the Year",
-  "500K Kenya AI literacy goal",
+  { src: laurelAward.url, alt: "Assistive Technology Enabler of the Year" },
+  { src: laurelLearners.url, alt: "3.5K+ learners trained" },
+  { src: laurelCountries.url, alt: "10 countries reached" },
+  { src: laurelKenya.url, alt: "500K Kenya AI literacy goal" },
 ];
-
-function Laurel({ flip = false }: { flip?: boolean }) {
-  return (
-    <svg
-      viewBox="0 0 60 80"
-      className="stats-laurel"
-      style={flip ? { transform: "scaleX(-1)" } : undefined}
-      aria-hidden="true"
-    >
-      <g fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round">
-        <path d="M48 6 Q26 38 30 76" />
-        <path d="M44 14 Q34 14 30 22" />
-        <path d="M42 22 Q32 22 28 30" />
-        <path d="M39 31 Q29 31 26 39" />
-        <path d="M37 40 Q27 40 25 48" />
-        <path d="M35 49 Q25 49 24 57" />
-        <path d="M33 58 Q24 58 24 66" />
-      </g>
-    </svg>
-  );
-}
 
 function AboutPage() {
   return (
