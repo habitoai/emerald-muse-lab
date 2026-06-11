@@ -488,6 +488,7 @@
   width: auto;
   flex-shrink: 0;
   display: block;
+  opacity: 0.55;
 }
 @media (max-width: 768px) {
   .stats-laurel-img { height: 84px; }
