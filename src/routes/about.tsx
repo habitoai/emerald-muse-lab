@@ -69,11 +69,9 @@ function AboutPage() {
       <section className="py-20">
         <div className="stats-marquee">
           <div className="stats-marquee-track">
-            {[...stats, ...stats].map((label, i) => (
+            {[...stats, ...stats].map((item, i) => (
               <div key={i} className="stats-marquee-item">
-                <Laurel />
-                <span className="stats-marquee-label">{label}</span>
-                <Laurel flip />
+                <img src={item.src} alt={item.alt} className="stats-laurel-img" loading="lazy" />
               </div>
             ))}
           </div>
