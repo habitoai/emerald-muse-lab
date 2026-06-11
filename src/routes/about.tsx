@@ -84,19 +84,17 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* STATS — monotone marquee */}
-      <section className="py-20 border-t border-accent">
+      {/* STATS — monotone laurel marquee */}
+      <section className="py-20">
         <div className="stats-marquee">
           <div className="stats-marquee-track">
-            {[...stats, ...stats].map((s, i) => {
-              const Icon = s.icon;
-              return (
-                <div key={i} className="stats-marquee-item">
-                  <Icon className="stats-marquee-icon" strokeWidth={1.5} />
-                  <span className="stats-marquee-label">{s.label}</span>
-                </div>
-              );
-            })}
+            {[...stats, ...stats].map((label, i) => (
+              <div key={i} className="stats-marquee-item">
+                <Laurel />
+                <span className="stats-marquee-label">{label}</span>
+                <Laurel flip />
+              </div>
+            ))}
           </div>
         </div>
       </section>
