@@ -64,20 +64,20 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* STATS */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-10 py-20 border-t border-accent">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl">
-          {stats.map((s) => (
-            <div
-              key={s}
-              className="px-6 py-5 rounded-2xl"
-              style={{ backgroundColor: "var(--green-tea)" }}
-            >
-              <p className="font-semibold text-lg" style={{ color: "var(--emerald-pine)" }}>
-                {s}
-              </p>
-            </div>
-          ))}
+      {/* STATS — monotone marquee */}
+      <section className="py-20 border-t border-accent">
+        <div className="stats-marquee">
+          <div className="stats-marquee-track">
+            {[...stats, ...stats].map((s, i) => {
+              const Icon = s.icon;
+              return (
+                <div key={i} className="stats-marquee-item">
+                  <Icon className="stats-marquee-icon" strokeWidth={1.5} />
+                  <span className="stats-marquee-label">{s.label}</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
