@@ -28,7 +28,7 @@ export const Route = createFileRoute("/journal/")({
 function JournalPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
-      <SiteHeader active="journal" />
+      <SiteHeader />
 
 
       {/* HERO */}
