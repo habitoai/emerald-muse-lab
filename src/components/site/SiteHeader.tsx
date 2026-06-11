@@ -18,14 +18,15 @@ const NAV: { key: NavKey; label: string; href: string; isHash?: boolean }[] = [
 
 export function SiteHeader({ active }: { active?: NavKey }) {
   return (
-    <header className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-8 flex items-center justify-between">
-      <Link
-        to="/"
-        className="logo-text font-semibold tracking-tight inline-flex items-center gap-3 leading-none"
-      >
-        <img src={logoAsset.url} alt="Eddys AI Lab" className="h-11 w-auto block shrink-0 relative top-[2px]" />
-        <span className="text-3xl leading-none relative top-[9px]">Eddys AI Lab</span>
-      </Link>
+    <header className="sticky top-0 z-50 w-full" style={{ backgroundColor: "var(--background)" }}>
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
+        <Link
+          to="/"
+          className="logo-text font-semibold tracking-tight inline-flex items-center gap-3 leading-none"
+        >
+          <img src={logoAsset.url} alt="Eddys AI Lab" className="h-11 w-auto block shrink-0 relative top-[2px]" />
+          <span className="text-3xl leading-none relative top-[9px]">Eddys AI Lab</span>
+        </Link>
 
       {/* Desktop */}
       <nav className="hidden md:flex items-center gap-10">
@@ -79,6 +80,7 @@ export function SiteHeader({ active }: { active?: NavKey }) {
           </nav>
         </SheetContent>
       </Sheet>
+      </div>
     </header>
   );
 }
