@@ -10,24 +10,20 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
-import serviceAdvisoryAsset from "@/assets/service-advisory.jpg.asset.json";
-import serviceTrainingAsset from "@/assets/service-training.jpg.asset.json";
-import serviceSystemsAsset from "@/assets/service-systems.jpg.asset.json";
-import serviceCreatorAsset from "@/assets/service-creator.jpg.asset.json";
-const serviceAdvisory = serviceAdvisoryAsset.url;
-const serviceTraining = serviceTrainingAsset.url;
-const serviceSystems = serviceSystemsAsset.url;
-const serviceCreator = serviceCreatorAsset.url;
-import speakerAsset from "@/assets/hero-speaker.jpg.asset.json";
+import serviceAdvisory from "@/assets/service-advisory.jpg";
+import serviceTraining from "@/assets/service-training.jpg";
+import serviceSystems from "@/assets/service-systems.jpg";
+import serviceCreator from "@/assets/service-creator.jpg";
+import speaker from "@/assets/hero-speaker.jpg";
 
-import brandOsho from "@/assets/brands/osho.png.asset.json";
-import brandBatanat from "@/assets/brands/batanat.png.asset.json";
-import brandDazu from "@/assets/brands/dazu.png.asset.json";
-import brandExcellence from "@/assets/brands/excellence-project.png.asset.json";
-import brandHive from "@/assets/brands/hive-pastries.png.asset.json";
-import brandGorgeous from "@/assets/brands/gorgeous-tech.png.asset.json";
-import brandMku from "@/assets/brands/mount-kenya.png.asset.json";
-import brandTie from "@/assets/brands/tie-events.png.asset.json";
+import brandOsho from "@/assets/brands/osho.png";
+import brandBatanat from "@/assets/brands/batanat.png";
+import brandDazu from "@/assets/brands/dazu.png";
+import brandExcellence from "@/assets/brands/excellence-project.png";
+import brandHive from "@/assets/brands/hive-pastries.png";
+import brandGorgeous from "@/assets/brands/gorgeous-tech.png";
+import brandMku from "@/assets/brands/mount-kenya.png";
+import brandTie from "@/assets/brands/tie-events.png";
 import reasonStrategy from "@/assets/reason-strategy.png";
 import reasonWorkflow from "@/assets/reason-workflow.png";
 import reasonEducation from "@/assets/reason-education.png";
@@ -68,14 +64,14 @@ const gallery = [
 ];
 
 const brands = [
-  { name: "Osho", src: brandOsho.url },
-  { name: "Batanat", src: brandBatanat.url },
-  { name: "Dazu AI Hub", src: brandDazu.url },
-  { name: "Excellence Project", src: brandExcellence.url },
-  { name: "The Hive Pastries", src: brandHive.url },
-  { name: "Gorgeous Technical Institute", src: brandGorgeous.url },
-  { name: "Mount Kenya University", src: brandMku.url },
-  { name: "TIE Events", src: brandTie.url },
+  { name: "Osho", src: brandOsho },
+  { name: "Batanat", src: brandBatanat },
+  { name: "Dazu AI Hub", src: brandDazu },
+  { name: "Excellence Project", src: brandExcellence },
+  { name: "The Hive Pastries", src: brandHive },
+  { name: "Gorgeous Technical Institute", src: brandGorgeous },
+  { name: "Mount Kenya University", src: brandMku },
+  { name: "TIE Events", src: brandTie },
 ];
 
 function Index() {
@@ -105,7 +101,7 @@ function Index() {
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-8">
         <div className="relative rounded-3xl overflow-hidden">
           <img
-            src={speakerAsset.url}
+            src={speaker}
             alt="AI consultancy keynote speaker addressing a business audience"
             width={1600}
             height={1000}

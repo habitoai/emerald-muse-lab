@@ -9,14 +9,10 @@ import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
 import g5 from "@/assets/gallery-5.jpg";
 import g6 from "@/assets/gallery-6.jpg";
-import serviceAdvisoryAsset from "@/assets/service-advisory.jpg.asset.json";
-import serviceTrainingAsset from "@/assets/service-training.jpg.asset.json";
-import serviceSystemsAsset from "@/assets/service-systems.jpg.asset.json";
-import serviceCreatorAsset from "@/assets/service-creator.jpg.asset.json";
-const serviceAdvisory = serviceAdvisoryAsset.url;
-const serviceTraining = serviceTrainingAsset.url;
-const serviceSystems = serviceSystemsAsset.url;
-const serviceCreator = serviceCreatorAsset.url;
+import serviceAdvisory from "@/assets/service-advisory.jpg";
+import serviceTraining from "@/assets/service-training.jpg";
+import serviceSystems from "@/assets/service-systems.jpg";
+import serviceCreator from "@/assets/service-creator.jpg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -46,15 +42,42 @@ type Item = {
 };
 
 const items: Item[] = [
-  { src: g1, alt: "Cohort workshop", caption: "AI for Leaders — Cohort 07", place: "Nairobi", tall: true },
-  { src: serviceTraining, alt: "Team training session", caption: "Team rollout sprint", place: "Lagos" },
+  {
+    src: g1,
+    alt: "Cohort workshop",
+    caption: "AI for Leaders — Cohort 07",
+    place: "Nairobi",
+    tall: true,
+  },
+  {
+    src: serviceTraining,
+    alt: "Team training session",
+    caption: "Team rollout sprint",
+    place: "Lagos",
+  },
   { src: g2, alt: "Keynote stage", caption: "Keynote — AI & Communications", place: "Kigali" },
-  { src: serviceAdvisory, alt: "Advisory session", caption: "Founder advisory day", place: "Cape Town" },
+  {
+    src: serviceAdvisory,
+    alt: "Advisory session",
+    caption: "Founder advisory day",
+    place: "Cape Town",
+  },
   { src: g3, alt: "Build sprint", caption: "Build sprint — Ops GPT", place: "Nairobi", tall: true },
   { src: g4, alt: "Roundtable discussion", caption: "C-suite roundtable", place: "Accra" },
   { src: serviceCreator, alt: "Creator session", caption: "Creator-led AI lab", place: "Nairobi" },
-  { src: g5, alt: "Workshop floor", caption: "Public-sector workshop", place: "Kampala", tall: true },
-  { src: serviceSystems, alt: "Systems mapping", caption: "Workflow mapping day", place: "Nairobi" },
+  {
+    src: g5,
+    alt: "Workshop floor",
+    caption: "Public-sector workshop",
+    place: "Kampala",
+    tall: true,
+  },
+  {
+    src: serviceSystems,
+    alt: "Systems mapping",
+    caption: "Workflow mapping day",
+    place: "Nairobi",
+  },
   { src: g6, alt: "Closing ceremony", caption: "Cohort 06 graduation", place: "Nairobi" },
 ];
 
@@ -68,8 +91,7 @@ function GalleryPage() {
     [],
   );
   const prev = useCallback(
-    () =>
-      setActiveIndex((i) => (i === null ? i : (i - 1 + items.length) % items.length)),
+    () => setActiveIndex((i) => (i === null ? i : (i - 1 + items.length) % items.length)),
     [],
   );
 
@@ -99,9 +121,7 @@ function GalleryPage() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10">
           <div className="max-w-2xl">
             <h1 className="about-hero-title">Gallery</h1>
-            <p className="about-lead mt-6 max-w-md">
-              Moments from cohorts and keynotes.
-            </p>
+            <p className="about-lead mt-6 max-w-md">Moments from cohorts and keynotes.</p>
           </div>
         </div>
       </section>
