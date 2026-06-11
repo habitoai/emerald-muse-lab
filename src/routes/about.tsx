@@ -4,10 +4,10 @@ import laurelAward from "@/assets/laurels/laurel-award.png.asset.json";
 import laurelCountries from "@/assets/laurels/laurel-countries.png.asset.json";
 import laurelKenya from "@/assets/laurels/laurel-kenya.png.asset.json";
 import laurelLearners from "@/assets/laurels/laurel-learners.png.asset.json";
-import person1 from "@/assets/people/person-1.jpg";
-import person2 from "@/assets/people/person-2.jpg";
-import person3 from "@/assets/people/person-3.jpg";
-import person4 from "@/assets/people/person-4.jpg";
+import person1 from "@/assets/people/edwin-1.jpg.asset.json";
+import person2 from "@/assets/people/edwin-2.jpg.asset.json";
+import person3 from "@/assets/people/edwin-3.jpg.asset.json";
+import person4 from "@/assets/people/edwin-4.jpg.asset.json";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { FinalCTA } from "@/components/site/FinalCTA";
@@ -89,9 +89,9 @@ function AboutPage() {
               His expertise is built upon a rigorous academic and professional foundation, holding multiple certifications that span the diverse tenets and applications of Artificial Intelligence. From technical architecture to real-world business implementation, Edwin&apos;s deep knowledge allows him to translate complex concepts into actionable strategies. Despite his extensive credentials, he remains a firm believer that in the fast-paced world of technology, the most valuable asset is an open mind; he is a lifelong student who never stops learning, constantly staying at the forefront of AI advancements to provide the most current insights to his community.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 py-4">
-              {[person1, person2, person3, person4].map((src, i) => (
+              {[person1, person2, person3, person4].map((p, i) => (
                 <div key={i} className="rounded-2xl overflow-hidden aspect-square bg-muted">
-                  <img src={src} alt="Community member" width={768} height={768} loading="lazy" className="w-full h-full object-cover" />
+                  <img src={p.url} alt="Edwin Rogoi" width={900} height={900} loading="lazy" className="w-full h-full object-cover" />
                 </div>
               ))}
             </div>
