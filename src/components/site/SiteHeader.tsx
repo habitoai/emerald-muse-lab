@@ -80,6 +80,7 @@ export function SiteHeader({ active }: { active?: NavKey }) {
           </nav>
         </SheetContent>
       </Sheet>
+      </div>
     </header>
   );
 }
