@@ -1,6 +1,5 @@
 const LINKS = [
   { label: "Works", href: "/gallery" },
-  { label: "Journal", href: "/journal" },
   { label: "About", href: "/about" },
   { label: "FAQ", href: "/#faq" },
 ];
