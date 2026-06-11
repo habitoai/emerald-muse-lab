@@ -91,7 +91,7 @@ function AboutPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 py-4">
               {[person1, person2, person3, person4].map((p, i) => (
                 <div key={i} className="rounded-2xl overflow-hidden aspect-square bg-muted">
-                  <img src={src} alt="Community member" width={768} height={768} loading="lazy" className="w-full h-full object-cover" />
+                  <img src={p.url} alt="Edwin Rogoi" width={900} height={900} loading="lazy" className="w-full h-full object-cover" />
                 </div>
               ))}
             </div>
