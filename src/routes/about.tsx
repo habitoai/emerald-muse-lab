@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Trophy, Users, GraduationCap, Globe2, Award, Target } from "lucide-react";
 import speakerAsset from "@/assets/speaker.png.asset.json";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
