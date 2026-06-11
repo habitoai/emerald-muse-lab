@@ -40,6 +40,12 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "We help business leaders put AI to work — strategy, training, and systems built around your real work." },
       { property: "og:title", content: "Eddys AI Lab — Practical AI for Leaders" },
       { property: "og:description", content: "We help business leaders put AI to work — strategy, training, and systems built around your real work." },
+      { property: "og:url", content: "https://emerald-muse-lab.lovable.app/" },
+      { name: "twitter:title", content: "Eddys AI Lab — Practical AI for Leaders" },
+      { name: "twitter:description", content: "We help business leaders put AI to work — strategy, training, and systems built around your real work." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://emerald-muse-lab.lovable.app/" },
     ],
   }),
   component: Index,

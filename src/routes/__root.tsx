@@ -72,29 +72,42 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+const OG_IMAGE = "https://emerald-muse-lab.lovable.app/__l5e/assets-v1/18c7b6e8-6771-4361-8e94-a81da8f351fc/hero-speaker.jpg";
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Eddys AI Lab — Practical AI for Leaders" },
       { name: "description", content: "Eddys AI Lab helps business leaders put AI to work with strategy, training, and systems that actually ship." },
-      { property: "og:title", content: "Eddys AI Lab — Practical AI for Leaders" },
-      { property: "og:description", content: "Eddys AI Lab helps business leaders put AI to work with strategy, training, and systems that actually ship." },
+      { property: "og:site_name", content: "Eddys AI Lab" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Eddys AI Lab — Practical AI for Leaders" },
-      { name: "twitter:description", content: "Eddys AI Lab helps business leaders put AI to work with strategy, training, and systems that actually ship." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/717f643f-2551-4bc3-a105-dce56da418f3/id-preview-90c5ccba--40d82ca0-3cec-4551-aa68-5a00fa4ce0f9.lovable.app-1781020523296.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/717f643f-2551-4bc3-a105-dce56da418f3/id-preview-90c5ccba--40d82ca0-3cec-4551-aa68-5a00fa4ce0f9.lovable.app-1781020523296.png" },
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:width", content: "1600" },
+      { property: "og:image:height", content: "1000" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" },
       { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" },
       { rel: "stylesheet", href: appCss },
     ],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Eddys AI Lab",
+        url: "https://emerald-muse-lab.lovable.app",
+        logo: "https://emerald-muse-lab.lovable.app/__l5e/assets-v1/5122b810-a8f3-4c0c-a7a8-a26f7b60c170/eddys-logo.png",
+        description: "Practical AI strategy, training, and systems for business leaders.",
+      }),
+    }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
