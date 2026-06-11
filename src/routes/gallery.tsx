@@ -92,7 +92,7 @@ function GalleryPage() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
-      <SiteHeader active="works" />
+      <SiteHeader />
 
       {/* HERO */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-32 pb-12">

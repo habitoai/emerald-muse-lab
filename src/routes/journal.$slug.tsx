@@ -46,7 +46,7 @@ function ArticlePage() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
-      <SiteHeader active="journal" />
+      <SiteHeader />
 
 
       {/* TITLE */}
