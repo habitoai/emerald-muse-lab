@@ -126,27 +126,34 @@ function Index() {
 
 
 
-      {/* BRANDS */}
+      {/* BRANDS — calm, static grid (no motion, peripheral presence) */}
       <section className="max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-10 pt-6 pb-12 mt-6">
-        <div className="rounded-2xl sm:rounded-3xl py-12 px-6 lg:px-10" style={{ backgroundColor: "var(--emerald-pine)" }}>
-          <p className="section-description text-center mb-10" style={{ color: "rgba(245,240,224,0.75)" }}>
+        <div
+          className="rounded-2xl sm:rounded-3xl py-14 px-6 lg:px-12"
+          style={{ backgroundColor: "var(--emerald-pine)" }}
+        >
+          <p
+            className="section-description text-center mb-12 tracking-wide"
+            style={{ color: "rgba(245,240,224,0.55)", fontSize: "0.85rem", letterSpacing: "0.12em", textTransform: "uppercase" }}
+          >
             Our Corporate Partners
           </p>
-          <div className="brand-marquee-row">
-            <div className="brand-marquee-track">
-              {[...brands, ...brands].map((b, i) => (
-                <div key={i} className="brand-logo-img-wrap" title={b.name}>
-                  <img
-                    src={b.src}
-                    alt={b.name}
-                    className="brand-logo-img"
-                    loading="lazy"
-                    
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          <ul
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-10 gap-x-6 items-center justify-items-center"
+            aria-label="Corporate partners"
+          >
+            {brands.map((b) => (
+              <li key={b.name} className="flex items-center justify-center w-full">
+                <img
+                  src={b.src}
+                  alt={b.name}
+                  loading="lazy"
+                  className="max-h-10 md:max-h-12 w-auto object-contain"
+                  style={{ opacity: 0.55, filter: "grayscale(1) brightness(1.6)" }}
+                />
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
