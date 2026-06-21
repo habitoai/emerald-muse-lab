@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState, useCallback } from "react";
 import speaker from "@/assets/speaker.png";
 import laurelAward from "@/assets/laurels/laurel-award.png";
 import laurelCountries from "@/assets/laurels/laurel-countries.png";
@@ -11,6 +12,12 @@ import person4 from "@/assets/people/edwin-4.jpg";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { FinalCTA } from "@/components/site/FinalCTA";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import type { CarouselApi } from "@/components/ui/carousel";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -39,6 +46,84 @@ const stats = [
   { src: laurelKenya, alt: "500K Kenya AI literacy goal" },
 ];
 
+const heroSlides = [
+  {
+    src: speaker,
+    alt: "Edwin Rogoi speaking on stage to a business audience",
+  },
+  {
+    src: "https://edlab2025.b-cdn.net/Images/1.jpg",
+    alt: "Edwin Rogoi portrait",
+  },
+  {
+    src: "https://edlab2025.b-cdn.net/Images/Grand-84.jpg",
+    alt: "Edwin Rogoi portrait",
+  },
+];
+
+function AboutHeroCarousel() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  const onSelect = useCallback(() => {
+    if (!api) return;
+    setCurrent(api.selectedScrollSnap());
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+    onSelect();
+    api.on("select", onSelect);
+    api.on("reInit", onSelect);
+  }, [api, onSelect]);
+
+  useEffect(() => {
+    if (!api) return;
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [api]);
+
+  return (
+    <div className="relative">
+      <Carousel
+        setApi={setApi}
+        opts={{ loop: true, align: "start" }}
+        className="w-full rounded-3xl overflow-hidden"
+      >
+        <CarouselContent>
+          {heroSlides.map((slide, index) => (
+            <CarouselItem key={index}>
+              <div className="w-full aspect-[16/10] bg-muted">
+                <img
+                  src={slide.src}
+                  alt={slide.alt}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+      <div className="flex justify-center gap-2 mt-4">
+        {heroSlides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => api?.scrollTo(index)}
+            className={`w-2.5 h-2.5 rounded-full transition-colors ${
+              current === index
+                ? "bg-primary"
+                : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function AboutPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
@@ -58,17 +143,9 @@ function AboutPage() {
         </p>
       </section>
 
-      {/* PORTRAIT */}
+      {/* PORTRAIT CAROUSEL */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-16">
-        <div className="rounded-3xl overflow-hidden">
-          <img
-            src={speaker}
-            alt="Edwin Rogoi speaking on stage to a business audience"
-            className="w-full h-auto object-cover"
-            width={1600}
-            height={1000}
-          />
-        </div>
+        <AboutHeroCarousel />
       </section>
 
       {/* STATS — monotone laurel marquee */}
