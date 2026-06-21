@@ -59,17 +59,9 @@ function AboutPage() {
         </p>
       </section>
 
-      {/* PORTRAIT */}
+      {/* PORTRAIT CAROUSEL */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-10 pb-16">
-        <div className="rounded-3xl overflow-hidden">
-          <img
-            src={speakerAsset.url}
-            alt="Edwin Rogoi speaking on stage to a business audience"
-            className="w-full h-auto object-cover"
-            width={1600}
-            height={1000}
-          />
-        </div>
+        <AboutHeroCarousel />
       </section>
 
       {/* STATS — monotone laurel marquee */}
