@@ -17,7 +17,7 @@ export function FinalCTA({
   ),
   body = "Work with us as your advisor. We pair strategy, ethics, and execution to put AI to real work in your business.",
   ctaLabel = "Book a private call",
-  ctaHref = "/contact",
+  ctaHref = "mailto:edwin@eddysailab.com",
 }: Props) {
   return (
     <section className="max-w-[1600px] mx-auto px-6 lg:px-10 py-32 border-t border-accent">

@@ -90,7 +90,7 @@ function ServicePage() {
         <p className="section-description mt-4 text-balance">{service.body}</p>
 
         <div className="mt-12 flex items-center gap-4">
-          <a href="/contact" className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base">
+          <a href="mailto:edwin@eddysailab.com" className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base">
             Book a private call
             <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
           </a>
