@@ -46,6 +46,84 @@ const stats = [
   { src: laurelKenya.url, alt: "500K Kenya AI literacy goal" },
 ];
 
+const heroSlides = [
+  {
+    src: speakerAsset.url,
+    alt: "Edwin Rogoi speaking on stage to a business audience",
+  },
+  {
+    src: person1.url,
+    alt: "Edwin Rogoi portrait",
+  },
+  {
+    src: person2.url,
+    alt: "Edwin Rogoi portrait",
+  },
+];
+
+function AboutHeroCarousel() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  const onSelect = useCallback(() => {
+    if (!api) return;
+    setCurrent(api.selectedScrollSnap());
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+    onSelect();
+    api.on("select", onSelect);
+    api.on("reInit", onSelect);
+  }, [api, onSelect]);
+
+  useEffect(() => {
+    if (!api) return;
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [api]);
+
+  return (
+    <div className="relative">
+      <Carousel
+        setApi={setApi}
+        opts={{ loop: true, align: "start" }}
+        className="w-full rounded-3xl overflow-hidden"
+      >
+        <CarouselContent>
+          {heroSlides.map((slide, index) => (
+            <CarouselItem key={index}>
+              <img
+                src={slide.src}
+                alt={slide.alt}
+                className="w-full h-auto object-cover"
+                width={1600}
+                height={1000}
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+      <div className="flex justify-center gap-2 mt-4">
+        {heroSlides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => api?.scrollTo(index)}
+            className={`w-2.5 h-2.5 rounded-full transition-colors ${
+              current === index
+                ? "bg-primary"
+                : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function AboutPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--background)" }}>
