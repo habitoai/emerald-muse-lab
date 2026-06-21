@@ -116,6 +116,16 @@ export function SiteFooter() {
               Follow me on Instagram
             </a>
             <a
+              href="https://wa.me/254729426313"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold transition hover:brightness-110"
+              style={{ backgroundColor: "#25D366", color: "#fff" }}
+            >
+              <i className="fa-brands fa-whatsapp" />
+              Chat on WhatsApp
+            </a>
+            <a
               href="https://www.tiktok.com/@eddys_ai_lab?_r=1&_t=ZS-977yAYS6cqI"
               target="_blank"
               rel="noopener noreferrer"

@@ -187,16 +187,15 @@ function Index() {
           >
             <div>
               <h3 className="cohort-banner-title">
-                AI Clarity
+                AI Clarity Cohort
                 <br />
-                Cohort 2026
+                & Corporate Training 2026
               </h3>
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mt-10">
               <p className="max-w-sm cohort-banner-body" style={{ color: "rgba(255,255,255,0.75)" }}>
-                Our six-week program for leaders who want to use AI with strategy,
-                taste, and real execution. We keep seats limited so you get our attention.
+                Enquire on Our cohort individual & corporate training programs for leaders and teams who want to use AI with strategy, clarity and real execution. We keep seats limited so you get our attention.
               </p>
               <a
                 href="/contact"
@@ -220,7 +219,7 @@ function Index() {
           {[
             { n: "3,500+", d: "Learners reached" },
             { n: "10+", d: "AI systems designed" },
-            { n: "6-week", d: "Implementation sprint" },
+            { n: "10+", d: "Countries engaged" },
             { n: "500K+", d: "Content reach" },
           ].map((s) => (
             <div key={s.n}>
