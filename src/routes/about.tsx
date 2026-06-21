@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState, useCallback } from "react";
 import speakerAsset from "@/assets/speaker.png.asset.json";
 import laurelAward from "@/assets/laurels/laurel-award.png.asset.json";
 import laurelCountries from "@/assets/laurels/laurel-countries.png.asset.json";
@@ -11,6 +12,12 @@ import person4 from "@/assets/people/edwin-4.jpg.asset.json";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { FinalCTA } from "@/components/site/FinalCTA";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import type { CarouselApi } from "@/components/ui/carousel";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
