@@ -52,11 +52,11 @@ const heroSlides = [
     alt: "Edwin Rogoi speaking on stage to a business audience",
   },
   {
-    src: person1.url,
+    src: "https://edlab2025.b-cdn.net/Images/1.jpg",
     alt: "Edwin Rogoi portrait",
   },
   {
-    src: person2.url,
+    src: "https://edlab2025.b-cdn.net/Images/Grand-84.jpg",
     alt: "Edwin Rogoi portrait",
   },
 ];
