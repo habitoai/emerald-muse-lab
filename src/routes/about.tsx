@@ -95,13 +95,13 @@ function AboutHeroCarousel() {
         <CarouselContent>
           {heroSlides.map((slide, index) => (
             <CarouselItem key={index}>
-              <img
-                src={slide.src}
-                alt={slide.alt}
-                className="w-full h-auto object-cover"
-                width={1600}
-                height={1000}
-              />
+              <div className="w-full aspect-[16/10] bg-muted">
+                <img
+                  src={slide.src}
+                  alt={slide.alt}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>
