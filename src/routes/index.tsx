@@ -85,7 +85,7 @@ function Index() {
             <br />
             put AI to work.
           </h1>
-          <a href="/contact" className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base self-start md:self-end shrink-0">
+          <a href="mailto:edwin@eddysailab.com" className="btn-primary rounded-full px-7 py-4 inline-flex items-center gap-3 text-base self-start md:self-end shrink-0">
             Book a private call
             <i className="fa-solid fa-arrow-right text-sm" style={{ color: "var(--lime-glow)" }} />
           </a>
@@ -198,7 +198,7 @@ function Index() {
                 Enquire on Our cohort individual & corporate training programs for leaders and teams who want to use AI with strategy, clarity and real execution. We keep seats limited so you get our attention.
               </p>
               <a
-                href="/contact"
+                href="mailto:edwin@eddysailab.com"
                 className="btn-primary rounded-full px-7 py-4 flex items-center gap-3 text-base shrink-0"
               >
                 Reserve a seat
